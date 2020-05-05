@@ -24,6 +24,11 @@
 /// while on screen.
 @property BOOL disableScrollOnKeyboardHidden;
 
+/// Called whenever something has changed that might require pages
+/// to be rendered or other items to have their positions
+/// synchronised with the document pages.
+- (void)viewHasAltered:(BOOL)forceRender;
+
 - (void)iteratePages:(void (^)(NSInteger i, UIView<ARDKPageCellDelegate> *pageView, CGRect screenRect))block;
 
 - (void)updateItemSize;

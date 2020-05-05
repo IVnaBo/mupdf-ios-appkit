@@ -9,6 +9,7 @@
 #import "ARDKGeometry.h"
 #import "ARDKNUpLayout.h"
 #import "ARDKCollectionViewCell.h"
+#import "ARDKViewRenderer.h"
 #import "ARDKNUpViewController.h"
 
 #define MIN_ZOOM (1.0)
@@ -19,7 +20,7 @@
 
 #define SCROLL_DURATION (0.3)
 
-@interface ARDKNUpViewController () <UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegate>
+@interface ARDKNUpViewController () <UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegate,ARDKViewRendererDelegate>
 @property(readonly) UITapGestureRecognizer *tapGesture;
 @property(readonly) UITapGestureRecognizer *dtapGesture;
 @property(readonly) UILongPressGestureRecognizer *longPressGesture;
@@ -33,6 +34,7 @@
 @property BOOL respondingToScrollViewDidScroll;
 @property CGFloat keyboardHeightAboveBottom;
 @property CGRect showAreaBox;
+@property ARDKViewRenderer *renderer;
 @end
 
 @implementation ARDKNUpViewController
@@ -72,6 +74,26 @@
 {
     _pageCount = pageCount;
     [self updateCollectionViewPageCount];
+}
+
+- (ARDKBitmap *)bitmap
+{
+    return self.delagate.session.bitmap;
+}
+
+- (void)setBitmap:(ARDKBitmap *)bitmap
+{
+    self.delagate.session.bitmap = bitmap;
+}
+
+- (BOOL)darkMode
+{
+    return self.renderer.darkMode;
+}
+
+- (void)setDarkMode:(BOOL)darkMode
+{
+    self.renderer.darkMode = darkMode;
 }
 
 - (void)updateItemSize
@@ -169,6 +191,12 @@
     }
 }
 
+- (void)viewHasAltered:(BOOL)forceRender
+{
+    [self requestRenderWithForce:forceRender];
+    [self.delagate viewHasMoved];
+}
+
 - (void)loadView
 {
     // Collection views can animate between different layouts,
@@ -205,6 +233,7 @@
     [self.collectionView addGestureRecognizer:_longPressGesture];
     [self.collectionView addGestureRecognizer:_dtapGesture];
     self.showAreaBox = CGRectNull;
+    self.renderer = [[ARDKViewRenderer alloc] initWithDelegate:self lib:self.delagate.session.doc];
 }
 
 - (BOOL)drawingMode
@@ -273,6 +302,19 @@
         block(index, nearestCell.pageView);
 }
 
+- (void)requestRenderWithForce:(BOOL)force
+{
+    if (force)
+        [self.renderer forceRender];
+
+    [self.renderer triggerRender];
+}
+
+- (void)afterFirstRender:(void (^)(void))block
+{
+    [self.renderer afterFirstRender:block];
+}
+
 - (void)handleTap:(UIGestureRecognizer *)gesture
 {
     if (gesture.state == UIGestureRecognizerStateEnded)
@@ -314,7 +356,7 @@
         case UIGestureRecognizerStateCancelled:
             // When the user releases long press, we zoom back to the previous state
             self.longPressZoomActive = NO;
-            [self.delagate viewHasAltered:NO];
+            [self.delagate viewHasMoved];
             [self.delagate didEndLongPress];
             break;
         default:
@@ -483,7 +525,7 @@
     self.scrollView.contentSize = rect.size;
     self.scrollView.contentOffset = off;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.delagate viewHasAltered:YES];
+        [self viewHasAltered:YES];
     });
 }
 
@@ -532,7 +574,7 @@
 
         if (!self.renderDisabledDuringZoom)
         {
-            [self.delagate viewHasAltered:NO];
+            [self viewHasAltered:NO];
         }
 
         self.respondingToScrollViewDidScroll = NO;
@@ -565,7 +607,7 @@
     UIEdgeInsets insets = self.scrollView.contentInset;
     insets.left = insets.right = margin;
     self.scrollView.contentInset = insets;
-    [self.delagate viewHasAltered:NO];
+    [self.delagate viewHasMoved];
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
@@ -602,7 +644,7 @@
     [self.delagate setupPageCell:cell forPage:indexPath.item];
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.delagate viewHasAltered:YES];
+        [self viewHasAltered:YES];
     });
 
     return cell;

@@ -912,9 +912,9 @@
     }
 }
 
-- (void)viewHasAltered:(BOOL)forceRender
+- (void)viewHasMoved
 {
-    [super viewHasAltered:forceRender];
+    [super viewHasMoved];
     [self repositionFurniture];
 }
 

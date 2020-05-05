@@ -3,8 +3,15 @@
 #import <Foundation/Foundation.h>
 #import "ARDKPageGeometry.h"
 #import "ARDKPageCell.h"
+#import "ARDKDocSession.h"
 
 @protocol ARDKPageControllerDelegate <NSObject>
+
+/// The document session
+@property(readonly) ARDKDocSession *session;
+
+/// The view that constrains the rendering area
+@property(readonly) UIView *view;
 
 /// Called to adjust the size of a cell to match the
 /// aspect ratio of the page.
@@ -14,12 +21,10 @@
 /// add it to the cell as a subview.
 - (void)setupPageCell:(id<ARDKPageCell>)pageCell forPage:(NSInteger)page;
 
-/// Called when there has a been an alteration that may
-/// require some parts of pages to be rerendered. The caller
-/// may decide whether to rerender based on the change in page
-/// positions since the last render, unless forceRender is true,
-/// in which case all parts of all pages are rerendered.
-- (void)viewHasAltered:(BOOL)forceRender;
+
+/// Called to allow the delegate to synchronise with page
+/// movements.
+- (void)viewHasMoved;
 
 /// Override to detect taps on pages.
 - (void)didTapCell:(UIView *)cell at:(CGPoint)point;
@@ -64,6 +69,9 @@
 /// When reflowing the layout will stay in a single column and
 /// changes of zoom scale will be reported back to the superclass
 @property BOOL reflowMode;
+
+/// Control dark mode
+@property BOOL darkMode;
 
 /// Enable drawing mode
 ///
@@ -119,5 +127,11 @@
 
 /// Map a point within the scrolling view to the nearest cell
 - (void)forCellNearestPoint:(CGPoint)pt do:(void (^)(NSInteger, UIView *))block;
+
+/// Request page rendering, with the option for forced rerender
+- (void)requestRenderWithForce:(BOOL)force;
+
+/// Request notification after first render
+- (void)afterFirstRender:(void (^)(void))block;
 
 @end

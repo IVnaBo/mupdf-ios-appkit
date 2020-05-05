@@ -21,9 +21,8 @@
 
 #define BACKGROUND_LUM (0xbc)
 
-@interface ARDKBasicDocumentViewController () <ARDKViewRendererDelegate, ARDKDocumentEventTarget,ARDKPageControllerDelegate>
+@interface ARDKBasicDocumentViewController () <ARDKDocumentEventTarget,ARDKPageControllerDelegate>
 @property UIViewController<ARDKPageController> *pageController;
-@property ARDKViewRenderer *renderer;
 @property BOOL hasBeenLaidOut;
 @property BOOL loadingComplete;
 @property BOOL firstRenderComplete;
@@ -194,7 +193,7 @@
     {
         if ( @available(iOS 13.0, *) )
         {
-            self.renderer.darkMode = (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark);
+            self.pageController.darkMode = (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark);
         }
     }
 #endif /* __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 */
@@ -212,10 +211,10 @@
             [self showPage:vs.page withOffset:vs.offset animated:NO];
         self.viewingStatePageHasLoaded = YES;
     }
-    self.renderer = [[ARDKViewRenderer alloc] initWithDelegate:self lib:self.doc];
     [self updateDarkMode];
+
     __weak typeof(self) weakSelf = self;
-    [self.renderer afterFirstRender:^{
+    [self.pageController afterFirstRender:^{
         weakSelf.firstRenderComplete = YES;
         if (weakSelf.loadingComplete)
             [weakSelf.delegate loadingAndFirstRenderComplete];
@@ -229,8 +228,6 @@
     [super viewWillDisappear:animated];
     [self syncViewingState];
     self.session.fileState.viewingStateInfo = self.viewingStateStack;
-
-    self.renderer = nil;
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
@@ -348,14 +345,8 @@
     [self showPage:pageNum withOffset:pt animated:YES];
 }
 
-/// Override: react to movement and page count updates
-- (void)viewHasAltered:(BOOL)forceRender
+- (void)viewHasMoved
 {
-    if (forceRender)
-        [self.renderer forceRender];
-
-    [self.renderer triggerRender];
-
     CGPoint pt = CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0);
     [self forCellNearestPoint:pt do:^(NSInteger index, UIView *cell) {
         if (index != self.currentPage)
@@ -381,6 +372,13 @@
         if (viewingStatePageIsVisible)
             self.viewingStateStack.viewingState.scale = self.zoomScale;
     }
+}
+
+/// Override: react to movement and page count updates
+- (void)viewHasAltered:(BOOL)forceRender
+{
+    [self.pageController requestRenderWithForce:forceRender];
+    [self viewHasMoved];
 }
 
 - (void)didDoubleTapCell:(UIView *)cell at:(CGPoint)point
