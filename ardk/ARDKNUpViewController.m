@@ -35,6 +35,7 @@
 @property CGFloat keyboardHeightAboveBottom;
 @property CGRect showAreaBox;
 @property ARDKViewRenderer *renderer;
+@property(weak,readonly) id<ARDKPageControllerDelegate> pageControllerDelegate;
 @end
 
 @implementation ARDKNUpViewController
@@ -48,11 +49,14 @@
     BOOL _drawingMode;
 }
 
-@synthesize delagate, reflowMode;
+@synthesize reflowMode;
 
-- (instancetype)init
+- (instancetype)initWithDelegate:(id<ARDKPageControllerDelegate>)delegate
 {
-    return [super initWithNibName:nil bundle:[NSBundle bundleForClass:self.class]];
+    self = [super initWithNibName:nil bundle:[NSBundle bundleForClass:self.class]];
+    if (self)
+        _pageControllerDelegate = delegate;
+    return self;
 }
 
 - (BOOL)longPressEnabled
@@ -78,12 +82,12 @@
 
 - (ARDKBitmap *)bitmap
 {
-    return self.delagate.session.bitmap;
+    return self.pageControllerDelegate.session.bitmap;
 }
 
 - (void)setBitmap:(ARDKBitmap *)bitmap
 {
-    self.delagate.session.bitmap = bitmap;
+    self.pageControllerDelegate.session.bitmap = bitmap;
 }
 
 - (BOOL)darkMode
@@ -99,7 +103,7 @@
 - (void)updateItemSize
 {
     ARDKNUpLayout *layout = (ARDKNUpLayout *)self.collectionView.collectionViewLayout;
-    layout.cellSize = [self.delagate adjustSize:CGSizeMake(_width, _width) toPage:0];
+    layout.cellSize = [self.pageControllerDelegate adjustSize:CGSizeMake(_width, _width) toPage:0];
     // Update the positions of existing cells straight away rather than waiting
     // for the invalidation of the layout to do it
     [self iteratePages:^(NSInteger i, UIView<ARDKPageCellDelegate> *pageView, CGRect screenRect) {
@@ -113,7 +117,7 @@
     ARDKNUpLayout *layout = (ARDKNUpLayout *)self.collectionView.collectionViewLayout;
 
     if (self.pageCount > 0 && self.collectionViewPageCount == 0 && _width > 0)
-        layout.cellSize = [self.delagate adjustSize:CGSizeMake(_width, _width) toPage:0];
+        layout.cellSize = [self.pageControllerDelegate adjustSize:CGSizeMake(_width, _width) toPage:0];
 
     NSMutableArray *array = [NSMutableArray array];
 
@@ -194,7 +198,7 @@
 - (void)viewHasAltered:(BOOL)forceRender
 {
     [self requestRenderWithForce:forceRender];
-    [self.delagate viewHasMoved];
+    [self.pageControllerDelegate viewHasMoved];
 }
 
 - (void)loadView
@@ -233,7 +237,7 @@
     [self.collectionView addGestureRecognizer:_longPressGesture];
     [self.collectionView addGestureRecognizer:_dtapGesture];
     self.showAreaBox = CGRectNull;
-    self.renderer = [[ARDKViewRenderer alloc] initWithDelegate:self lib:self.delagate.session.doc];
+    self.renderer = [[ARDKViewRenderer alloc] initWithDelegate:self lib:self.pageControllerDelegate.session.doc];
 }
 
 - (BOOL)drawingMode
@@ -320,7 +324,7 @@
     if (gesture.state == UIGestureRecognizerStateEnded)
     {
         [self forCellAtPoint:[gesture locationInView:self.view] do:^(NSInteger index, UIView *cell, CGPoint pt) {
-            [self.delagate didTapCell:cell at:pt];
+            [self.pageControllerDelegate didTapCell:cell at:pt];
         }];
     }
 }
@@ -330,7 +334,7 @@
     if (gesture.state == UIGestureRecognizerStateEnded)
     {
         [self forCellAtPoint:[gesture locationInView:self.view] do:^(NSInteger index, UIView *cell, CGPoint pt) {
-            [self.delagate didDoubleTapCell:cell at:pt];
+            [self.pageControllerDelegate didDoubleTapCell:cell at:pt];
         }];
     }
 }
@@ -341,13 +345,13 @@
     {
         case UIGestureRecognizerStateBegan:
             self.longPressZoomActive = YES;
-            [self.delagate didStartLongPress];
-            // Fallthrough
+            [self.pageControllerDelegate didStartLongPress];
+            break;
 
         case UIGestureRecognizerStateChanged:
         {
             [self forCellAtPoint:[gesture locationInView:self.view] do:^(NSInteger index, UIView *cell, CGPoint pt) {
-                [self.delagate didLongPressMoveInCell:cell at:pt];
+                [self.pageControllerDelegate didLongPressMoveInCell:cell at:pt];
             }];
             break;
         }
@@ -356,8 +360,8 @@
         case UIGestureRecognizerStateCancelled:
             // When the user releases long press, we zoom back to the previous state
             self.longPressZoomActive = NO;
-            [self.delagate viewHasMoved];
-            [self.delagate didEndLongPress];
+            [self.pageControllerDelegate viewHasMoved];
+            [self.pageControllerDelegate didEndLongPress];
             break;
         default:
             break;
@@ -550,7 +554,7 @@
         self.scrollView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
         ARDKNUpLayout *layout = (ARDKNUpLayout *)self.collectionView.collectionViewLayout;
         layout.viewWidth = _width;
-        layout.cellSize =  self.pageCount > 0 ? [self.delagate adjustSize:CGSizeMake(_width, _width) toPage:0]
+        layout.cellSize =  self.pageCount > 0 ? [self.pageControllerDelegate adjustSize:CGSizeMake(_width, _width) toPage:0]
                                               : CGSizeMake(_width, (int)(_width * 1.5));
         [self updateCollectionViewSize:layout];
         self.scrollView.minimumZoomScale = ((ARDKNUpLayout *)self.collectionView.collectionViewLayout).minZoom;
@@ -562,7 +566,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollView.dragging)
-        [self.delagate didDragDocument];
+        [self.pageControllerDelegate didDragDocument];
 
     if (!self.respondingToScrollViewDidScroll)
     {
@@ -607,7 +611,7 @@
     UIEdgeInsets insets = self.scrollView.contentInset;
     insets.left = insets.right = margin;
     self.scrollView.contentInset = insets;
-    [self.delagate viewHasMoved];
+    [self.pageControllerDelegate viewHasMoved];
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
@@ -615,7 +619,7 @@
     if (self.reflowMode)
     {
         if (!self.longPressZoomActive)
-            [self.delagate onReflowZoom];
+            [self.pageControllerDelegate onReflowZoom];
     }
     else
     {
@@ -641,7 +645,7 @@
 - (UIView *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ARDKCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"Page" forIndexPath:indexPath];
-    [self.delagate setupPageCell:cell forPage:indexPath.item];
+    [self.pageControllerDelegate setupPageCell:cell forPage:indexPath.item];
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [self viewHasAltered:YES];
@@ -675,7 +679,7 @@
         self.scrollView.scrollIndicatorInsets = insets;
     }
     if (!self.longPressZoomActive && heightAboveBottom > self.keyboardHeightAboveBottom)
-        [self.delagate adjustToReducedScreenArea];
+        [self.pageControllerDelegate adjustToReducedScreenArea];
     self.keyboardHeightAboveBottom = heightAboveBottom;
     _keyboardHiddenWhileScrollDisabled = NO;
 }
@@ -700,7 +704,7 @@
 - (void)keyboardWasHidden:(NSNotification *)notification
 {
     _keyboardShown = NO;
-    [self.delagate adjustToReducedScreenArea];
+    [self.pageControllerDelegate adjustToReducedScreenArea];
     if (!_disableScrollOnKeyboardHidden)
         [self reactToKeyboardHidden];
     else

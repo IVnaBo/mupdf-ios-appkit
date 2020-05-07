@@ -12,6 +12,6 @@
 #import "ARDKPageController.h"
 
 @interface ARDKNUpViewController : UIViewController<ARDKPageController>
-- (instancetype)init;
+- (instancetype)initWithDelegate:(id<ARDKPageControllerDelegate>)delegate;
 @end
 

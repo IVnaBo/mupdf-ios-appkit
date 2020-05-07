@@ -54,9 +54,6 @@
 
 @protocol ARDKPageController <NSObject>
 
-/// The page controller's delegate
-@property(weak) id<ARDKPageControllerDelegate> delagate;
-
 /// Current document page count. The owner of the page controller
 /// is responsible for keeping this up to date. Can be updated
 /// iteratively as new

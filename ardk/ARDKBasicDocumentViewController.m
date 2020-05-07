@@ -121,8 +121,7 @@
         self.viewingStatePageHasLoaded = NO;
         
         self.view.backgroundColor = [UIColor colorWithWhite:BACKGROUND_LUM/255.0 alpha:1.0];
-        self.pageController = [[ARDKNUpViewController alloc] init];
-        self.pageController.delagate = self;
+        self.pageController = [[ARDKNUpViewController alloc] initWithDelegate:self];
         [self addChildViewController:self.pageController];
         [self.view addSubview:self.pageController.view];
         [self.view sendSubviewToBack:self.pageController.view];
