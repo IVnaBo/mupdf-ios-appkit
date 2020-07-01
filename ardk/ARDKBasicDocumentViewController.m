@@ -14,6 +14,7 @@
 #import "ARDKPageController.h"
 #import "ARDKNUpViewController.h"
 #import "ARDKBasicDocViewAPI.h"
+#import "ARDKBookModeViewController.h"
 #import "ARDKBasicDocumentViewController.h"
 #import "ARDKBasicDocumentViewProtected.h"
 

@@ -31,5 +31,9 @@
 #define ARCGPointOffset(pt, xoff, yoff) \
     CGPointMake((pt).x + (xoff), (pt).y + (yoff))
 
+#define ARCGRectDistanceToPoint(rect, pt) \
+    fmax(fmax((rect).origin.x - (pt).x, fmax((pt).x - ((rect).origin.x + (rect).size.width), 0.0)), \
+         fmax((rect).origin.y - (pt).y, fmax((pt).y - ((rect).origin.y + (rect).size.height), 0.0)))
+
 
 #endif /* defined(__ARDKGeometry__) */

@@ -26,6 +26,10 @@
 
 // setSelected is called to control highlighting of the selected page
 - (void)setSelected:(BOOL)selected;
+
+// Called to ensure a page completely redraws on next render
+- (void)onContentChange;
+
 @end
 
 @protocol ARDKPageCell <NSObject>
