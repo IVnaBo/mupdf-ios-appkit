@@ -12,13 +12,127 @@
 #define NO_DUMMY_PAGE (-1)
 #define LONG_PRESS_MIN_DURATION (0.3)
 
+typedef enum {
+    LayoutType_TwoUp,
+    LayoutType_LeftPage,
+    LayoutType_RightPage
+} LayoutType;
+
+static void controlConstraints(NSArray<NSLayoutConstraint *> *constraints, BOOL enabled)
+{
+    for (NSLayoutConstraint *c in constraints)
+        c.active = enabled;
+}
+
+static NSArray<NSLayoutConstraint *> *makeTwoUpConstraints(UIView *outer, UIView *inner)
+{
+    // Create layout constraints that use as large a central area of the
+    // view, given a defined aspect ratio
+    NSLayoutConstraint *centeredX = [NSLayoutConstraint constraintWithItem:outer
+                                                                 attribute:NSLayoutAttributeCenterX
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:inner
+                                                                 attribute:NSLayoutAttributeCenterX
+                                                                multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *centeredY = [NSLayoutConstraint constraintWithItem:outer
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:inner
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *widthEqual = [NSLayoutConstraint constraintWithItem:outer
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:inner
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *heightEqual = [NSLayoutConstraint constraintWithItem:outer
+                                                                   attribute:NSLayoutAttributeHeight
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:inner
+                                                                   attribute:NSLayoutAttributeHeight
+                                                                  multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *widthLess = [NSLayoutConstraint constraintWithItem:outer
+                                                                 attribute:NSLayoutAttributeWidth
+                                                                 relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                    toItem:inner
+                                                                 attribute:NSLayoutAttributeWidth
+                                                                multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *heightLess = [NSLayoutConstraint constraintWithItem:outer
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                     toItem:inner
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1.0 constant:0.0];
+    // Priority for the equal height and width constraints need to be of lower priority so
+    // they can be broken. For some crazy reason, it doesn't work unless the width one is
+    // slightly lower than the hight one. No idea why.
+    widthEqual.priority = 240;
+    heightEqual.priority = 250;
+    return @[centeredX, centeredY, widthEqual, heightEqual, widthLess, heightLess];
+}
+
+static NSArray<NSLayoutConstraint *> *makeLeftPageConstraints(UIView *outer, UIView *inner)
+{
+    NSLayoutConstraint *topEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:inner
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0
+                                                                constant:0.0];
+    NSLayoutConstraint *leftEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                                attribute:NSLayoutAttributeLeft
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:inner
+                                                                attribute:NSLayoutAttributeLeft
+                                                               multiplier:1.0
+                                                                 constant:0.0];
+    NSLayoutConstraint *widthHalf = [NSLayoutConstraint constraintWithItem:outer
+                                                                 attribute:NSLayoutAttributeWidth
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:inner
+                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:1.0];
+    return @[topEdge, leftEdge, widthHalf];
+}
+
+static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UIView *inner)
+{
+    NSLayoutConstraint *topEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:inner
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0
+                                                                constant:0.0];
+    NSLayoutConstraint *leftEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                                attribute:NSLayoutAttributeRight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:inner
+                                                                attribute:NSLayoutAttributeRight
+                                                               multiplier:1.0
+                                                                 constant:0.0];
+    NSLayoutConstraint *widthHalf = [NSLayoutConstraint constraintWithItem:outer
+                                                                 attribute:NSLayoutAttributeWidth
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:inner
+                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:1.0];
+    return @[topEdge, leftEdge, widthHalf];
+}
+
 @interface ARDKBookModeViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @property(readonly) UITapGestureRecognizer *tapGesture;
 @property(readonly) UITapGestureRecognizer *dtapGesture;
+@property(readonly) UIPinchGestureRecognizer *pinchGesture;
 @property(readonly) UILongPressGestureRecognizer *longPressGesture;
 @property(weak) id<ARDKPageControllerDelegate> pageControllerDelegate;
 @property UIPageViewController *pageViewController;
 @property NSLayoutConstraint *aspect;
+@property NSArray<NSLayoutConstraint *> *twoUpConstraints;
+@property NSArray<NSLayoutConstraint *> *leftPageConstraints;
+@property NSArray<NSLayoutConstraint *> *rightPageConstraints;
+@property NSArray<NSLayoutConstraint *> *currentConstraints;
+@property LayoutType layoutType;
 @property NSMutableArray<ARDKBitmap *> *bitmaps;
 @property NSMutableDictionary<NSNumber *, ARDKBookModePageViewController *> *pageVCs;
 @property CGSize pageSize;
@@ -201,50 +315,18 @@
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
     [_pageViewController didMoveToParentViewController:self];
-    // Create layout constraints that use as large a central area of the
-    // view, given a defined aspect ratio
-    NSLayoutConstraint *centeredX = [NSLayoutConstraint constraintWithItem:self.view
-                                                                 attribute:NSLayoutAttributeCenterX
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:_pageViewController.view
-                                                                 attribute:NSLayoutAttributeCenterX
-                                                                multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *centeredY = [NSLayoutConstraint constraintWithItem:self.view
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:_pageViewController.view
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *widthEqual = [NSLayoutConstraint constraintWithItem:self.view
-                                                                  attribute:NSLayoutAttributeWidth
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:_pageViewController.view
-                                                                  attribute:NSLayoutAttributeWidth
-                                                                 multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *heightEqual = [NSLayoutConstraint constraintWithItem:self.view
-                                                                   attribute:NSLayoutAttributeHeight
-                                                                   relatedBy:NSLayoutRelationEqual
-                                                                      toItem:_pageViewController.view
-                                                                   attribute:NSLayoutAttributeHeight
-                                                                  multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *widthLess = [NSLayoutConstraint constraintWithItem:self.view
-                                                                attribute:NSLayoutAttributeWidth
-                                                                 relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                    toItem:_pageViewController.view
-                                                                 attribute:NSLayoutAttributeWidth
-                                                                multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *heightLess = [NSLayoutConstraint constraintWithItem:self.view
-                                                                  attribute:NSLayoutAttributeWidth
-                                                                  relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                     toItem:_pageViewController.view
-                                                                  attribute:NSLayoutAttributeWidth
-                                                                 multiplier:1.0 constant:0.0];
-    // Priority for the equal height and width constraints need to be of lower priority so
-    // they can be broken. For some crazy reason, it doesn't work unless the width one is
-    // slightly lower than the hight one. No idea why.
-    widthEqual.priority = 240;
-    heightEqual.priority = 250;
-    [self.view addConstraints:@[centeredX, centeredY, widthEqual, heightEqual, widthLess, heightLess]];
+    // Add three sets of constraints to the view for the sake of different layouts,
+    // but activate only one at a time.
+    self.twoUpConstraints = makeTwoUpConstraints(self.view, _pageViewController.view);
+    self.leftPageConstraints = makeLeftPageConstraints(self.view, _pageViewController.view);
+    self.rightPageConstraints = makeRightPageConstraints(self.view, _pageViewController.view);
+    [self.view addConstraints:self.twoUpConstraints];
+    [self.view addConstraints:self.leftPageConstraints];
+    [self.view addConstraints:self.rightPageConstraints];
+    controlConstraints(self.leftPageConstraints, false);
+    controlConstraints(self.rightPageConstraints, false);
+    self.currentConstraints = self.twoUpConstraints;
+    self.layoutType = LayoutType_TwoUp;
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [_tapGesture setNumberOfTapsRequired:1];
     _dtapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
@@ -253,9 +335,11 @@
     _longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     _longPressGesture.minimumPressDuration = LONG_PRESS_MIN_DURATION;
     [_tapGesture requireGestureRecognizerToFail:_longPressGesture];
+    _pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
     [self.view addGestureRecognizer:_tapGesture];
     [self.view addGestureRecognizer:_longPressGesture];
     [self.view addGestureRecognizer:_dtapGesture];
+    [self.view addGestureRecognizer:_pinchGesture];
 }
 
 - (void)handleTap:(UIGestureRecognizer *)gesture
@@ -303,6 +387,44 @@
             break;
     }
 
+}
+
+- (void)handlePinch:(UIPinchGestureRecognizer *)gesture
+{
+    if (self.layoutType == LayoutType_TwoUp && gesture.scale > 1)
+    {
+        CGPoint pt = [gesture locationInView:self.view];
+        if (pt.x < self.view.bounds.size.width / 2)
+        {
+            controlConstraints(self.currentConstraints, NO);
+            controlConstraints(self.leftPageConstraints, YES);
+            self.currentConstraints = self.leftPageConstraints;
+            self.layoutType = LayoutType_LeftPage;
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+        }
+        else
+        {
+            controlConstraints(self.currentConstraints, NO);
+            controlConstraints(self.rightPageConstraints, YES);
+            self.currentConstraints = self.rightPageConstraints;
+            self.layoutType = LayoutType_RightPage;
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+        }
+    }
+    else if(self.layoutType != LayoutType_TwoUp && gesture.scale < 1)
+    {
+        controlConstraints(self.currentConstraints, NO);
+        controlConstraints(self.twoUpConstraints, YES);
+        self.currentConstraints = self.twoUpConstraints;
+        self.layoutType = LayoutType_TwoUp;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
 }
 
 - (void)viewDidLayoutSubviews
