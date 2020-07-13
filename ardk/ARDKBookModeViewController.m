@@ -237,7 +237,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         {
             ARDKBitmap *bitmap = self.bitmaps.lastObject;
             [self.bitmaps removeLastObject];
-            ARDKBookModePageViewController *pvc = [[ARDKBookModePageViewController alloc] initForPage:p withBitmap:bitmap];
+            ARDKBookModePageViewController *pvc = [[ARDKBookModePageViewController alloc] initForPage:p withBitmap:bitmap andDelegate:self];
             self.pageVCs[@(p)] = pvc;
             if (!CGSizeEqualToSize(self.pageSize, CGSizeZero))
             {
@@ -275,7 +275,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
             // We have to supply pages in pairs, so create an uninitialised one
             ARDKBitmap *bitmap = self.bitmaps.lastObject;
             [self.bitmaps removeLastObject];
-            self.pageVCs[@(_currentPage+1)] = [[ARDKBookModePageViewController alloc] initForPage:_currentPage+1 withBitmap:bitmap];
+            self.pageVCs[@(_currentPage+1)] = [[ARDKBookModePageViewController alloc] initForPage:_currentPage+1 withBitmap:bitmap andDelegate:self];
             _dummyPage = _currentPage+1;
         }
 
@@ -427,11 +427,8 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     }
 }
 
-- (void)viewDidLayoutSubviews
+- (void)onPageSizeUpdate:(CGSize)pageSize
 {
-    [super viewDidLayoutSubviews];
-    CGSize bookSize = _pageViewController.view.frame.size;
-    CGSize pageSize = CGSizeMake(bookSize.width/2, bookSize.height);
     cellSize = pageSize;
     if (!CGSizeEqualToSize(pageSize, self.pageSize))
     {
@@ -579,7 +576,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         // and odd count, produce a dummy
         ARDKBitmap *bitmap = self.bitmaps.lastObject;
         [self.bitmaps removeLastObject];
-        pvc = [[ARDKBookModePageViewController alloc] initForPage:pageNumber+1 withBitmap:bitmap];
+        pvc = [[ARDKBookModePageViewController alloc] initForPage:pageNumber+1 withBitmap:bitmap andDelegate:self];
         self.pageVCs[@(pageNumber+1)] = pvc;
         _dummyPage = pageNumber+1;
     }

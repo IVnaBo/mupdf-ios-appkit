@@ -6,11 +6,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ARDKBookModePageViewControllerDelegate <NSObject>
+- (void) onPageSizeUpdate:(CGSize) size;
+@end
+
 @interface ARDKBookModePageViewController : UIViewController
 @property(readonly) NSInteger pageNumber;
 @property(readonly) ARDKBitmap *bitmap;
 - (instancetype)initForPage:(NSInteger)pageNumber
-                 withBitmap:(ARDKBitmap * _Nullable)bitmap;
+                 withBitmap:(ARDKBitmap * _Nullable)bitmap
+                andDelegate:delegate;
 @end
 
 NS_ASSUME_NONNULL_END
