@@ -18,6 +18,22 @@ typedef enum {
     LayoutType_RightPage
 } LayoutType;
 
+static void addSubviewFit(UIView *outer, UIView *inner)
+{
+    [outer addSubview:inner];
+    inner.translatesAutoresizingMaskIntoConstraints = NO;
+    NSArray<NSLayoutConstraint *> *hFit = [NSLayoutConstraint constraintsWithVisualFormat:@"|[inner]|"
+                                                                                  options:0
+                                                                                  metrics:nil
+                                                                                    views:@{@"inner" : inner}];
+    NSArray<NSLayoutConstraint *> *vFit = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[inner]|"
+                                                                                  options:0
+                                                                                  metrics:nil
+                                                                                    views:@{@"inner" : inner}];
+    [outer addConstraints:hFit];
+    [outer addConstraints:vFit];
+}
+
 static void controlConstraints(NSArray<NSLayoutConstraint *> *constraints, BOOL enabled)
 {
     for (NSLayoutConstraint *c in constraints)
@@ -88,12 +104,19 @@ static NSArray<NSLayoutConstraint *> *makeLeftPageConstraints(UIView *outer, UIV
                                                                 attribute:NSLayoutAttributeLeft
                                                                multiplier:1.0
                                                                  constant:0.0];
+    NSLayoutConstraint *bottomEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:inner
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                 multiplier:1.0
+                                                                   constant:0.0];
     NSLayoutConstraint *widthHalf = [NSLayoutConstraint constraintWithItem:outer
                                                                  attribute:NSLayoutAttributeWidth
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:inner
-                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:1.0];
-    return @[topEdge, leftEdge, widthHalf];
+                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:0.0];
+    return @[topEdge, leftEdge, bottomEdge, widthHalf];
 }
 
 static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UIView *inner)
@@ -112,22 +135,33 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
                                                                 attribute:NSLayoutAttributeRight
                                                                multiplier:1.0
                                                                  constant:0.0];
+    NSLayoutConstraint *bottomEdge = [NSLayoutConstraint constraintWithItem:outer
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:inner
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                 multiplier:1.0
+                                                                   constant:0.0];
     NSLayoutConstraint *widthHalf = [NSLayoutConstraint constraintWithItem:outer
                                                                  attribute:NSLayoutAttributeWidth
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:inner
-                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:1.0];
-    return @[topEdge, leftEdge, widthHalf];
+                                                                 attribute:NSLayoutAttributeWidth multiplier:0.5 constant:0.0];
+    return @[topEdge, leftEdge, bottomEdge, widthHalf];
 }
 
-@interface ARDKBookModeViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface ARDKBookModeViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, ARDKBookModePageViewControllerDelegate>
 @property(readonly) UITapGestureRecognizer *tapGesture;
 @property(readonly) UITapGestureRecognizer *dtapGesture;
 @property(readonly) UIPinchGestureRecognizer *pinchGesture;
 @property(readonly) UILongPressGestureRecognizer *longPressGesture;
 @property(weak) id<ARDKPageControllerDelegate> pageControllerDelegate;
+@property UIScrollView *scrollView;
+@property UIView *contentView;
 @property UIPageViewController *pageViewController;
 @property NSLayoutConstraint *aspect;
+@property NSLayoutConstraint *contentWidthConstraint;
+@property NSLayoutConstraint *contentHeightConstraint;
 @property NSArray<NSLayoutConstraint *> *twoUpConstraints;
 @property NSArray<NSLayoutConstraint *> *leftPageConstraints;
 @property NSArray<NSLayoutConstraint *> *rightPageConstraints;
@@ -239,23 +273,20 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
             [self.bitmaps removeLastObject];
             ARDKBookModePageViewController *pvc = [[ARDKBookModePageViewController alloc] initForPage:p withBitmap:bitmap andDelegate:self];
             self.pageVCs[@(p)] = pvc;
-            if (!CGSizeEqualToSize(self.pageSize, CGSizeZero))
-            {
-                ARDKBookModePageView *pv = (ARDKBookModePageView *)pvc.view;
-                [pv setPageSize:self.pageSize];
-                [_pageControllerDelegate setupPageCell:pv forPage:pv.pageNumber];
-                __weak typeof(self) weakSelf = self;
-                [pv render:^{
-                    if (!self.firstRenderHasCompleted)
-                    {
-                        weakSelf.firstRenderHasCompleted = YES;
-                        if (self.afterFirstRenderBlock)
-                            self.afterFirstRenderBlock();
-                    }
-                }];
-                if (_dummyPage == p)
-                    _dummyPage = NO_DUMMY_PAGE;
-            }
+            ARDKBookModePageView *pv = (ARDKBookModePageView *)pvc.view;
+            [pv setPageSize:self.pageSize];
+            [_pageControllerDelegate setupPageCell:pv forPage:pv.pageNumber];
+            __weak typeof(self) weakSelf = self;
+            [pv render:^{
+                if (!self.firstRenderHasCompleted)
+                {
+                    weakSelf.firstRenderHasCompleted = YES;
+                    if (self.afterFirstRenderBlock)
+                        self.afterFirstRenderBlock();
+                }
+            }];
+            if (_dummyPage == p)
+                _dummyPage = NO_DUMMY_PAGE;
         }
     }
 
@@ -313,18 +344,39 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     [super viewDidLoad];
     _pageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:_pageViewController];
-    [self.view addSubview:_pageViewController.view];
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    addSubviewFit(self.view, _scrollView);
+    _contentView = [[UIView alloc] initWithFrame:self.view.bounds];
+    addSubviewFit(_scrollView, _contentView);
+    [_contentView addSubview:_pageViewController.view];
     [_pageViewController didMoveToParentViewController:self];
+
+    _contentWidthConstraint = [NSLayoutConstraint constraintWithItem:self.view
+                                                           attribute:NSLayoutAttributeWidth
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:_contentView
+                                                           attribute:NSLayoutAttributeWidth
+                                                          multiplier:1.0
+                                                            constant:0.0];
+    _contentHeightConstraint = [NSLayoutConstraint constraintWithItem:self.view
+                                                            attribute:NSLayoutAttributeHeight
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:_contentView
+                                                            attribute:NSLayoutAttributeHeight
+                                                           multiplier:1.0
+                                                             constant:0.0];
+    [self.view addConstraints:@[_contentWidthConstraint, _contentHeightConstraint]];
+
     // Add three sets of constraints to the view for the sake of different layouts,
     // but activate only one at a time.
-    self.twoUpConstraints = makeTwoUpConstraints(self.view, _pageViewController.view);
-    self.leftPageConstraints = makeLeftPageConstraints(self.view, _pageViewController.view);
-    self.rightPageConstraints = makeRightPageConstraints(self.view, _pageViewController.view);
-    [self.view addConstraints:self.twoUpConstraints];
-    [self.view addConstraints:self.leftPageConstraints];
-    [self.view addConstraints:self.rightPageConstraints];
+    self.twoUpConstraints = makeTwoUpConstraints(_contentView, _pageViewController.view);
+    self.leftPageConstraints = makeLeftPageConstraints(_contentView, _pageViewController.view);
+    self.rightPageConstraints = makeRightPageConstraints(_contentView, _pageViewController.view);
+    [_contentView addConstraints:self.leftPageConstraints];
     controlConstraints(self.leftPageConstraints, false);
+    [_contentView addConstraints:self.rightPageConstraints];
     controlConstraints(self.rightPageConstraints, false);
+    [_contentView addConstraints:self.twoUpConstraints];
     self.currentConstraints = self.twoUpConstraints;
     self.layoutType = LayoutType_TwoUp;
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
@@ -396,6 +448,10 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         CGPoint pt = [gesture locationInView:self.view];
         if (pt.x < self.view.bounds.size.width / 2)
         {
+            // Remove the contraint that matches the content-view height to
+            // the scroll view, so that the book view controls the content height,
+            // hence permitting the appropriate amount of scolling.
+            self.contentHeightConstraint.active = NO;
             controlConstraints(self.currentConstraints, NO);
             controlConstraints(self.leftPageConstraints, YES);
             self.currentConstraints = self.leftPageConstraints;
@@ -406,6 +462,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         }
         else
         {
+            self.contentHeightConstraint.active = NO;
             controlConstraints(self.currentConstraints, NO);
             controlConstraints(self.rightPageConstraints, YES);
             self.currentConstraints = self.rightPageConstraints;
@@ -419,6 +476,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     {
         controlConstraints(self.currentConstraints, NO);
         controlConstraints(self.twoUpConstraints, YES);
+        self.contentHeightConstraint.active = YES;
         self.currentConstraints = self.twoUpConstraints;
         self.layoutType = LayoutType_TwoUp;
         [UIView animateWithDuration:0.3 animations:^{
@@ -565,7 +623,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 
 - (nullable UIViewController *)pageViewController:(nonnull UIPageViewController *)pageViewController viewControllerAfterViewController:(nonnull UIViewController *)viewController
 {
-    if (drawingMode)
+    if (drawingMode || self.layoutType != LayoutType_TwoUp)
         return nil;
 
     NSInteger pageNumber = ((ARDKBookModePageViewController *)viewController).pageNumber;
@@ -586,7 +644,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 
 - (nullable UIViewController *)pageViewController:(nonnull UIPageViewController *)pageViewController viewControllerBeforeViewController:(nonnull UIViewController *)viewController
 {
-    if (drawingMode)
+    if (drawingMode || self.layoutType != LayoutType_TwoUp)
         return nil;
 
     NSInteger pageNumber = ((ARDKBookModePageViewController *)viewController).pageNumber;
