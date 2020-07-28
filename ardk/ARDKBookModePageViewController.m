@@ -32,7 +32,7 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    [self.delegate onPageSizeUpdate:self.view.bounds.size];
+    [self.delegate onPageSizeUpdate];
 }
 
 

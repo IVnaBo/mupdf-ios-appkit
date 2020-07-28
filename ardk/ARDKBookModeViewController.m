@@ -485,8 +485,10 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     }
 }
 
-- (void)onPageSizeUpdate:(CGSize)pageSize
+- (void)onPageSizeUpdate
 {
+    CGSize pageSize = _pageViewController.view.bounds.size;
+    pageSize.width /= 2.0;
     cellSize = pageSize;
     if (!CGSizeEqualToSize(pageSize, self.pageSize))
     {

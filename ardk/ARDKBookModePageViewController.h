@@ -7,7 +7,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ARDKBookModePageViewControllerDelegate <NSObject>
-- (void) onPageSizeUpdate:(CGSize) size;
+- (void) onPageSizeUpdate;
 @end
 
 @interface ARDKBookModePageViewController : UIViewController
