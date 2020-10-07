@@ -1,0 +1,101 @@
+# iOS Fonts
+ArialMT:Arial:Helvetica:sans-serif:lang-ar_ar,,,,,,Arial.ttf
+Arial-BoldMT:Arial:Helvetica:sans-serif:lang-ar_ar,,,Bold,,,ArialBold.ttf
+Arial-BoldItalicMT:Arial:Helvetica:sans-serif:lang-ar_ar,Italic,,Bold,,,ArialBoldItalic.ttf
+Arial-ItalicMT:Arial:Helvetica:sans-serif:lang-ar_ar,Italic,,,,,ArialItalic.ttf
+
+ArialHB:lang-he_il,,,,,,ArialHB.ttf
+ArialHBBold:lang-he_il,,,Bold,,,ArialHBBold.ttf
+
+CourierNewPSMT:Courier New:Courier:NewCourier:monospace:lang-ar_ar,,,,,,CourierNew.ttf
+CourierNewPS-BoldMT:Courier New:Courier:NewCourier:monospace:lang-ar_ar,,,Bold,,,CourierNewBold.ttf
+CourierNewPS-BoldItalicMT:Courier New:Courier:NewCourier:monospace:lang-ar_ar,Italic,,Bold,,,CourierNewBoldItalic.ttf
+CourierNewPS-ItalicMT:Courier New:Courier:NewCourier:monospace:lang-ar_ar,Italic,,,,,CourierNewItalic.ttf
+
+GeezaPro:lang-ar_ar,,,,,,GeezaPro.ttf
+GeezaProBold:lang-ar_ar,,,Bold,,,GeezaProBold.ttf
+
+Georgia,,,,,,Georgia.ttf
+Georgia-Bold:Georgia,,,Bold,,,GeorgiaBold.ttf
+Georgia-BoldItalic:Georgia,Italic,,Bold,,,GeorgiaBoldItalic.ttf
+Georgia-Italic:Georgia,Italic,,,,,GeorgiaItalic.ttf
+
+TimesNewRomanPSMT:Times New Roman:Times:serif:lang-ar_ar,,,,,,TimesNewRoman.ttf
+TimesNewRomanPS-BoldMT:Times New Roman:Times:serif:lang-ar_ar,,,Bold,,,TimesNewRomanBold.ttf
+TimesNewRomanPS-BoldItalicMT:Times New Roman:Times:serif:lang-ar_ar,Italic,,Bold,,,TimesNewRomanBoldItalic.ttf
+TimesNewRomanPS-ItalicMT:Times New Roman:Times:serif:lang-ar_ar,Italic,,,,,TimesNewRomanItalic.ttf
+
+TrebuchetMS:Trebuchet:Trebuchet MS,,,,,,TrebuchetMS.ttf
+TrebuchetMS-Bold:Trebuchet:Trebuchet MS,,,Bold,,,TrebuchetMSBold.ttf
+Trebuchet-BoldItalic:Trebuchet:Trebuchet MS,Italic,,Bold,,,TrebuchetMSBoldItalic.ttf
+TrebuchetMS-Italic:Trebuchet:Trebuchet MS,Italic,,,,,TrebuchetMSItalic.ttf
+
+Verdana,,,,,,Verdana.ttf
+Verdana-Bold:Verdana,,,Bold,,,VerdanaBold.ttf
+Verdana-BoldItalic:Verdana,Italic,,Bold,,,VerdanaBoldItalic.ttf
+Verdana-Italic:Verdana,Italic,,,,,VerdanaItalic.ttf
+
+# iOS 8.2 Japanese (contains the halfwidth characters, eg U+ff77, which
+# STHeiti does not seem to)
+Hiragino Sans W3:.Hiragino Kaku Gothic:Hiragino Kaku Gothic:gothic:lang-ja_jp,,,,,,HiraginoKakuGothic.ttc
+Hiragino Sans W6:.Hiragino Kaku Gothic:Hiragino Kaku Gothic:gothic:lang-ja_jp,,,Bold,,,HiraginoKakuGothic.ttc
+
+# iOS 9.3 Japanese
+Hiragino Mincho ProN W3:Hiragino Mincho ProN:mincho:lang-ja_jp,,,,,,HiraginoMincho.ttc
+Hiragino Mincho ProN W6:Hiragino Mincho ProN:mincho:lang-ja_jp,,,Bold,,,HiraginoMincho.ttc
+
+Heiti TC Light:Heiti TC:lang-zh_tw,,,,,,STHeiti-Light.ttc
+Heiti SC Light:Heiti SC:lang-zh_cn,,,,,,STHeiti-Light.ttc
+.Heiti K Light:.Heiti K:lang-ko_kr,,,,,,STHeiti-Light.ttc
+.Heiti J Light:.Heiti J:gothic:lang-ja_jp,,,,,,STHeiti-Light.ttc
+
+Heiti TC Medium:Heiti TC:lang-zh_tw,,,Bold,,,STHeiti-Medium.ttc
+Heiti SC Medium:Heiti SC:lang-zh_cn,,,Bold,,,STHeiti-Medium.ttc
+.Heiti K Medium:.Heiti K:lang-ko_kr,,,Bold,,,STHeiti-Medium.ttc
+.Heiti J Medium:.Heiti J:gothic:lang-ja_jp,,,Bold,,,STHeiti-Medium.ttc
+
+AppleGothic:Batang:Baekmuk Batang:BatangChe:Gungsuh:GungsuhChe:lang-ko_kr,,,,,,AppleGothic.ttf
+AppleGothic:Batang:Baekmuk Batang:BatangChe:Gungsuh:GungsuhChe:lang-ko_kr,,,,,,AppleGothic.otf
+
+# Sangam MN families (ios 7.1 and 8.1)
+Arial Hebrew:lang-he_il,,,,,,ArialHB.ttc
+Arial Hebrew Bold:lang-he_il,,,Bold,,,ArialHB.ttc
+Bangla Sangam MN:BanglaSangamMN:lang-bn_in,,,,,,BanglaSangamMN.ttc
+Bangla Sangam MN Bold:BanglaSangamMN:lang-bn_in,,,Bold,,,BanglaSangamMN.ttc
+Devanagari Sangam MN:DevanagariSangamMN:lang-hi_in,,,,,,DevanagariSangamMN.ttc
+Devanagari Sangam MN Bold:DevanagariSangamMN:lang-hi_in,,,Bold,,,DevanagariSangamMN.ttc
+Gujarati Sangam MN:GujaratiSangamMN:lang-gu_in,,,,,,GujaratiSangamMN.ttc
+Gujarati Sangam MN Bold:GujaratiSangamMN:lang-gu_in,,,Bold,,,GujaratiSangamMN.ttc
+Gurmukhi MN:GurmukhiMN:lang-pa_in,,,,,,GurmukhiMN.ttc
+Gurmukhi MN Bold:GurmukhiMN:lang-pa_in,,,Bold,,,GurmukhiMN.ttc
+Kannada Sangam MN:KannadaSangamMN:lang-kn_in,,,,,,KannadaSangamMN.ttc
+Kannada Sangam MN Bold:KannadaSangamMN:lang-kn_in,,,Bold,,,KannadaSangamMN.ttc
+Tamil Sangam MN:TamilSangamMN:lang-ta_in,,,,,,TamilSangamMN.ttc
+Tamil Sangam MN Bold:TamilSangamMN:lang-ta_in,,,Bold,,,TamilSangamMN.ttc
+Telugu Sangam MN:TeluguSangamMN:lang-te_in,,,,,,TeluguSangamMN.ttc
+Telugu Sangam MN Bold:TeluguSangamMN:lang-te_in,,,Bold,,,TeluguSangamMN.ttc
+
+# Sangam MN families (ios 8.1)
+Khmer Sangam MN:KhmerSangamMN:lang-vi_vn,,,,,,KhmerSangamMN.ttf
+
+# Other ios 7.1/8.1 fonts
+Damascus Regular:lang-ar_ar,,,,,,Damascus.ttc
+Damascus Bold:lang-ar_ar,,,Bold,,,Damascus.ttc
+Hiragino Kaku Gothic ProN:HiraginaKakuGothicProN:gothic:lang-ja_jp,,,,,,HKGPW3UI.ttf
+Apple SD Gothic Neo Regular:AppleSDGothicNeo-Regular:lang-ko_kr,,,,,,AppleSDGothicNeo-Regular.otf
+
+# iOS 8.2
+Apple SD Gothic Neo Regular:AppleSDGothicNeo:lang-ko_kr,,,,,,AppleSDGothicNeo.ttc
+Apple SD Gothic Neo Bold:AppleSDGothicNeo:lang-ko_kr,,,Bold,,,AppleSDGothicNeo.ttc
+Kohinoor Devanagari Regular:lang-hi_in,,,,,,Kohinoor.ttc
+Kohinoor Devanagari Semibold:lang-hi_in,,,Bold,,,Kohinoor.ttc
+
+# iOS 9.0
+.PingFang SC Regular:lang-zh_cn,,,,,,PingFang.ttc
+.PingFang SC Semibold:lang-zh_cn,,,Bold,,,PingFang.ttc
+.PingFang TC Regular:lang-zh_tw,,,,,,PingFang.ttc
+.PingFang TC Semibold:lang-zh_tw,,,Bold,,,PingFang.ttc
+Kohinoor Bangla:lang-bn_in,,,,,,KohinoorBangla.ttc
+Kohinoor Bangla Semibold:lang-bn_in,,,Bold,,,KohinoorBangla.ttc
+Kohinoor Telugu:lang-te_in,,,,,,KohinoorTelugu.ttc
+Kohinoor Telugu Medium:lang-te_in,,,Bold,,,KohinoorTelugu.ttc

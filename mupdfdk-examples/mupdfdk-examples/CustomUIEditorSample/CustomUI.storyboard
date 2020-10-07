@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vb8-6K-ZCr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="aNf-9q-JSC">
+            <objects>
+                <viewController id="vb8-6K-ZCr" userLabel="Main" customClass="CustomUIDocumentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Th-YO-xlv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-Xe-K9f" userLabel="Menu View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bnf-Di-9kc"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="lDk-OD-eEV" kind="embed" identifier="embedTopBar" id="f9W-Ch-o77"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-YC-905">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hd-YC-905" firstAttribute="top" secondItem="Y4f-Xe-K9f" secondAttribute="bottom" id="Ahx-wQ-hve"/>
+                            <constraint firstItem="Y4f-Xe-K9f" firstAttribute="bottom" secondItem="v95-Dz-k2g" secondAttribute="top" priority="500" id="QiN-A7-Lfj"/>
+                            <constraint firstItem="Y4f-Xe-K9f" firstAttribute="leading" secondItem="v95-Dz-k2g" secondAttribute="leading" id="Rqi-S0-me0"/>
+                            <constraint firstItem="v95-Dz-k2g" firstAttribute="trailing" secondItem="Y4f-Xe-K9f" secondAttribute="trailing" id="dW5-Cg-THP"/>
+                            <constraint firstItem="v95-Dz-k2g" firstAttribute="trailing" secondItem="8hd-YC-905" secondAttribute="trailing" id="gaZ-rH-ThV"/>
+                            <constraint firstItem="Y4f-Xe-K9f" firstAttribute="top" secondItem="v95-Dz-k2g" secondAttribute="top" id="ikt-yZ-7yI" userLabel="Menu Visible"/>
+                            <constraint firstItem="v95-Dz-k2g" firstAttribute="bottom" secondItem="8hd-YC-905" secondAttribute="bottom" id="n6P-ft-yyt"/>
+                            <constraint firstItem="8hd-YC-905" firstAttribute="leading" secondItem="v95-Dz-k2g" secondAttribute="leading" id="rJp-pZ-SXv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v95-Dz-k2g"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ikt-yZ-7yI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="mGM-kZ-bND">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="L4u-r6-YxM"/>
+                        <barButtonItem key="leftBarButtonItem" image="back-icon" id="jfJ-th-Ywc">
+                            <connections>
+                                <action selector="backWasTapped:" destination="vb8-6K-ZCr" id="vZJ-85-a2u"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Menu" id="sw5-bz-C6i">
+                                <connections>
+                                    <action selector="menuWasTapped:" destination="vb8-6K-ZCr" id="5zq-bx-ne6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="TOC" id="Npv-fr-Uea">
+                                <connections>
+                                    <segue destination="dQo-kl-xL0" kind="show" identifier="showTOC" id="ZaZ-0e-Ei5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="documentArea" destination="8hd-YC-905" id="4Wl-XM-SwM"/>
+                        <outlet property="menuVisible" destination="ikt-yZ-7yI" id="y5m-Fn-INZ"/>
+                        <outlet property="tocButton" destination="Npv-fr-Uea" id="nTJ-Bk-Gmj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cQ-Nk-tll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f8C-Pg-rNO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxa-3A-Anp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ay2-yb-WI9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vb8-6K-ZCr" kind="relationship" relationship="rootViewController" id="BXO-fZ-WzC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bui-Q1-ECc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="104"/>
+        </scene>
+        <!--Add note-->
+        <scene sceneID="QpY-Dc-yC3">
+            <objects>
+                <viewController id="aVl-YY-iqJ" userLabel="Add note" customClass="CustomUIAddNoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OmV-UJ-A3p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZPc-CL-tYf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tap where you want a note" id="JMA-1j-ymg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4F-Ss-4nv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4429" y="-404"/>
+        </scene>
+        <!--Add ink-->
+        <scene sceneID="Bo6-Ir-hfR">
+            <objects>
+                <viewController id="07I-vy-UUo" userLabel="Add ink" customClass="CustomUIAddInkViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Ax-fG-QyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="W7F-hT-EZD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Draw on page" id="3qj-5T-3rX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="szF-j9-Czz"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Clear" id="XCg-0q-Wc2">
+                                <connections>
+                                    <action selector="clearButtonWasTapped:" destination="07I-vy-UUo" id="ViF-MC-KhO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Width" id="JR8-hJ-vtt">
+                                <connections>
+                                    <segue destination="0Mv-Xd-UAv" kind="show" id="Lvp-RN-lkj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Color" id="XCI-WU-eal">
+                                <connections>
+                                    <segue destination="4gU-hi-KgR" kind="show" id="Zkq-gR-tCm"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Apply" id="1Hx-y5-g9P">
+                                <connections>
+                                    <action selector="applyButtonWasTapped:" destination="07I-vy-UUo" id="ibH-Ad-fJ5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbT-JU-v1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4429" y="-256"/>
+        </scene>
+        <!--Ink Color-->
+        <scene sceneID="eT9-VE-fpl">
+            <objects>
+                <viewController id="4gU-hi-KgR" userLabel="Ink Color" customClass="CustomUIInkColorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFJ-Yp-OoF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Gdb-Xj-cUW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5eZ-Ab-Y7S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wK4-CU-TWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5291" y="-126"/>
+        </scene>
+        <!--Ink Thickness-->
+        <scene sceneID="wCB-xk-cvz">
+            <objects>
+                <viewController id="0Mv-Xd-UAv" userLabel="Ink Thickness" customClass="CustomUIInkThicknessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUh-bw-dO7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Dtb-Qx-XvI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bsu-XN-MXa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKs-zB-j4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5290" y="-32"/>
+        </scene>
+        <!--Add highlight-->
+        <scene sceneID="xsP-HN-ZXl">
+            <objects>
+                <viewController id="JV6-Gg-E5s" userLabel="Add highlight" customClass="CustomUIAddHighlightViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dh-ab-GkF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AEX-3e-X1W"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select text" id="Itc-Qy-28X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vya-D4-MfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4451" y="-83"/>
+        </scene>
+        <!--Annotation-->
+        <scene sceneID="EVB-Yk-5ce">
+            <objects>
+                <viewController id="Mi5-mb-E7l" userLabel="Annotation" customClass="CustomUIAnnotationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dqz-a7-hW2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UrW-4Q-O3g"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hBZ-h8-p8r">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Delete" id="h5P-js-jgH">
+                                <connections>
+                                    <action selector="deleteButtonWasTapped:" destination="Mi5-mb-E7l" id="lr5-sM-4qp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Highlight" id="tNb-Qg-nGX">
+                                <connections>
+                                    <action selector="addHighlightButtonWasTapped:" destination="Mi5-mb-E7l" id="2yw-6j-KZ9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Ink" id="rdq-Gh-B9r">
+                                <connections>
+                                    <segue destination="07I-vy-UUo" kind="show" id="HLb-cQ-stG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Note" id="Xya-Fa-82p">
+                                <connections>
+                                    <action selector="addNoteWasTapped:" destination="Mi5-mb-E7l" id="wcc-43-5jT"/>
+                                    <segue destination="aVl-YY-iqJ" kind="show" id="ZHp-9P-Pca"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addHighlightButton" destination="tNb-Qg-nGX" id="M86-p0-Bdd"/>
+                        <outlet property="addInkButton" destination="rdq-Gh-B9r" id="Nns-sI-Gjd"/>
+                        <outlet property="addNoteButton" destination="Xya-Fa-82p" id="gnn-dm-mwQ"/>
+                        <outlet property="deleteAnnotationButton" destination="h5P-js-jgH" id="x0C-Hk-djg"/>
+                        <segue destination="JV6-Gg-E5s" kind="show" identifier="showAddHighlightBar" id="O5T-Be-Tce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tB-jF-oLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3603" y="-65"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="C6C-e2-dk8">
+            <objects>
+                <viewController id="UIA-ZB-Scg" userLabel="Find" customClass="CustomUIFindViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z1A-hk-59l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Lhy-Fs-A7h"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ICj-7c-QIT">
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" systemItem="fastForward" id="wkH-B4-7mJ">
+                                <connections>
+                                    <action selector="searchForwardButtonWasTapped:" destination="UIA-ZB-Scg" id="qWQ-gJ-zRI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" systemItem="rewind" id="nFU-SZ-cEb">
+                                <connections>
+                                    <action selector="searchBackButtonWasTapped:" destination="UIA-ZB-Scg" id="mSa-i1-LAr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBackButton" destination="nFU-SZ-cEb" id="mrS-jH-Yh6"/>
+                        <outlet property="searchForwardButton" destination="wkH-B4-7mJ" id="dVY-Vo-o1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3io-pM-1sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3603" y="180"/>
+        </scene>
+        <!--Redaction-->
+        <scene sceneID="FQg-PF-Qdy">
+            <objects>
+                <viewController id="Y8H-1u-0YJ" userLabel="Redaction" customClass="CustomUIRedactViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSS-O8-SjO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="94b-uQ-FTp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IEz-g2-9r8">
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" title="Apply" id="v4x-Gw-wgR">
+                                <connections>
+                                    <action selector="applyButtonWasTapped:" destination="Y8H-1u-0YJ" id="bjJ-Jw-jkt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Remove" id="hDa-t2-4cb">
+                                <connections>
+                                    <action selector="removeButtonWasTapped:" destination="Y8H-1u-0YJ" id="CAK-9k-FeO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Area" id="CD5-pH-WE4">
+                                <connections>
+                                    <action selector="areaButtonWasTapped:" destination="Y8H-1u-0YJ" id="Ujo-cT-9dC"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Text" id="Q0s-Mu-JKs">
+                                <connections>
+                                    <action selector="textButtonWasTapped:" destination="Y8H-1u-0YJ" id="mxO-js-4Ul"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="applyButton" destination="v4x-Gw-wgR" id="xxR-yo-aQY"/>
+                        <outlet property="areaButton" destination="CD5-pH-WE4" id="RJP-nQ-Snr"/>
+                        <outlet property="removeButton" destination="hDa-t2-4cb" id="vs1-Tc-eay"/>
+                        <outlet property="textButton" destination="Q0s-Mu-JKs" id="fAf-0J-Qfr"/>
+                        <segue destination="v0p-Qx-0VY" kind="show" identifier="showTextRedactionBar" id="An0-gR-ZxT"/>
+                        <segue destination="oLS-az-8xe" kind="show" identifier="showAreaRedactionBar" id="33n-wQ-ij3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPp-Dn-w73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3603" y="342"/>
+        </scene>
+        <!--CustomUI File View Controller-->
+        <scene sceneID="JHQ-DG-g5e">
+            <objects>
+                <viewController id="J2X-st-m6l" customClass="CustomUIFileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QD0-3z-8o9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EUl-FQ-1Lf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xwy-VJ-uKl">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Print" id="nwy-OX-iuk">
+                                <connections>
+                                    <action selector="printButtonWasTapped:" destination="J2X-st-m6l" id="vNs-9y-HxZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Save As" id="k5Z-nh-A83">
+                                <connections>
+                                    <action selector="saveAsButtonWasTapped:" destination="J2X-st-m6l" id="ZHd-pZ-LcP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Save" id="Mfb-lZ-ZRW">
+                                <connections>
+                                    <action selector="saveButtonWasTapped:" destination="J2X-st-m6l" id="xqb-hJ-x0G"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="Mfb-lZ-ZRW" id="WeP-Sd-Fe2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7Z-zr-6ed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3602" y="495"/>
+        </scene>
+        <!--Add Text Redaction-->
+        <scene sceneID="FI8-WC-s8b">
+            <objects>
+                <viewController id="v0p-Qx-0VY" userLabel="Add Text Redaction" customClass="CustomUIAddTextRedactionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vLI-yS-g0n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cRh-GQ-kGy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Text" id="c0g-Vc-ZUD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmD-9z-vBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4461" y="342"/>
+        </scene>
+        <!--Add Area Redaction-->
+        <scene sceneID="S80-mi-fld">
+            <objects>
+                <viewController id="oLS-az-8xe" userLabel="Add Area Redaction" customClass="CustomUIAddAreaRedactionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLZ-yv-DLy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gIs-tF-pqb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Area" id="By2-XM-GmX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XY-S4-uYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4462" y="457"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="sIj-ex-q08">
+            <objects>
+                <viewController id="4Ww-cv-Vuh" userLabel="Menu" customClass="CustomUIMenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gju-Pd-dVF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3c2-fN-GGD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="szJ-Z1-YWe">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="27j-Df-gsj">
+                            <connections>
+                                <action selector="doneButtonWasTapped:" destination="4Ww-cv-Vuh" id="keN-c7-K2P"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Redact" id="M6b-zi-8Mv">
+                                <connections>
+                                    <segue destination="Y8H-1u-0YJ" kind="show" id="aRi-HN-e6T"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Annotate" id="Uko-2S-6NW">
+                                <connections>
+                                    <segue destination="Mi5-mb-E7l" kind="show" id="Sww-hk-F6O"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="File" id="xlv-hy-rhW">
+                                <connections>
+                                    <segue destination="J2X-st-m6l" kind="show" id="9PZ-K5-lbL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="kqd-Qn-hNU">
+                                <connections>
+                                    <segue destination="UIA-ZB-Scg" kind="show" id="vIO-ze-iY3"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlx-tP-jFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808.6956521739135" y="118.20652173913044"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dww-cw-ks8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lDk-OD-eEV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y7B-Ga-g70">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Ww-cv-Vuh" kind="relationship" relationship="rootViewController" id="PTw-x9-n2i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycg-Dl-sti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901.449275362319" y="118.20652173913044"/>
+        </scene>
+        <!--TOC View Controller-->
+        <scene sceneID="jKn-UX-6He">
+            <objects>
+                <tableViewController id="dQo-kl-xL0" userLabel="TOC View Controller" customClass="CustomUITOCViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eLJ-rA-q74">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6Nk-lD-aMd" customClass="CustomUITOCTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Nk-lD-aMd" id="u6U-ie-rin">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-B4-DJF">
+                                            <rect key="frame" x="0.0" y="11.5" width="600" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2wa-B4-DJF" firstAttribute="centerY" secondItem="hSZ-t3-7B5" secondAttribute="centerY" id="F7n-fF-Fkv"/>
+                                        <constraint firstItem="2wa-B4-DJF" firstAttribute="leading" secondItem="hSZ-t3-7B5" secondAttribute="leading" id="JBn-py-zi4"/>
+                                        <constraint firstItem="hSZ-t3-7B5" firstAttribute="trailing" secondItem="2wa-B4-DJF" secondAttribute="trailing" id="nVc-A7-uOw"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="hSZ-t3-7B5"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="2wa-B4-DJF" id="27N-RV-ONk"/>
+                                    <outlet property="labelOffset" destination="JBn-py-zi4" id="FZu-xj-zoq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dQo-kl-xL0" id="bfv-Or-Lge"/>
+                            <outlet property="delegate" destination="dQo-kl-xL0" id="EER-HZ-DA2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6gH-zX-S08"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01h-cN-b4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="527"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-icon" width="13.5" height="24"/>
+    </resources>
+</document>

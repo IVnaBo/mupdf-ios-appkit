@@ -1,0 +1,63 @@
+/* Class = "UILabel"; text = "Xxxxxxxx"; ObjectID = "8Vf-lK-98F"; */
+"8Vf-lK-98F.text" = "Xxxxxxxx";
+
+/* Class = "UILabel"; text = "Xxxxx"; ObjectID = "DvN-4U-BXS"; */
+"DvN-4U-BXS.text" = "Xxxxx";
+
+/* Class = "UILabel"; text = "Xxxxxx"; ObjectID = "Gfj-i1-qqe"; */
+"Gfj-i1-qqe.text" = "Xxxxxx";
+
+/* Class = "UILabel"; text = "Xxxxx"; ObjectID = "AhC-P8-AAl"; */
+"AhC-P8-AAl.text" = "Xxxxx";
+
+/* Class = "UIButton"; normalTitle = "Thousand separator"; ObjectID = "Oz9-J3-Fxc"; */
+"Oz9-J3-Fxc.normalTitle" = "Thousand separator";
+
+/* Class = "UIButton"; normalTitle = "Scientific"; ObjectID = "6UX-fq-EbG"; */
+"6UX-fq-EbG.normalTitle" = "Scientific";
+
+/* Class = "UILabel"; text = "00/00/00"; ObjectID = "FVU-Sb-CUF"; */
+"FVU-Sb-CUF.text" = "00/00/00";
+
+/* Class = "UIButton"; normalTitle = "Edit Function"; ObjectID = "Bq2-3u-Vka"; */
+"Bq2-3u-Vka.normalTitle" = "Edit Function";
+
+/* Class = "UIButton"; normalTitle = "Create New"; ObjectID = "P8A-t4-OPT"; */
+"P8A-t4-OPT.normalTitle" = "Create New";
+
+/* Class = "UILabel"; text = "Xxxxx"; ObjectID = "5mI-Ia-5Zr"; */
+"5mI-Ia-5Zr.text" = "Xxxxx";
+
+/* Class = "UILabel"; text = "Xxxxx"; ObjectID = "POR-bv-1NW"; */
+"POR-bv-1NW.text" = "Xxxxx";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "QSb-kt-UNF"; */
+"QSb-kt-UNF.normalTitle" = "Two Decimal Places";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "VPI-lf-AID"; */
+"VPI-lf-AID.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "lcM-IE-Z0S"; */
+"lcM-IE-Z0S.text" = ">";
+
+/* Class = "UITextView"; text = "Xxxxx xxxxx xxxx"; ObjectID = "VLf-eK-GYZ"; */
+"VLf-eK-GYZ.text" = "Xxxxx xxxxx xxxx";
+
+/* Class = "UILabel"; text = "Xxxxxx"; ObjectID = "iAB-X7-uLJ"; */
+"iAB-X7-uLJ.text" = "Xxxxxx";
+
+/* Class = "UILabel"; text = "Xxxxx"; ObjectID = "mur-81-nIa"; */
+"mur-81-nIa.text" = "Xxxxx";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "sjd-bc-OjR"; */
+"sjd-bc-OjR.normalTitle" = "Two Decimal Places";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "D19-gV-vmv"; */
+"D19-gV-vmv.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "45k-OH-Tmf"; */
+"45k-OH-Tmf.text" = "Label";
+
+/* Class = "UILabel"; text = "Bookmarks"; ObjectID = "OvY-rg-yxY"; */
+"OvY-rg-yxY.text" = "Bookmarks";
+

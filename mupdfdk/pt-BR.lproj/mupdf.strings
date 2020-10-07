@@ -1,0 +1,68 @@
+/* Class = "UIButton"; normalTitle = "SAVE AS"; ObjectID = "BcR-rE-vok"; */
+"BcR-rE-vok.normalTitle" = "SALVAR COMO";
+
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "Cbt-8x-nM9"; */
+"Cbt-8x-nM9.normalTitle" = "ARQUIVO";
+
+/* Class = "UIButton"; normalTitle = "OPEN IN"; ObjectID = "Nb8-OS-gH7"; */
+"Nb8-OS-gH7.normalTitle" = "ABRIR EM";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "Tkj-tW-h1c"; */
+"Tkj-tW-h1c.normalTitle" = "COMPARTILHAR";
+/* Class = "UILabel"; text = "LOADING..."; ObjectID = "fUk-Sp-RdJ"; */
+"fUk-Sp-RdJ.text" = "CARREGANDO...";
+
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "lT1-8D-PNZ"; */
+"lT1-8D-PNZ.normalTitle" = "SALVAR";
+
+/* Class = "UIButton"; normalTitle = "PRINT"; ObjectID = "mh8-H5-qn1"; */
+"mh8-H5-qn1.normalTitle" = "IMPRIMIR";
+/* Class = "UIButton"; normalTitle = "LAST PAGE"; ObjectID = "74T-og-ENW"; */
+"74T-og-ENW.normalTitle" = "ÚLTIMA PÁGINA";
+
+/* Class = "UIButton"; normalTitle = "DRAW"; ObjectID = "0yg-Fs-H81"; */
+"0yg-Fs-H81.normalTitle" = "DESENHAR";
+
+/* Class = "UIButton"; normalTitle = "FIRST PAGE"; ObjectID = "Svk-up-6Xp"; */
+"Svk-up-6Xp.normalTitle" = "PRIMEIRA PÁGINA";
+
+/* Class = "UITextField"; placeholder = "Find"; ObjectID = "NVZ-3p-pvE"; */
+"NVZ-3p-pvE.placeholder" = "Encontrar";
+
+/* Class = "UIButton"; normalTitle = "NOTE"; ObjectID = "GIL-FW-ELQ"; */
+"GIL-FW-ELQ.normalTitle" = "NOTA";
+
+/* Class = "UIButton"; normalTitle = "HIGHLIGHT"; ObjectID = "Ane-TF-Bch"; */
+"Ane-TF-Bch.normalTitle" = "DESTACAR";
+
+
+/* Class = "UIButton"; normalTitle = "ANNOTATE"; ObjectID = "You-SO-fit"; */
+"You-SO-fit.normalTitle" = "ANOTAR";
+
+/* Class = "UIButton"; normalTitle = "FIND"; ObjectID = "Xeh-Y8-b2a"; */
+"Xeh-Y8-b2a.normalTitle" = "ENCONTRAR";
+
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "XHH-YZ-jjl"; */
+"XHH-YZ-jjl.normalTitle" = "ARQUIVO";
+/* Class = "UIButton"; normalTitle = "PREVIOUS"; ObjectID = "fOn-3i-23s"; */
+"fOn-3i-23s.normalTitle" = "ANTERIOR";
+
+
+/* Class = "UIButton"; normalTitle = "PAGES"; ObjectID = "urr-VY-God"; */
+"urr-VY-God.normalTitle" = "PÁGINAS";
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "l63-Lm-thV"; */
+"l63-Lm-thV.normalTitle" = "PRÓXIMO";
+
+/* Class = "UIButton"; normalTitle = "DELETE"; ObjectID = "rtd-Q0-cv6"; */
+"rtd-Q0-cv6.normalTitle" = "EXCLUIR";
+
+
+/* Class = "UIButton"; normalTitle = "ANNOTATE"; ObjectID = "zT2-E7-63U"; */
+"zT2-E7-63U.normalTitle" = "ANOTAR";
+
+/* Class = "UIButton"; normalTitle = "PAGES"; ObjectID = "v0a-Om-0JO"; */
+"v0a-Om-0JO.normalTitle" = "PÁGINAS";
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "zkg-ed-bk3"; */
+"zkg-ed-bk3.normalTitle" = "ARQUIVO";
+

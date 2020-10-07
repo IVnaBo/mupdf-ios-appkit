@@ -1,0 +1,505 @@
+/* Title of alert controller */
+"File already exists" = "ファイルはすでに存在しています";
+
+/* String displayed to indicate that a given attribute is not present in this certifcate */
+"-" = "-";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "95.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "95.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "85.0 FormulasRibbonButtonWidth";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "承諾";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "会計";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "コメント";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "墨消しは一度適用すると元に戻すことができません。続行しますか？";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "この文書からシート「%@」を本当に削除しますか？";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "分母を8に設定";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "分母を2に設定";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "分母を100に設定";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "分母を4に設定";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "分母を16に設定";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "分母を10に設定";
+
+/* Country name */
+"Australia" = "オーストラリア";
+
+/* Name recorded against changes made to the document */
+"Author" = "作成者";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "作成者";
+
+/* Label for available certificates section on the certificate picker dialog */
+"Available Certificates" = "利用できる証明書";
+
+/* Country name */
+"Canada" = "カナダ";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "キャンセル";
+
+/* Label for certificate details section on the certificate picker dialog */
+"Certificate Details" = "証明書の詳細";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "段落のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed run properties" = "実行のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed section properties" = "セクションのプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed table cell properties" = "表のセルのプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed Table Grid" = "表のグリッドが変更されました";
+
+/* Description of document alteration */
+"Changed table properties" = "表のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed table row properties" = "表の行のプロパティが変更されました";
+
+/* Country name */
+"China" = "中国";
+
+/* Title of alert controller */
+"Choose filename" = "ファイル名を選択";
+
+/* Button text */
+"Comment" = "コメント";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "コメント";
+
+/* Certificate details 'IssuedBy.CommonName' attribute name
+   Certificate details 'IssuedTo.CommonName' attribute name */
+"Common Name (CN)" = "コモンネーム（CN）";
+
+/* Continue searching the document */
+"Continue" = "続行";
+
+/* Label for continue with editing button */
+"Continue editing" = "編集を続行";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "コピー";
+
+/* Certificate details 'IssuedTo.Country' attribute name */
+"Country (C)" = "国（C）";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "通貨";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "カスタム";
+
+/* Type of number format used in spreadsheets */
+"Date" = "日付";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "日付と時間";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "デバッグ";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "削除";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "シートを削除する";
+
+/* Description of document alteration */
+"Deleted text" = "テキストが削除されました";
+
+/* Label for discard changes button */
+"Discard" = "破棄";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "消去";
+
+/* Message of alert controller */
+"Do you wish to overwrite the existing file?" = "既存のファイルを上書きしますか？";
+
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "アニメーションが終わりました。タップで終了します。";
+/* Warning of problem loading document */
+"Document could not be loaded" = "ドキュメントを読み込めませんでした";
+
+/* Signature verifier message that there was a document digest failure */
+"Document digest failure" = "文書ダイジェスト失敗";
+
+/* Warning of problem loading document */
+"Document is empty" = "ドキュメントが空です";
+
+/* Warning of problem loading document */
+"Document is too large" = "ドキュメントのサイズが大きすぎます";
+
+/* Label for document signature verification dialog title */
+"Document Signature Verification" = "文書署名認証";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "ドキュメントにサポートされていない暗号化が施されています";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "複製";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "編集";
+
+/* Certificate details 'IssuedTo.Email' attribute name */
+"Email" = "メールアドレス";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "スライドショーが終わりました。タップで終了します。";
+
+/* Heading for the certificate details 'Extended Key Usage' section */
+"Extended Key Usage" = "拡張キー使用法";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ファイル";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "ファイルを保存できませんでした";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "検索";
+
+/* Heading for the certificate details 'Fingerprints' section */
+"Fingerprint" = "指紋";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "形式";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "数式";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "分数";
+
+/* Type of number format used in spreadsheets */
+"General" = "全般";
+
+/* Country name */
+"India" = "インド";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "挿入";
+
+/* Description of document alteration */
+"Inserted paragraph" = "パラグラフが挿入されました";
+
+/* Description of document alteration */
+"Inserted table cell" = "表のセルが挿入されました";
+
+/* Description of document alteration */
+"Inserted table row" = "表の行が挿入されました";
+
+/* Description of document alteration */
+"Inserted text" = "テキストが挿入されました";
+
+/* Prompt to ask tell the user that the PKCS12 password was incorrect, and to try again */
+"Invalid password, please try again" = "無効なパスワードです。もう一度お試しください";
+
+/* Heading for the certificate details 'Issued By' section */
+"Issued By" = "発行元";
+
+/* Heading for the certificate details 'Issued To' section */
+"Issued To" = "発行先";
+
+/* Country name */
+"Japan" = "日本";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "検索を続けますか？";
+
+/* Heading for the certificate details 'Key Usage' section */
+"Key Usage" = "キー使用法";
+
+/* Country name */
+"Korea" = "韓国";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "読み込み中...";
+
+/* Refrence to user's current location - the country */
+"Local" = "ローカル";
+
+/* Certificate details 'IssuedTo.Locality' attribute name */
+"Locality (L)" = "場所（L）";
+
+/* Button title for dismissing alert view and requesting not to see it again. */
+"Never show this again" = "今後表示しない";
+
+/* Country name */
+"New Zealand" = "ニュージーランド";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "次へ";
+
+/* Label on No button */
+"No" = "いいえ";
+
+/* Description of document alteration */
+"No Changed" = "変更なし";
+
+/* The search has found no more tracked changes */
+"No more found" = "他には見つかりませんでした";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "サポートされていません";
+
+/* Certificate details 'PeriodOfValidity.NotValidAfter' attribute name */
+"Not Valid After" = "有効期間終了：";
+
+/* Certificate details 'PeriodOfValidity.NotValidBefore' attribute name */
+"Not Valid Before" = "有効期間開始：";
+
+/* Type of number format used in spreadsheets */
+"Number" = "数値";
+
+/* Button title for dismissing alert view.
+   Caption on OK button
+   Label for button to accept password and open the document */
+"OK" = "OK";
+
+/* Label on Okay button */
+"Okay" = "OK";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "アプリで開く";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "PDFをアプリで開く";
+
+/* Certificate details 'IssuedBy.Organization' attribute name
+   Certificate details 'IssuedTo.Organization' attribute name */
+"Organization (O)" = "所属機関（O）";
+
+/* Certificate details 'IssuedBy.OrganizationalUnit' attribute name
+   Certificate details 'IssuedTo.OrganizationlUnit' attribute name */
+"Organizational Unit (OU)" = "所属部署（OU）";
+
+/* Button text */
+"Overwrite" = "上書き";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "ページ %1$zd / %2$d";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "ページ";
+
+
+/* Label for button to accept password and open the document */
+"Open" = "OK";
+/* Placeholder in textfield that accepts a password */
+"Password" = "パスワード";
+
+/* Prompt to ask the user for the password for the file PKCS12 file %@ being imported */
+"Password for PKCS12 file: '%@'" = "PKCS12ファイルのパスワード：'%@'";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "パスワードが必要です";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "パーセンテージ";
+
+/* Heading for the certificate details 'Period Of Validity' section */
+"Period Of Validity" = "有効期間";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "このドキュメントのパスワードを入力してください";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "前へ";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "印刷";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "保護";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "墨消し";
+
+/* Caption for button that rejects a change */
+"REJECT" = "拒否";
+
+/* Label of button for retaining the current author */
+"Retain" = "保持";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "校閲";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Office 1997～2007の形式のドキュメントは、校閲操作に対応しておりません。デスクトップコンピューターでOfficeを使用して、ファイルをより新しい形式に変換してください。";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "保存";
+
+/* Label for save changes button */
+"Save" = "保存";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "名前を付けて保存";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "PDFで保存";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "保存先";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "ファイルが保存できませんでした。\nエラーコード：SO%@";
+
+/* Certificate details 'IssuedTo.Serial Number' attribute name */
+"Serial Number" = "シリアルナンバー";
+
+/* Certificate details 'Fingerprint.SHA256Fingerprint' attribute name */
+"SHA-256 Fingerprint" = "SHA-256 指紋";
+
+/* Certificate details 'Fingerprint.SHA1Fingerprint' attribute name */
+"SHA1 Fingerprint" = "SHA1 指紋";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "共有";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "変更箇所を表示する";
+
+/* Label for button on certificate picker dialog to sign with the selected certificate */
+"Sign" = "署名";
+
+/* Signature verifier message heading to indicate that the signature is valid */
+"Signature valid" = "署名有効";
+
+/* Signature verifier message heading to indicate a warning about the signature */
+"Signature warning" = "署名警告";
+
+/* Country name */
+"Singapore" = "シンガポール";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "スライド";
+
+/* Title of alert view informing the user that part of the UI scrolls. */
+"Some button bars are scrollable" = "一部のボタンバーはスクロール可能です";
+
+/* Message of alert view informing the user that part of the UI scrolls. */
+"Some button bars are too long to fit the screen, and some buttons may be hidden.\nYou can scroll the bar to see what is hidden." = "ボタンバーが画面に収まりきらない場合や、ボタンが非表示になっている場合があります。\nバーをスクロールすると、隠れた部分を確認できます。";
+
+/* Country name */
+"South Africa" = "南アフリカ";
+
+/* Certificate details 'IssuedTo.State' attribute name */
+"State (S)" = "都道府県（S）";
+
+/* Stop searching the document */
+"Stop" = "中止";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "保存されていない変更があります";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "この文書にはまだ適用されていない墨消しマークが含まれます。このマークがついたコンテンツは、墨消しが適用されるまで残ります。本当に続行しますか？";
+
+/* Warning message concerning potential form-filling problems */
+"This document uses dual forms, Acroform and XFA. %@ will use the Acroform. Adobe products preferentially use XFA. Form edits may not be shown in Adobe products. Other PDF viewers should work correctly." = "この文書では、AcroformとXFAの2つのフォームを使用しています。%@はアクロフォームを使用します。Adobe製品はXFAを優先的に使用します。Adobe製品では、フォームの編集が表示されない場合があります。他のPDFビューアは正しく動作するはずです。";
+
+/* Signature verfier warning that this signature has been invalidated by changes it prohibits since signing */
+"This signature has been invalidated by changes it prohibits since signing" = "この署名は、署名後、禁止されている変更によって無効になりました";
+
+/* Signature verifier message that this signature is not trusted */
+"This signature is not trusted" = "証明に信用がありません";
+
+/* Signature verfier message that this signature is valid, and only changes it permits have been made since signing */
+"This signature is valid, and only changes it permits have been made since signing" = "この署名は有効であり、署名後は許可された変更のみが行われました";
+
+/* Prompt to ask tell the user that they have run out of password retry attempts */
+"Too many password retry attempts" = "パスワードの再試行の回数が多すぎます";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "変更履歴を記録する";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "ドキュメントを読み込めませんでした";
+
+/* Country name */
+"United Kingdom" = "イギリス";
+
+/* Country name */
+"United States" = "アメリカ";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "未対応の種類のドキュメントです";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "最大1桁";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "最大3桁";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "最大2桁";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "変更履歴の作成者";
+/* Label of button for updating the author */
+"Update" = "更新";
+
+/* Certificate details 'ExtendedKeyUsage.Usage' attribute name
+   Certificate details 'KeyUsage.Usage' attribute name */
+"Usage" = "使用法";
+
+/* Signature verifier message heading to indicate that the signature verify operation failed */
+"Verification failed" = "認証失敗";
+
+/* Title of alert view presenting a warning */
+"Warning" = "警告";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "編集を続行しますか？それとも変更を保存しますか？あるいは変更を破棄しますか？";
+
+
+/* Message for dialog button to conrinue with existing edit session */
+"Continue with existing edit session" = "現行の編集セッションを続行";
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "作成者名を更新しますか？それとも現在のものを保持しますか？";
+
+/* Label on Yes button */
+"Yes" = "はい";
+

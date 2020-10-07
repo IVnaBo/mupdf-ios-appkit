@@ -1,0 +1,505 @@
+/* Title of alert controller */
+"File already exists" = "ไฟล์มีอยู่แล้ว";
+
+/* String displayed to indicate that a given attribute is not present in this certifcate */
+"-" = "-";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ยอมรับ";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "บัญชี";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "บันทึกหมายเหตุ";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "การทำการแก้ไขไม่สามารถยกเลิกได้ คุณต้องการดำเนินการต่อหรือไม่";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "คุณแน่ใจหรือว่าต้องการลบชีท '%@' จากเอกสารนี้";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "แปดส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "สองส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "ร้อยส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "สี่ส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "สิบหกส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "สิบส่วน";
+
+/* Country name */
+"Australia" = "ประเทศออสเตรเลีย";
+
+/* Name recorded against changes made to the document */
+"Author" = "ผู้เขียน";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "ผู้เขียน";
+
+/* Label for available certificates section on the certificate picker dialog */
+"Available Certificates" = "ใบรับรองที่มีอยู่";
+
+/* Country name */
+"Canada" = "ประเทศแคนาดา";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "ยกเลิก";
+
+/* Label for certificate details section on the certificate picker dialog */
+"Certificate Details" = "รายละเอียดใบรับรอง";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "คุณสมบัติพารากราฟมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed run properties" = "คุณสมบัติรันมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed section properties" = "คุณสมบัติหมวดหมู่มีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table cell properties" = "คุณสมบัติเซลล์ตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed Table Grid" = "กริดตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table properties" = "คุณสมบัติตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table row properties" = "คุณสมบัติแถวของตารางมีการเปลี่ยนแปลง";
+
+/* Country name */
+"China" = "ประเทศจีน";
+
+/* Title of alert controller */
+"Choose filename" = "เลือกชื่อไฟล์";
+
+/* Button text */
+"Comment" = "ความคิดเห็น";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "ความคิดเห็น";
+
+/* Certificate details 'IssuedBy.CommonName' attribute name
+   Certificate details 'IssuedTo.CommonName' attribute name */
+"Common Name (CN)" = "ชื่อสามัญ (CN)";
+
+/* Continue searching the document */
+"Continue" = "ดำเนินการต่อ";
+
+/* Label for continue with editing button */
+"Continue editing" = "ดำเนินการแก้ไขต่อ";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "คัดลอก";
+
+/* Certificate details 'IssuedTo.Country' attribute name */
+"Country (C)" = "ประเทศ (C)";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "สกุลเงิน";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "กำหนดเอง";
+
+/* Type of number format used in spreadsheets */
+"Date" = "วันที่";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "วันที่และเวลา";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "แก้จุดบกพร่อง";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "ลบ";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "ลบชีท";
+
+/* Description of document alteration */
+"Deleted text" = "ข้อความถูกลบแล้ว";
+
+/* Label for discard changes button */
+"Discard" = "ละทิ้ง";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "ยกเลิก";
+
+/* Message of alert controller */
+"Do you wish to overwrite the existing file?" = "คุณต้องการบันทึกทับไฟล์ที่มีอยู่หรือไม่";
+
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "จบสไลด์แอนิเมชั่น แตะเพื่อออก";
+/* Warning of problem loading document */
+"Document could not be loaded" = "ไม่สามารถโหลดเอกสารได้";
+
+/* Signature verifier message that there was a document digest failure */
+"Document digest failure" = "การย่อยเอกสารล้มเหลว";
+
+/* Warning of problem loading document */
+"Document is empty" = "เอกสารว่างเปล่า";
+
+/* Warning of problem loading document */
+"Document is too large" = "เอกสารมีขนาดใหญ่เกินไป";
+
+/* Label for document signature verification dialog title */
+"Document Signature Verification" = "การตรวจสอบลายเซ็นเอกสาร";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "เอกสารใช้การเข้ารหัสลับที่ไม่รองรับ";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "ทำซ้ำ";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "แก้ไข";
+
+/* Certificate details 'IssuedTo.Email' attribute name */
+"Email" = "อีเมล";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "จบสไลด์โชว์ แตะเพื่อออก";
+
+/* Heading for the certificate details 'Extended Key Usage' section */
+"Extended Key Usage" = "การใช้คีย์เพิ่มเติม";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ไฟล์";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "ไม่สามารถบันทึกไฟล์ได้";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "ค้นหา";
+
+/* Heading for the certificate details 'Fingerprints' section */
+"Fingerprint" = "ลายนิ้วมือ";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "รูปแบบ";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "สูตร";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "เศษส่วน";
+
+/* Type of number format used in spreadsheets */
+"General" = "ทั่วไป";
+
+/* Country name */
+"India" = "ประเทศอินเดีย";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "แทรก";
+
+/* Description of document alteration */
+"Inserted paragraph" = "พารากราฟถูกแทรก";
+
+/* Description of document alteration */
+"Inserted table cell" = "เซลล์ตารางถูกแทรก";
+
+/* Description of document alteration */
+"Inserted table row" = "แถวตารางถูกแทรก";
+
+/* Description of document alteration */
+"Inserted text" = "ข้อความถูกแทรก";
+
+/* Prompt to ask tell the user that the PKCS12 password was incorrect, and to try again */
+"Invalid password, please try again" = "รหัสผ่านไม่ถูกต้อง โปรดลองอีกครั้ง";
+
+/* Heading for the certificate details 'Issued By' section */
+"Issued By" = "ออกโดย";
+
+/* Heading for the certificate details 'Issued To' section */
+"Issued To" = "ออกให้แก่";
+
+/* Country name */
+"Japan" = "ประเทศญี่ปุ่น";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "ค้นหาต่อไปหรือไม่";
+
+/* Heading for the certificate details 'Key Usage' section */
+"Key Usage" = "การใช้คีย์";
+
+/* Country name */
+"Korea" = "ประเทศเกาหลี";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "กำลังโหลด...";
+
+/* Refrence to user's current location - the country */
+"Local" = "ท้องถิ่น";
+
+/* Certificate details 'IssuedTo.Locality' attribute name */
+"Locality (L)" = "ท้องถิ่น (L)";
+
+/* Button title for dismissing alert view and requesting not to see it again. */
+"Never show this again" = "ไม่ต้องแสดงอีก";
+
+/* Country name */
+"New Zealand" = "ประเทศนิวซีแลนด์";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "ถัดไป";
+
+/* Label on No button */
+"No" = "ไม่";
+
+/* Description of document alteration */
+"No Changed" = "ไม่มีการเปลี่ยนแปลง";
+
+/* The search has found no more tracked changes */
+"No more found" = "ไม่พบรายการอื่น";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "ไม่รองรับ";
+
+/* Certificate details 'PeriodOfValidity.NotValidAfter' attribute name */
+"Not Valid After" = "ไม่สามารถใช้ได้หลังจาก";
+
+/* Certificate details 'PeriodOfValidity.NotValidBefore' attribute name */
+"Not Valid Before" = "ไม่สามารถใช้ได้ก่อน";
+
+/* Type of number format used in spreadsheets */
+"Number" = "หมายเลข";
+
+/* Button title for dismissing alert view.
+   Caption on OK button
+   Label for button to accept password and open the document */
+"OK" = "ตกลง";
+
+/* Label on Okay button */
+"Okay" = "ตกลง";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "เปิดใน";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "เปิด PDF ใน";
+
+/* Certificate details 'IssuedBy.Organization' attribute name
+   Certificate details 'IssuedTo.Organization' attribute name */
+"Organization (O)" = "องค์กร (O)";
+
+/* Certificate details 'IssuedBy.OrganizationalUnit' attribute name
+   Certificate details 'IssuedTo.OrganizationlUnit' attribute name */
+"Organizational Unit (OU)" = "หน่วยองค์กร (OU)";
+
+/* Button text */
+"Overwrite" = "บันทึกทับ";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "หน้า %1$zd จาก %2$d";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "หน้า";
+
+
+/* Label for button to accept password and open the document */
+"Open" = "ตกลง";
+/* Placeholder in textfield that accepts a password */
+"Password" = "รหัสผ่าน";
+
+/* Prompt to ask the user for the password for the file PKCS12 file %@ being imported */
+"Password for PKCS12 file: '%@'" = "รหัสผ่านสำหรับไฟล์ PKCS12: '%@'";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "ต้องการรหัสผ่าน";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "ร้อยละ";
+
+/* Heading for the certificate details 'Period Of Validity' section */
+"Period Of Validity" = "ระยะเวลาการใช้งาน";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "กรุณากรอกรหัสผ่านสำหรับเอกสารนี้";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "ก่อนหน้า";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "พิมพ์";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "ป้องกัน";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "แก้ไข";
+
+/* Caption for button that rejects a change */
+"REJECT" = "ปฏิเสธ";
+
+/* Label of button for retaining the current author */
+"Retain" = "ใช้ที่มีอยู่";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "รีวิว";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "คำสั่งรีวิวไม่รองรับสำหรับเอกสารที่มีรูปแบบไฟล์ Office 1997-2007 กรุณาใช้ Office บนคอมพิวเตอร์เดสก์ทอปเพื่อแปลงไฟล์เป็นรูปแบบไฟล์ที่ใหม่ขึ้น";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "บันทึก";
+
+/* Label for save changes button */
+"Save" = "บันทึก";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "บันทึกเป็น";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "บันทึก PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "บันทึกไปยัง";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "การบันทึกไฟล์ล้มเหลว\nโค้ดผิดพลาด SO%@";
+
+/* Certificate details 'IssuedTo.Serial Number' attribute name */
+"Serial Number" = "หมายเลขซีเรียล";
+
+/* Certificate details 'Fingerprint.SHA256Fingerprint' attribute name */
+"SHA-256 Fingerprint" = "ลายนิ้วมือ SHA-256";
+
+/* Certificate details 'Fingerprint.SHA1Fingerprint' attribute name */
+"SHA1 Fingerprint" = "ลายนิ้วมือ SHA1";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "แบ่งปัน";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "แสดงการเปลี่ยนแปลง";
+
+/* Label for button on certificate picker dialog to sign with the selected certificate */
+"Sign" = "ลายเซ็น";
+
+/* Signature verifier message heading to indicate that the signature is valid */
+"Signature valid" = "ลายเซ็นที่ถูกต้อง";
+
+/* Signature verifier message heading to indicate a warning about the signature */
+"Signature warning" = "คำเตือนลายเซ็น";
+
+/* Country name */
+"Singapore" = "ประเทศสิงคโปร์";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "สไลด์";
+
+/* Title of alert view informing the user that part of the UI scrolls. */
+"Some button bars are scrollable" = "แถบปุ่มบางแถบสามารถเลื่อนได้";
+
+/* Message of alert view informing the user that part of the UI scrolls. */
+"Some button bars are too long to fit the screen, and some buttons may be hidden.\nYou can scroll the bar to see what is hidden." = "แถบปุ่มบางแถบยาวเกินไปที่จะพอดีกับหน้าจอและปุ่มบางปุ่มอาจซ่อนอยู่\nคุณสามารถเลื่อนแถบเพื่อดูสิ่งที่ซ่อนอยู่";
+
+/* Country name */
+"South Africa" = "ประเทศแอฟริกาใต้";
+
+/* Certificate details 'IssuedTo.State' attribute name */
+"State (S)" = "รัฐ (S)";
+
+/* Stop searching the document */
+"Stop" = "หยุด";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "มีรายการเปลี่ยนแปลงที่ยังไม่ได้บันทึก";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "เอกสารนี้มีเครื่องหมายการแก้ไขที่ยังไม่ได้ใช้ เนื้อหาใดๆ ที่เกี่ยวข้องกับเครื่องหมายเหล่านี้จะยังคงปรากฏอยู่จนกว่าจะมีการนำไปใช้ คุณแน่ใจหรือว่าต้องการดำเนินการต่อ";
+
+/* Warning message concerning potential form-filling problems */
+"This document uses dual forms, Acroform and XFA. %@ will use the Acroform. Adobe products preferentially use XFA. Form edits may not be shown in Adobe products. Other PDF viewers should work correctly." = "เอกสารนี้ใช้สองรูปแบบ ได้แก่ Acroform และ XFA %@ จะใช้ Acroform ในขณะที่ผลิตภัณฑ์ Adobe มักจะใช้ XFA การแก้ไขรูปแบบอาจไม่ปรากฏในผลิตภัณฑ์ Adobe โปรแกรมอ่านไฟล์ PDF อื่นๆ ควรทำงานได้เป็นปกติ";
+
+/* Signature verfier warning that this signature has been invalidated by changes it prohibits since signing */
+"This signature has been invalidated by changes it prohibits since signing" = "ลายเซ็นนี้ไม่สามารถใช้งานได้จากการเปลี่ยนแปลงที่ห้ามทำตั้งแต่มีการลงนาม";
+
+/* Signature verifier message that this signature is not trusted */
+"This signature is not trusted" = "ลายเซ็นนี้ไม่น่าเชื่อถือ";
+
+/* Signature verfier message that this signature is valid, and only changes it permits have been made since signing */
+"This signature is valid, and only changes it permits have been made since signing" = "ลายเซ็นนี้สามารถใช้งานได้และมีเพียงการเปลี่ยนแปลงที่ยอมรับได้หลังจากลงนาม";
+
+/* Prompt to ask tell the user that they have run out of password retry attempts */
+"Too many password retry attempts" = "มีการพยายามป้อนรหัสผ่านเกินจำนวนครั้งที่กำหนด";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "ติดตามการแก้ไข";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "ไม่สามารถโหลดเอกสารได้";
+
+/* Country name */
+"United Kingdom" = "ประเทศอังกฤษ";
+
+/* Country name */
+"United States" = "ประเทศสหรัฐอเมริกา";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "ประเภทไฟล์ไม่รองรับ";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "ตัวเลขไม่เกินหนึ่งตัว";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "ตัวเลขไม่เกินสามตัว";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "ตัวเลขไม่เกินสองตัว";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "ผู้เขียนที่ติดตามการแก้ไข";
+/* Label of button for updating the author */
+"Update" = "อัพเดท";
+
+/* Certificate details 'ExtendedKeyUsage.Usage' attribute name
+   Certificate details 'KeyUsage.Usage' attribute name */
+"Usage" = "การใช้งาน";
+
+/* Signature verifier message heading to indicate that the signature verify operation failed */
+"Verification failed" = "การยืนยันล้มเหลว";
+
+/* Title of alert view presenting a warning */
+"Warning" = "คำเตือน";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "คุณต้องการดำเนินการแก้ไขต่อ บันทึกการเปลี่ยนแปลง หรือยกเลิกการเปลี่ยนแปลง";
+
+
+/* Message for dialog button to conrinue with existing edit session */
+"Continue with existing edit session" = "ดำเนินการต่อด้วยเซสชันแก้ไขที่ทำอยู่";
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "คุณต้องการอัพเดทชื่อผู้เขียนหรือใช้ชื่อที่มีอยู่";
+
+/* Label on Yes button */
+"Yes" = "ใช่";
+

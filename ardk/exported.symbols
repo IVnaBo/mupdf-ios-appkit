@@ -1,0 +1,6 @@
+# Export only Objective-C classes
+_OBJC_CLASS_$_*
+_OBJC_METACLASS_$_*
+_ARDK_InkAnnotationThicknessKey
+_ARDK_InkAnnotationColorKey
+_ARDK_RibbonScrollWarningHoldOff

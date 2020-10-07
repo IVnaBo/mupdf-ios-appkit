@@ -1,0 +1,27 @@
+/* Class = "UIButton"; normalTitle = "Thousand separator"; ObjectID = "Oz9-J3-Fxc"; */
+"Oz9-J3-Fxc.normalTitle" = "Binlik ayıracı";
+
+/* Class = "UIButton"; normalTitle = "Scientific"; ObjectID = "6UX-fq-EbG"; */
+"6UX-fq-EbG.normalTitle" = "Bilimsel";
+
+/* Class = "UIButton"; normalTitle = "Edit Function"; ObjectID = "Bq2-3u-Vka"; */
+"Bq2-3u-Vka.normalTitle" = "Fonksiyonu düzenle";
+
+/* Class = "UIButton"; normalTitle = "Create New"; ObjectID = "P8A-t4-OPT"; */
+"P8A-t4-OPT.normalTitle" = "Yeni oluştur";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "QSb-kt-UNF"; */
+"QSb-kt-UNF.normalTitle" = "İki Ondalık Hane";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "sjd-bc-OjR"; */
+"sjd-bc-OjR.normalTitle" = "İki Ondalık Hane";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "D19-gV-vmv"; */
+"D19-gV-vmv.normalTitle" = "İptal et";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "45k-OH-Tmf"; */
+"45k-OH-Tmf.text" = "Etiket";
+
+/* Class = "UILabel"; text = "Bookmarks"; ObjectID = "OvY-rg-yxY"; */
+"OvY-rg-yxY.text" = "Yer imleri";
+

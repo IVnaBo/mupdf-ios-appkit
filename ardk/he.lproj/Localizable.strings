@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "האם ברצונך לעדכן את שם המחבר או להשאיר את השם הנוכחי?";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "לא ניתן לבטל את החלת ההכנות לפרסום. האם להמשיך?";
+
+/* Name recorded against changes made to the document */
+"Author" = "מחבר/ת";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "צנזר";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "מסמך זה מכיל סימני הכנה לפרסום שטרם הוחלו. כל תוכן הקשור לסימנים אלה עדיין יהיה קיים עד להחלתו. האם להמשיך?";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "הפסק";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "לא ניתן היה לשמור קובץ";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "פתח בתוך";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "הדפס";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "הגן";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "שמור";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "שמור בשם";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "שמור PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "שמור בתוך";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "שמירת הקובץ נכשלה.\nקוד שגיאה SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "שתף";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "שונו מאפייני פסקה";
+
+/* Description of document alteration */
+"Changed run properties" = "שונו מאפייני הפעלה";
+
+/* Description of document alteration */
+"Changed section properties" = "שונו מאפייני סעיף";
+
+/* Description of document alteration */
+"Changed table cell properties" = "שונו מאפייני תא בטבלה";
+
+/* Description of document alteration */
+"Changed Table Grid" = "שונתה רשת טבלה";
+
+/* Description of document alteration */
+"Changed table properties" = "שונו מאפייני טבלה";
+
+/* Description of document alteration */
+"Changed table row properties" = "שונו מאפייני שורה בטבלה";
+
+/* Description of document alteration */
+"Deleted text" = "נמחק טקסט";
+
+/* Description of document alteration */
+"Inserted paragraph" = "נוספה פסקה";
+
+/* Description of document alteration */
+"Inserted table cell" = "נוסף תא בטבלה";
+
+/* Description of document alteration */
+"Inserted table row" = "נוספה שורה בטבלה";
+
+/* Description of document alteration */
+"Inserted text" = "נוסף טקסט";
+
+/* Description of document alteration */
+"No Changed" = "לא השתנה";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "ביאור";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "קובץ";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "חפש";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "דפים";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "סוף הצגת שקופיות. הקש כדי לצאת.";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "מטבע";
+
+/* Type of number format used in spreadsheets */
+"Date" = "תאריך";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "שבר";
+
+/* Type of number format used in spreadsheets */
+"General" = "כללי";
+
+/* Type of number format used in spreadsheets */
+"Number" = "מספר";
+
+/* Label for continue with editing button */
+"Continue editing" = "המשך לערוך";
+
+/* Label for discard changes button */
+"Discard" = "בטל";
+
+/* Label for save changes button */
+"Save" = "שמור";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "קיימים שינויים שלא נשמרו";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "האם ברצונך להמשיך לערוך, לשמור שינויים או לבטל את השינויים שלך?";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "טוען...";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "דף %1$zd מתוך %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "האם אתה בטוח שברצונך למחוק את הגיליון '%@' מתוך מסמך זה?";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "בטל";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "מחק גיליון";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "איתור באגים";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "ערוך";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "תבנית";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "נוסחאות";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "הוסף";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "לא נתמך";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "סקור";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "פעולות סקירה לא נתמכות עבור מסמכים בתבנית Office 1997-2007. פתח את Office במחשב נייח כדי להמיר את הקובץ לתבנית חדשה יותר.";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "שקופיות";
+
+/* Continue searching the document */
+"Continue" = "המשך";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "להמשיך לחפש?";
+
+/* The search has found no more tracked changes */
+"No more found" = "לא נמצאו שינויים נוספים";
+
+/* Stop searching the document */
+"Stop" = "עצור";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "קבל";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "מחבר";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "הערה";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "מחק";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "הבא";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "הקודם";
+
+/* Caption for button that rejects a change */
+"REJECT" = "דחה";
+
+/* Label of button for retaining the current author */
+"Retain" = "השאר";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "הצג שינויים";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "עקוב אחר שינויים";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "מחבר שינויים מסומנים";
+/* Label of button for updating the author */
+"Update" = "עדכן";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "כשמיניות";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "כחצאים";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "כמאיות";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "כרבעים";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "כחלקי שישה עשר";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "כעשיריות";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "עד ספרה אחת";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "עד שלוש ספרות";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "עד שתי ספרות";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "סוף הצגת שקופיות. הקש כדי לצאת.";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "לא ניתן היה לטעון מסמך";
+
+/* Warning of problem loading document */
+"Document is empty" = "המסמך ריק";
+
+/* Warning of problem loading document */
+"Document is too large" = "המסמך גדול מדי";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "המסמך משתמש בהצפנה לא נתמכת";
+
+/* Label for button to accept password and open the document */
+"OK" = "אישור";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "סיסמה";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "נדרשת סיסמה";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "הזן את הסיסמה עבור מסמך זה";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "לא ניתן לטעון מסמך";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "סוג מסמך לא נתמך";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "העתק";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "פתח PDF בתוך";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "חשבונאות";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "מותאם אישית";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "תאריך ושעה";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "אחוז";
+
+/* Label on No button */
+"No" = "לא";
+
+/* Label on Okay button */
+"Okay" = "אישור";
+
+/* Label on Yes button */
+"Yes" = "כן";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "שכפל";
+
+/* Country name */
+"Australia" = "אוסטרליה";
+
+/* Country name */
+"Canada" = "קנדה";
+
+/* Country name */
+"China" = "סין";
+
+/* Country name */
+"India" = "הודו";
+
+/* Country name */
+"Japan" = "יפן";
+
+/* Country name */
+"Korea" = "קוריאה";
+
+/* Refrence to user's current location - the country */
+"Local" = "מקומי";
+
+/* Country name */
+"New Zealand" = "ניו זילנד";
+
+/* Country name */
+"Singapore" = "סינגפור";
+
+/* Country name */
+"South Africa" = "דרום אפריקה";
+
+/* Country name */
+"United Kingdom" = "הממלכה המאוחדת";
+
+/* Country name */
+"United States" = "ארה\"ב";
+

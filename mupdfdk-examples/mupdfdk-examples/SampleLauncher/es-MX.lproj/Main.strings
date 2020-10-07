@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Standalone Conversion To PNG"; ObjectID = "1HB-E4-UR8"; */
+"1HB-E4-UR8.text" = "Standalone Conversion To PNG";
+
+/* Class = "UILabel"; text = "Full Document Editor"; ObjectID = "C8A-Na-ZgD"; */
+"C8A-Na-ZgD.text" = "Simple Document Viewer/Annotator";
+
+/* Class = "UILabel"; text = "filename.docx"; ObjectID = "CXN-m9-MVh"; */
+"CXN-m9-MVh.text" = "filename.docx";
+
+/* Class = "UINavigationItem"; title = "Document Editing Example"; ObjectID = "KdT-st-7D1"; */
+"KdT-st-7D1.title" = "Document Viewer/Annotator";
+
+/* Class = "UITableViewController"; title = "PNG Export Example"; ObjectID = "Mgj-sn-xle"; */
+"Mgj-sn-xle.title" = "PNG Export Example";
+
+/* Class = "UINavigationItem"; title = "Security Settings"; ObjectID = "PaD-Ac-7fK"; */
+"PaD-Ac-7fK.title" = "Security Settings";
+
+/* Class = "UITableViewController"; title = "Security Settings"; ObjectID = "VMh-5e-RK1"; */
+"VMh-5e-RK1.title" = "Security Settings";
+
+/* Class = "UITableViewController"; title = "SmartOffice Library Examples"; ObjectID = "aAT-eQ-TKo"; */
+"aAT-eQ-TKo.title" = "MuPDFDK Library Examples";
+
+/* Class = "UILabel"; text = "Toggle all"; ObjectID = "cQY-83-35Y"; */
+"cQY-83-35Y.text" = "Toggle all";
+
+/* Class = "UINavigationItem"; title = "SmartOffice Library Examples"; ObjectID = "gTf-VV-m0D"; */
+"gTf-VV-m0D.title" = "MuPDFDK Library Examples";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nfU-Dq-LCl"; */
+"nfU-Dq-LCl.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Examples"; ObjectID = "qZK-xN-eDG"; */
+"qZK-xN-eDG.title" = "Examples";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "xWZ-Jl-kR5"; */
+"xWZ-Jl-kR5.title" = "Settings";
+
+/* Class = "UITableViewController"; title = "Document Editing Example"; ObjectID = "zPW-Ko-6bT"; */
+"zPW-Ko-6bT.title" = "Document Viewer/Annotator";

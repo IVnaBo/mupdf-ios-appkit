@@ -1,0 +1,505 @@
+/* Title of alert controller */
+"File already exists" = "Bestand bestaat al";
+
+/* String displayed to indicate that a given attribute is not present in this certifcate */
+"-" = "-";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "85.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "85.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ACCEPTEREN";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "Administratie";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "AANTEKENING";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "Het toepassen van redacties kan niet ongedaan worden gemaakt. Wil je doorgaan?";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "Weet u zeker dat u het werkblad '%@' uit dit document wilt verwijderen?";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "Als achtsten";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "Als halven";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "Als honderdsten";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "Als kwarten";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "Als zestienden";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "Als tienden";
+
+/* Country name */
+"Australia" = "Australië";
+
+/* Name recorded against changes made to the document */
+"Author" = "Auteur";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "AUTEUR";
+
+/* Label for available certificates section on the certificate picker dialog */
+"Available Certificates" = "Beschikbare certificaten";
+
+/* Country name */
+"Canada" = "Canada";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "Annuleren";
+
+/* Label for certificate details section on the certificate picker dialog */
+"Certificate Details" = "Certificaatgegevens";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "Paragraafeigenschappen zijn gewijzigd";
+
+/* Description of document alteration */
+"Changed run properties" = "Uitvoereigenschappen zijn gewijzigd";
+
+/* Description of document alteration */
+"Changed section properties" = "Sectie-eigenschappen zijn gewijzigd";
+
+/* Description of document alteration */
+"Changed table cell properties" = "Tabelceleigenschappen zijn gewijzigd";
+
+/* Description of document alteration */
+"Changed Table Grid" = "Tabelraster is gewijzigd";
+
+/* Description of document alteration */
+"Changed table properties" = "Tabeleigenschappen zijn gewijzigd";
+
+/* Description of document alteration */
+"Changed table row properties" = "Tabelrijeigenschappen zijn gewijzigd";
+
+/* Country name */
+"China" = "China";
+
+/* Title of alert controller */
+"Choose filename" = "Kies bestandsnaam";
+
+/* Button text */
+"Comment" = "Opmerking";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "OPMERKING";
+
+/* Certificate details 'IssuedBy.CommonName' attribute name
+   Certificate details 'IssuedTo.CommonName' attribute name */
+"Common Name (CN)" = "Gangbare naam (CN)";
+
+/* Continue searching the document */
+"Continue" = "Verdergaan";
+
+/* Label for continue with editing button */
+"Continue editing" = "Verdergaan met bewerken";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "KOPIËREN";
+
+/* Certificate details 'IssuedTo.Country' attribute name */
+"Country (C)" = "Land (C)";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "Valuta";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "Aangepast";
+
+/* Type of number format used in spreadsheets */
+"Date" = "Datum";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "Datum en tijd";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "DIAGNOSE";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "VERWIJDEREN";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "Werkblad verwijderen";
+
+/* Description of document alteration */
+"Deleted text" = "Tekst is verwijderd";
+
+/* Label for discard changes button */
+"Discard" = "Verwijderen";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "Afwijzen";
+
+/* Message of alert controller */
+"Do you wish to overwrite the existing file?" = "Wil je het bestaande bestand overschrijven?";
+
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "Einde van diavoorstelling. Tikken om af te sluiten.";
+/* Warning of problem loading document */
+"Document could not be loaded" = "Document kon niet worden geladen";
+
+/* Signature verifier message that there was a document digest failure */
+"Document digest failure" = "Samenvatting document mislukt";
+
+/* Warning of problem loading document */
+"Document is empty" = "Document is leeg";
+
+/* Warning of problem loading document */
+"Document is too large" = "Document is te groot";
+
+/* Label for document signature verification dialog title */
+"Document Signature Verification" = "Verificatie ondertekening document";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "Document gebruikt niet-ondersteunde versleuteling";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "Duplicaat maken";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "BEWERKEN";
+
+/* Certificate details 'IssuedTo.Email' attribute name */
+"Email" = "E-mail";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "Einde van diavoorstelling. Tik om af te sluiten.";
+
+/* Heading for the certificate details 'Extended Key Usage' section */
+"Extended Key Usage" = "Verlengd sleutelgebruik";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "BESTAND";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "Bestand kon niet worden opgeslagen";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "VINDEN";
+
+/* Heading for the certificate details 'Fingerprints' section */
+"Fingerprint" = "Vingerafdruk";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "INDELING";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "FORMULES";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "Breuk";
+
+/* Type of number format used in spreadsheets */
+"General" = "Algemeen";
+
+/* Country name */
+"India" = "India";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "INVOEGEN";
+
+/* Description of document alteration */
+"Inserted paragraph" = "Paragraaf ingevoegd";
+
+/* Description of document alteration */
+"Inserted table cell" = "Tabelcel ingevoegd";
+
+/* Description of document alteration */
+"Inserted table row" = "Tabelrij ingevoegd";
+
+/* Description of document alteration */
+"Inserted text" = "Tekst ingevoegd";
+
+/* Prompt to ask tell the user that the PKCS12 password was incorrect, and to try again */
+"Invalid password, please try again" = "Ongeldig wachtwoord, probeer het opnieuw";
+
+/* Heading for the certificate details 'Issued By' section */
+"Issued By" = "Verstrekt door";
+
+/* Heading for the certificate details 'Issued To' section */
+"Issued To" = "Verstrekt aan";
+
+/* Country name */
+"Japan" = "Japan";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "Verder zoeken?";
+
+/* Heading for the certificate details 'Key Usage' section */
+"Key Usage" = "Sleutelgebruik";
+
+/* Country name */
+"Korea" = "Korea";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "Aan het laden...";
+
+/* Refrence to user's current location - the country */
+"Local" = "Lokaal";
+
+/* Certificate details 'IssuedTo.Locality' attribute name */
+"Locality (L)" = "Lokaliteit (L)";
+
+/* Button title for dismissing alert view and requesting not to see it again. */
+"Never show this again" = "Niet opnieuw weergeven";
+
+/* Country name */
+"New Zealand" = "Nieuw-Zeeland";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "VOLGENDE";
+
+/* Label on No button */
+"No" = "Nee";
+
+/* Description of document alteration */
+"No Changed" = "Geen wijziging";
+
+/* The search has found no more tracked changes */
+"No more found" = "Niets meer gevonden";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "Niet ondersteund";
+
+/* Certificate details 'PeriodOfValidity.NotValidAfter' attribute name */
+"Not Valid After" = "Niet geldig na";
+
+/* Certificate details 'PeriodOfValidity.NotValidBefore' attribute name */
+"Not Valid Before" = "Niet geldig vóór";
+
+/* Type of number format used in spreadsheets */
+"Number" = "Nummer";
+
+/* Button title for dismissing alert view.
+   Caption on OK button
+   Label for button to accept password and open the document */
+"OK" = "OK";
+
+/* Label on Okay button */
+"Okay" = "Oké";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "OPENEN IN";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "PDF OPENEN IN";
+
+/* Certificate details 'IssuedBy.Organization' attribute name
+   Certificate details 'IssuedTo.Organization' attribute name */
+"Organization (O)" = "Organisatie (O)";
+
+/* Certificate details 'IssuedBy.OrganizationalUnit' attribute name
+   Certificate details 'IssuedTo.OrganizationlUnit' attribute name */
+"Organizational Unit (OU)" = "Organisatorische eenheid (OU)";
+
+/* Button text */
+"Overwrite" = "Overschrijven";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "PAGINA%1$zd VAN %2$d";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "PAGINA'S";
+
+
+/* Label for button to accept password and open the document */
+"Open" = "OK";
+/* Placeholder in textfield that accepts a password */
+"Password" = "Wachtwoord";
+
+/* Prompt to ask the user for the password for the file PKCS12 file %@ being imported */
+"Password for PKCS12 file: '%@'" = "Wachtwoord voor PKCS12-bestand: '%@'";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "Wachtwoord vereist";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "Percentage";
+
+/* Heading for the certificate details 'Period Of Validity' section */
+"Period Of Validity" = "Geldigheidsperiode";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "Voer het wachtwoord voor dit document in";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "VORIGE";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "AFDRUKKEN";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "BESCHERMEN";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "REDACTIE";
+
+/* Caption for button that rejects a change */
+"REJECT" = "WEIGEREN";
+
+/* Label of button for retaining the current author */
+"Retain" = "Behouden";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "CONTROLEREN";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Controleerbewerkingen worden niet ondersteund voor documenten met een Office 1997-2007-indeling. Gebruik Office op een desktopcomputer om het bestand naar de nieuwere indeling te converteren.";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "OPSLAAN";
+
+/* Label for save changes button */
+"Save" = "Opslaan";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "OPSLAAN ALS";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "PDF OPSLAAN";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "OPSLAAN NAAR";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "Het bestand opslaan is mislukt.\nFoutcode SO%@";
+
+/* Certificate details 'IssuedTo.Serial Number' attribute name */
+"Serial Number" = "Serienummer";
+
+/* Certificate details 'Fingerprint.SHA256Fingerprint' attribute name */
+"SHA-256 Fingerprint" = "SHA-256-vingerafdruk";
+
+/* Certificate details 'Fingerprint.SHA1Fingerprint' attribute name */
+"SHA1 Fingerprint" = "SHA1-vingerafdruk";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "DELEN";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "WIJZIGINGEN TONEN";
+
+/* Label for button on certificate picker dialog to sign with the selected certificate */
+"Sign" = "Ondertekenen";
+
+/* Signature verifier message heading to indicate that the signature is valid */
+"Signature valid" = "Ondertekening geldig";
+
+/* Signature verifier message heading to indicate a warning about the signature */
+"Signature warning" = "Waarschuwing ondertekening";
+
+/* Country name */
+"Singapore" = "Singapore";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "DIA'S";
+
+/* Title of alert view informing the user that part of the UI scrolls. */
+"Some button bars are scrollable" = "Met sommige knop-balken kan worden gescrold";
+
+/* Message of alert view informing the user that part of the UI scrolls. */
+"Some button bars are too long to fit the screen, and some buttons may be hidden.\nYou can scroll the bar to see what is hidden." = "Sommige knop-balken zijn te lang en passen niet op het scherm en sommige knoppen kunnen verborgen zijn.\nJe kunt met de balk scrollen om te zien wat er verborgen is.";
+
+/* Country name */
+"South Africa" = "Zuid-Afrika";
+
+/* Certificate details 'IssuedTo.State' attribute name */
+"State (S)" = "Staat (S)";
+
+/* Stop searching the document */
+"Stop" = "Stoppen";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "Er zijn wijzigingen die nog niet zijn opgeslagen";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "Dit document bevat redactie-markeringen die nog niet zijn toegepast. Inhoud die gekoppeld is aan deze markeringen zal aanwezig blijven totdat ze zijn toegepast. Weet je zeker dat je door wilt gaan?";
+
+/* Warning message concerning potential form-filling problems */
+"This document uses dual forms, Acroform and XFA. %@ will use the Acroform. Adobe products preferentially use XFA. Form edits may not be shown in Adobe products. Other PDF viewers should work correctly." = "Dit document maakt gebruikt van een tweevoudig formaat, Acroform en XFA. %@ gebruikt Acroform. Adobe-producten geven de voorkeur aan XFA. Bewerkingen van het formaat worden mogelijk niet getoond in Adobe-producten. Andere PDF-viewers zouden geen problemen moeten veroorzaken.";
+
+/* Signature verfier warning that this signature has been invalidated by changes it prohibits since signing */
+"This signature has been invalidated by changes it prohibits since signing" = "De handtekening is ongeldig verklaard door wijzigingen die sinds het ondertekenen niet meer worden toegelaten";
+
+/* Signature verifier message that this signature is not trusted */
+"This signature is not trusted" = "Deze handtekening is niet vertrouwd";
+
+/* Signature verfier message that this signature is valid, and only changes it permits have been made since signing */
+"This signature is valid, and only changes it permits have been made since signing" = "Deze handtekening is geldig en alleen toegestane wijzigingen zijn aangebracht sinds het ondertekenen";
+
+/* Prompt to ask tell the user that they have run out of password retry attempts */
+"Too many password retry attempts" = "Te veel herhaalde pogingen voor het wachtwoord";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "WIJZIGINGEN BIJHOUDEN";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "Document kan niet worden geladen";
+
+/* Country name */
+"United Kingdom" = "Verenigd Koninkrijk";
+
+/* Country name */
+"United States" = "Verenigde Staten";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "Niet-ondersteund documenttype";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "Tot één cijfer";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "Tot drie cijfers";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "Tot twee cijfers";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "Auteur van bijgehouden wijzigingen";
+/* Label of button for updating the author */
+"Update" = "Bijwerken";
+
+/* Certificate details 'ExtendedKeyUsage.Usage' attribute name
+   Certificate details 'KeyUsage.Usage' attribute name */
+"Usage" = "Gebruik";
+
+/* Signature verifier message heading to indicate that the signature verify operation failed */
+"Verification failed" = "Verificatie mislukt";
+
+/* Title of alert view presenting a warning */
+"Warning" = "Waarschuwing";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "Wilt u verdergaan met bewerken, uw wijzigingen opslaan of uw wijzigingen verwijderen?";
+
+
+/* Message for dialog button to conrinue with existing edit session */
+"Continue with existing edit session" = "Verdergaan met bestaande bewerkingssessie";
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "Wilt u de naam van de auteur bijwerken of de huidige naam behouden?";
+
+/* Label on Yes button */
+"Yes" = "Ja";
+

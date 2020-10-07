@@ -1,0 +1,27 @@
+/* Class = "UIButton"; normalTitle = "Thousand separator"; ObjectID = "Oz9-J3-Fxc"; */
+"Oz9-J3-Fxc.normalTitle" = "천 단위 구분자";
+
+/* Class = "UIButton"; normalTitle = "Scientific"; ObjectID = "6UX-fq-EbG"; */
+"6UX-fq-EbG.normalTitle" = "공학용 표기형식";
+
+/* Class = "UIButton"; normalTitle = "Edit Function"; ObjectID = "Bq2-3u-Vka"; */
+"Bq2-3u-Vka.normalTitle" = "편집하기";
+
+/* Class = "UIButton"; normalTitle = "Create New"; ObjectID = "P8A-t4-OPT"; */
+"P8A-t4-OPT.normalTitle" = "새로 만들기";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "QSb-kt-UNF"; */
+"QSb-kt-UNF.normalTitle" = "소수점 두 자리";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "sjd-bc-OjR"; */
+"sjd-bc-OjR.normalTitle" = "소수점 두 자리";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "D19-gV-vmv"; */
+"D19-gV-vmv.normalTitle" = "취소";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "45k-OH-Tmf"; */
+"45k-OH-Tmf.text" = "라벨";
+
+/* Class = "UILabel"; text = "Bookmarks"; ObjectID = "OvY-rg-yxY"; */
+"OvY-rg-yxY.text" = "북마크";
+

@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "Vuoi aggiornare il nome dell'autore o mantenere quello attuale?";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "L'applicazione delle revisioni non può essere annullata. Continuare?";
+
+/* Name recorded against changes made to the document */
+"Author" = "Autore";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "REVISIONA";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "Questo documento contiene segni di revisione che non sono ancora stati applicati. Qualsiasi contenuto associato a questi segni sarà ancora presente fino a quando non verranno applicati. Continuare?";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "90.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "80.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "80.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "85.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "Ignora";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "Impossibile salvare il file";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "APRI IN";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "STAMPA";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "PROTEGGI";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "SALVA";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "SALVA COME";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "SALVA PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "SALVA IN";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "Impossibile salvare file.\nCodice errore SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "CONDIVIDI";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "Modificate proprietà paragrafo";
+
+/* Description of document alteration */
+"Changed run properties" = "Modificate le proprietà della serie.";
+
+/* Description of document alteration */
+"Changed section properties" = "Modificate le proprietà della sezione";
+
+/* Description of document alteration */
+"Changed table cell properties" = "Modificate le proprietà della cella nella tabella";
+
+/* Description of document alteration */
+"Changed Table Grid" = "Modificata la griglia della tabella";
+
+/* Description of document alteration */
+"Changed table properties" = "Modificate le proprietà della tabella";
+
+/* Description of document alteration */
+"Changed table row properties" = "Modificate le proprietà della riga/delle righe nella tabella";
+
+/* Description of document alteration */
+"Deleted text" = "Testo eliminato";
+
+/* Description of document alteration */
+"Inserted paragraph" = "Inserito paragrafo";
+
+/* Description of document alteration */
+"Inserted table cell" = "Inserita cella tabella";
+
+/* Description of document alteration */
+"Inserted table row" = "Inserita riga tabella";
+
+/* Description of document alteration */
+"Inserted text" = "Inserito testo";
+
+/* Description of document alteration */
+"No Changed" = "Nessuna modifica";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "ANNOTA";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "FILE";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "TROVA";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "PAGINE";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "Fine della presentazione. Tocca per uscire.";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "Valuta";
+
+/* Type of number format used in spreadsheets */
+"Date" = "Data";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "Frazione";
+
+/* Type of number format used in spreadsheets */
+"General" = "Generale";
+
+/* Type of number format used in spreadsheets */
+"Number" = "Numero";
+
+/* Label for continue with editing button */
+"Continue editing" = "Continua le modifiche";
+
+/* Label for discard changes button */
+"Discard" = "Ignora";
+
+/* Label for save changes button */
+"Save" = "Salva";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "Sono presenti modifiche non salvate";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "Vuoi continuare a modificare, salvare le modifiche o annullarle?";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "Caricamento...";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "PAGINA %1$zd DI %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "Vuoi davvero cancellare il foglio '%@' da questo documento?";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "Annulla";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "Cancella foglio";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "DEBUG";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "MODIFICA";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "FORMATO";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "FORMULE";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "INSERISCI";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "Non supportato";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "REVISIONA";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Le funzionalità di revisione non sono supportate per i documenti formattati con Office 1997-2007. Usa Office su un computer desktop per convertire il file in un formato più recente.";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "SLIDE";
+
+/* Continue searching the document */
+"Continue" = "Continua";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "Continuare a cercare?";
+
+/* The search has found no more tracked changes */
+"No more found" = "Nessun altro risultato";
+
+/* Stop searching the document */
+"Stop" = "Ferma";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ACCETTA";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "AUTORE";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "COMMENTA";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "ELIMINA";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "SUCCESSIVO";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "PRECEDENTE";
+
+/* Caption for button that rejects a change */
+"REJECT" = "RIFIUTA";
+
+/* Label of button for retaining the current author */
+"Retain" = "Mantieni";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "MOSTRA MODIFICHE";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "REVISIONI";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "Revisioni autore";
+/* Label of button for updating the author */
+"Update" = "Aggiorna";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "Come ottavi";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "Come metà";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "Come centesimi";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "Come quarti";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "Come sedicesimi";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "Come decimi";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "Fino a una cifra";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "Fino a tre cifre";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "Fino a due cifre";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "Fine della presentazione animata. Tocca per uscire.";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "Impossibile caricare il documento";
+
+/* Warning of problem loading document */
+"Document is empty" = "Il documento è vuoto";
+
+/* Warning of problem loading document */
+"Document is too large" = "Il documento è troppo grande";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "Il documento usa un cifraggio non supportato";
+
+/* Label for button to accept password and open the document */
+"OK" = "OK";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "Password";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "Password richiesta";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "Inserisci la password per questo documento";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "Impossibile caricare il documento";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "Tipo di documento non supportato";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "COPIA";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "APRI PDF IN";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "Contabilità";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "Personalizzato";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "Data e ora";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "Percentuale";
+
+/* Label on No button */
+"No" = "No";
+
+/* Label on Okay button */
+"Okay" = "Okay";
+
+/* Label on Yes button */
+"Yes" = "Sì";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "Duplica";
+
+/* Country name */
+"Australia" = "Australia";
+
+/* Country name */
+"Canada" = "Canada";
+
+/* Country name */
+"China" = "Cina";
+
+/* Country name */
+"India" = "India";
+
+/* Country name */
+"Japan" = "Giappone";
+
+/* Country name */
+"Korea" = "Corea";
+
+/* Refrence to user's current location - the country */
+"Local" = "Locale";
+
+/* Country name */
+"New Zealand" = "Nuova Zelanda";
+
+/* Country name */
+"Singapore" = "Singapore";
+
+/* Country name */
+"South Africa" = "Sudafrica";
+
+/* Country name */
+"United Kingdom" = "Regno Unito";
+
+/* Country name */
+"United States" = "Stati Uniti";
+

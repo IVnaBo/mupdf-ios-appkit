@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "您要更新作者名稱還是保留現有名稱？";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "一旦套用校訂，便無法還原，要繼續嗎？";
+
+/* Name recorded against changes made to the document */
+"Author" = "作者";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "校訂";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "此文件包含未套用的校訂標記，若不套用，與這些標記相關的任何內容會一直存在，您確定要繼續嗎？";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "關閉";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "無法儲存檔案";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "以…開啟";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "列印";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "保護";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "儲存";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "儲存為";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "儲存 PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "儲存至";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "無法儲存檔案。\n錯誤碼：SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "共享";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "已變更段落屬性";
+
+/* Description of document alteration */
+"Changed run properties" = "已變更文字屬性";
+
+/* Description of document alteration */
+"Changed section properties" = "已變更部分屬性";
+
+/* Description of document alteration */
+"Changed table cell properties" = "已變更表格儲存格屬性";
+
+/* Description of document alteration */
+"Changed Table Grid" = "已變更表格網格";
+
+/* Description of document alteration */
+"Changed table properties" = "已變更表格屬性";
+
+/* Description of document alteration */
+"Changed table row properties" = "已變更表格列屬性";
+
+/* Description of document alteration */
+"Deleted text" = "已刪除文字";
+
+/* Description of document alteration */
+"Inserted paragraph" = "已插入段落";
+
+/* Description of document alteration */
+"Inserted table cell" = "已插入表格儲存格";
+
+/* Description of document alteration */
+"Inserted table row" = "已插入表格列";
+
+/* Description of document alteration */
+"Inserted text" = "已插入文字";
+
+/* Description of document alteration */
+"No Changed" = "沒有變更";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "註釋";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "檔案";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "尋找";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "頁面";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "已到幻燈片秀末尾。按一下即可離開。";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "貨幣";
+
+/* Type of number format used in spreadsheets */
+"Date" = "日期";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "分數";
+
+/* Type of number format used in spreadsheets */
+"General" = "一般";
+
+/* Type of number format used in spreadsheets */
+"Number" = "數字";
+
+/* Label for continue with editing button */
+"Continue editing" = "繼續編輯";
+
+/* Label for discard changes button */
+"Discard" = "捨棄";
+
+/* Label for save changes button */
+"Save" = "儲存";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "您有未儲存的變更";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "您要繼續編輯、儲存變更，還是捨棄變更？";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "載入中…";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "頁面：%1$zd / %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "您確定要從此文件中刪除工作表「%@」嗎？";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "取消";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "刪除工作表";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "除錯";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "編輯";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "格式";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "公式";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "插入";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "不受支援";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "校閱";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Office 1997 - 2007 格式的文件不支援校閱操作，請在桌上型電腦上使用 Office 並將檔案格式轉換至較新的格式。";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "幻燈片";
+
+/* Continue searching the document */
+"Continue" = "繼續";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "要繼續搜尋嗎？";
+
+/* The search has found no more tracked changes */
+"No more found" = "沒有其他相符結果";
+
+/* Stop searching the document */
+"Stop" = "停止";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "接受";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "作者";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "留言";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "刪除";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "下一個";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "上一個";
+
+/* Caption for button that rejects a change */
+"REJECT" = "拒絕";
+
+/* Label of button for retaining the current author */
+"Retain" = "保留";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "顯示變更";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "追蹤修訂";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "追蹤修訂作者";
+/* Label of button for updating the author */
+"Update" = "更新";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "分八份";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "分一半";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "分一百份";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "分 4 份";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "分 16 份";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "分 10 份";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "最多一位";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "最多三位";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "最多兩位";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "已到幻燈片秀末尾。按一下即可離開。";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "無法載入文件";
+
+/* Warning of problem loading document */
+"Document is empty" = "文件為空白";
+
+/* Warning of problem loading document */
+"Document is too large" = "文件大小太大了";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "文件使用了不受支援的加密方法";
+
+/* Label for button to accept password and open the document */
+"OK" = "好";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "密碼";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "需要密碼";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "請輸入此文件的密碼。";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "無法載入文件";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "不受支援的文件類型";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "複製";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "以…開啟 PDF";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "會計";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "自訂";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "日期及時間";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "百分比";
+
+/* Label on No button */
+"No" = "否";
+
+/* Label on Okay button */
+"Okay" = "好的";
+
+/* Label on Yes button */
+"Yes" = "是";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "復製";
+
+/* Country name */
+"Australia" = "澳洲";
+
+/* Country name */
+"Canada" = "加拿大";
+
+/* Country name */
+"China" = "中國";
+
+/* Country name */
+"India" = "印度";
+
+/* Country name */
+"Japan" = "日本";
+
+/* Country name */
+"Korea" = "韓國";
+
+/* Refrence to user's current location - the country */
+"Local" = "本地";
+
+/* Country name */
+"New Zealand" = "紐西蘭";
+
+/* Country name */
+"Singapore" = "新加坡";
+
+/* Country name */
+"South Africa" = "南非";
+
+/* Country name */
+"United Kingdom" = "英國";
+
+/* Country name */
+"United States" = "美國";
+

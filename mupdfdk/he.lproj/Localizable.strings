@@ -1,0 +1,505 @@
+/* Title of alert controller */
+"File already exists" = "הקובץ כבר קיים";
+
+/* String displayed to indicate that a given attribute is not present in this certifcate */
+"-" = "-";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "קבל";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "חשבונאות";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "ביאור";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "לא ניתן לבטל את החלת ההכנות לפרסום. האם להמשיך?";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "האם אתה בטוח שברצונך למחוק את הגיליון '%@' מתוך מסמך זה?";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "כשמיניות";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "כחצאים";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "כמאיות";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "כרבעים";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "כחלקי שישה עשר";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "כעשיריות";
+
+/* Country name */
+"Australia" = "אוסטרליה";
+
+/* Name recorded against changes made to the document */
+"Author" = "מחבר/ת";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "מחבר";
+
+/* Label for available certificates section on the certificate picker dialog */
+"Available Certificates" = "אישורים זמינים";
+
+/* Country name */
+"Canada" = "קנדה";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "בטל";
+
+/* Label for certificate details section on the certificate picker dialog */
+"Certificate Details" = "פרטי אישור";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "שונו מאפייני פסקה";
+
+/* Description of document alteration */
+"Changed run properties" = "שונו מאפייני הפעלה";
+
+/* Description of document alteration */
+"Changed section properties" = "שונו מאפייני סעיף";
+
+/* Description of document alteration */
+"Changed table cell properties" = "שונו מאפייני תא בטבלה";
+
+/* Description of document alteration */
+"Changed Table Grid" = "שונתה רשת טבלה";
+
+/* Description of document alteration */
+"Changed table properties" = "שונו מאפייני טבלה";
+
+/* Description of document alteration */
+"Changed table row properties" = "שונו מאפייני שורה בטבלה";
+
+/* Country name */
+"China" = "סין";
+
+/* Title of alert controller */
+"Choose filename" = "בחר שם קובץ";
+
+/* Button text */
+"Comment" = "הערה";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "הערה";
+
+/* Certificate details 'IssuedBy.CommonName' attribute name
+   Certificate details 'IssuedTo.CommonName' attribute name */
+"Common Name (CN)" = "שם כללי (CN)";
+
+/* Continue searching the document */
+"Continue" = "המשך";
+
+/* Label for continue with editing button */
+"Continue editing" = "המשך לערוך";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "העתק";
+
+/* Certificate details 'IssuedTo.Country' attribute name */
+"Country (C)" = "ארץ (C)";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "מטבע";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "מותאם אישית";
+
+/* Type of number format used in spreadsheets */
+"Date" = "תאריך";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "תאריך ושעה";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "איתור באגים";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "מחק";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "מחק גיליון";
+
+/* Description of document alteration */
+"Deleted text" = "נמחק טקסט";
+
+/* Label for discard changes button */
+"Discard" = "בטל";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "הפסק";
+
+/* Message of alert controller */
+"Do you wish to overwrite the existing file?" = "האם ברצונך להחליף את הקובץ הקיים?";
+
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "סוף הצגת שקופיות. הקש כדי לצאת.";
+/* Warning of problem loading document */
+"Document could not be loaded" = "לא ניתן היה לטעון מסמך";
+
+/* Signature verifier message that there was a document digest failure */
+"Document digest failure" = "תימצות המסמך נכשל";
+
+/* Warning of problem loading document */
+"Document is empty" = "המסמך ריק";
+
+/* Warning of problem loading document */
+"Document is too large" = "המסמך גדול מדי";
+
+/* Label for document signature verification dialog title */
+"Document Signature Verification" = "אימות חתימה של המסמך";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "המסמך משתמש בהצפנה לא נתמכת";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "שכפל";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "ערוך";
+
+/* Certificate details 'IssuedTo.Email' attribute name */
+"Email" = "דוא\"ל";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "סוף הצגת שקופיות. הקש כדי לצאת.";
+
+/* Heading for the certificate details 'Extended Key Usage' section */
+"Extended Key Usage" = "שימוש במפתח מורחב";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "קובץ";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "לא ניתן היה לשמור קובץ";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "חפש";
+
+/* Heading for the certificate details 'Fingerprints' section */
+"Fingerprint" = "טביעת אצבע";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "תבנית";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "נוסחאות";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "שבר";
+
+/* Type of number format used in spreadsheets */
+"General" = "כללי";
+
+/* Country name */
+"India" = "הודו";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "הוסף";
+
+/* Description of document alteration */
+"Inserted paragraph" = "נוספה פסקה";
+
+/* Description of document alteration */
+"Inserted table cell" = "נוסף תא בטבלה";
+
+/* Description of document alteration */
+"Inserted table row" = "נוספה שורה בטבלה";
+
+/* Description of document alteration */
+"Inserted text" = "נוסף טקסט";
+
+/* Prompt to ask tell the user that the PKCS12 password was incorrect, and to try again */
+"Invalid password, please try again" = "סיסמה לא תקינה, נסה שוב";
+
+/* Heading for the certificate details 'Issued By' section */
+"Issued By" = "הונפק על ידי";
+
+/* Heading for the certificate details 'Issued To' section */
+"Issued To" = "הונפק עבור";
+
+/* Country name */
+"Japan" = "יפן";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "להמשיך לחפש?";
+
+/* Heading for the certificate details 'Key Usage' section */
+"Key Usage" = "שימוש במפתח";
+
+/* Country name */
+"Korea" = "קוריאה";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "טוען...";
+
+/* Refrence to user's current location - the country */
+"Local" = "מקומי";
+
+/* Certificate details 'IssuedTo.Locality' attribute name */
+"Locality (L)" = "מקומיות (L)";
+
+/* Button title for dismissing alert view and requesting not to see it again. */
+"Never show this again" = "לעולם אל תציג את זה שוב";
+
+/* Country name */
+"New Zealand" = "ניו זילנד";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "הבא";
+
+/* Label on No button */
+"No" = "לא";
+
+/* Description of document alteration */
+"No Changed" = "לא השתנה";
+
+/* The search has found no more tracked changes */
+"No more found" = "לא נמצאו שינויים נוספים";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "לא נתמך";
+
+/* Certificate details 'PeriodOfValidity.NotValidAfter' attribute name */
+"Not Valid After" = "לא בתוקף אחרי";
+
+/* Certificate details 'PeriodOfValidity.NotValidBefore' attribute name */
+"Not Valid Before" = "לא בתוקף לפני";
+
+/* Type of number format used in spreadsheets */
+"Number" = "מספר";
+
+/* Button title for dismissing alert view.
+   Caption on OK button
+   Label for button to accept password and open the document */
+"OK" = "אישור";
+
+/* Label on Okay button */
+"Okay" = "אישור";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "פתח בתוך";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "פתח PDF בתוך";
+
+/* Certificate details 'IssuedBy.Organization' attribute name
+   Certificate details 'IssuedTo.Organization' attribute name */
+"Organization (O)" = "ארגון (O)";
+
+/* Certificate details 'IssuedBy.OrganizationalUnit' attribute name
+   Certificate details 'IssuedTo.OrganizationlUnit' attribute name */
+"Organizational Unit (OU)" = "יחידה ארגונית (OU)";
+
+/* Button text */
+"Overwrite" = "החלף";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "דף %1$zd מתוך %2$d";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "דפים";
+
+
+/* Label for button to accept password and open the document */
+"Open" = "אישור";
+/* Placeholder in textfield that accepts a password */
+"Password" = "סיסמה";
+
+/* Prompt to ask the user for the password for the file PKCS12 file %@ being imported */
+"Password for PKCS12 file: '%@'" = "סיסמה עבור קובץ PKCS12: '%@'";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "נדרשת סיסמה";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "אחוז";
+
+/* Heading for the certificate details 'Period Of Validity' section */
+"Period Of Validity" = "משך תוקף";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "הזן את הסיסמה עבור מסמך זה";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "הקודם";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "הדפס";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "הגן";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "צנזר";
+
+/* Caption for button that rejects a change */
+"REJECT" = "דחה";
+
+/* Label of button for retaining the current author */
+"Retain" = "השאר";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "סקור";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "פעולות סקירה לא נתמכות עבור מסמכים בתבנית Office 1997-2007. פתח את Office במחשב נייח כדי להמיר את הקובץ לתבנית חדשה יותר.";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "שמור";
+
+/* Label for save changes button */
+"Save" = "שמור";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "שמור בשם";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "שמור PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "שמור בתוך";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "שמירת הקובץ נכשלה.\nקוד שגיאה SO%@";
+
+/* Certificate details 'IssuedTo.Serial Number' attribute name */
+"Serial Number" = "מספר סידורי";
+
+/* Certificate details 'Fingerprint.SHA256Fingerprint' attribute name */
+"SHA-256 Fingerprint" = "טביעת אצבע SHA-256";
+
+/* Certificate details 'Fingerprint.SHA1Fingerprint' attribute name */
+"SHA1 Fingerprint" = "טביעת אצבע SHA1";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "שתף";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "הצג שינויים";
+
+/* Label for button on certificate picker dialog to sign with the selected certificate */
+"Sign" = "חתימה";
+
+/* Signature verifier message heading to indicate that the signature is valid */
+"Signature valid" = "החתימה תקפה";
+
+/* Signature verifier message heading to indicate a warning about the signature */
+"Signature warning" = "אזהרת חתימה";
+
+/* Country name */
+"Singapore" = "סינגפור";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "שקופיות";
+
+/* Title of alert view informing the user that part of the UI scrolls. */
+"Some button bars are scrollable" = "שורות לחצנים מסוימות ניתנות לגלילה";
+
+/* Message of alert view informing the user that part of the UI scrolls. */
+"Some button bars are too long to fit the screen, and some buttons may be hidden.\nYou can scroll the bar to see what is hidden." = "שורות לחצנים מסוימות ארוכות מדי ולא מתאימות למסך, כך שלחצנים מסוימים עשויים להיות מוסתרים.\nניתן לגלול בשורה כדי לראות מה מוסתר.";
+
+/* Country name */
+"South Africa" = "דרום אפריקה";
+
+/* Certificate details 'IssuedTo.State' attribute name */
+"State (S)" = "מדינה (S)";
+
+/* Stop searching the document */
+"Stop" = "עצור";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "קיימים שינויים שלא נשמרו";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "מסמך זה מכיל סימני הכנה לפרסום שטרם הוחלו. כל תוכן הקשור לסימנים אלה עדיין יהיה קיים עד להחלתו. האם להמשיך?";
+
+/* Warning message concerning potential form-filling problems */
+"This document uses dual forms, Acroform and XFA. %@ will use the Acroform. Adobe products preferentially use XFA. Form edits may not be shown in Adobe products. Other PDF viewers should work correctly." = "מסמך זה משתמש בטפסים כפולים, ב-Acroform וב-XFA. %@ ישתמש ב- Acroform. מוצרי Adobe משתמשים בדרך כלל ב-XFA. יתכן שעריכות טפסים לא יוצגו במוצרי Adobe. מציגי PDF אחרים צפויים לפעול באופן תקין.";
+
+/* Signature verfier warning that this signature has been invalidated by changes it prohibits since signing */
+"This signature has been invalidated by changes it prohibits since signing" = "תוקפה של חתימה זו נשלל עקב שינויים שאסורים לאחר חתימה";
+
+/* Signature verifier message that this signature is not trusted */
+"This signature is not trusted" = "חתימה זו אינה מהימנה";
+
+/* Signature verfier message that this signature is valid, and only changes it permits have been made since signing */
+"This signature is valid, and only changes it permits have been made since signing" = "חתימה זו תקפה, ונערכו רק שינויים שמותרים לאחר חתימה";
+
+/* Prompt to ask tell the user that they have run out of password retry attempts */
+"Too many password retry attempts" = "יותר מדי ניסיונות להזנת הסיסמה";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "עקוב אחר שינויים";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "לא ניתן לטעון מסמך";
+
+/* Country name */
+"United Kingdom" = "הממלכה המאוחדת";
+
+/* Country name */
+"United States" = "ארה\"ב";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "סוג מסמך לא נתמך";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "עד ספרה אחת";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "עד שלוש ספרות";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "עד שתי ספרות";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "מחבר שינויים מסומנים";
+/* Label of button for updating the author */
+"Update" = "עדכן";
+
+/* Certificate details 'ExtendedKeyUsage.Usage' attribute name
+   Certificate details 'KeyUsage.Usage' attribute name */
+"Usage" = "שימוש";
+
+/* Signature verifier message heading to indicate that the signature verify operation failed */
+"Verification failed" = "האימות נכשל";
+
+/* Title of alert view presenting a warning */
+"Warning" = "אזהרה";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "האם ברצונך להמשיך לערוך, לשמור שינויים או לבטל את השינויים שלך?";
+
+
+/* Message for dialog button to conrinue with existing edit session */
+"Continue with existing edit session" = "המשך בפעולת העריכה הנוכחית";
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "האם ברצונך לעדכן את שם המחבר או להשאיר את השם הנוכחי?";
+
+/* Label on Yes button */
+"Yes" = "כן";
+

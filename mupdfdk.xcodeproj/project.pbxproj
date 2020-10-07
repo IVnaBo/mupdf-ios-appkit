@@ -1,0 +1,1784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		926CF2A5243F750900ED0586 /* ARDKDigitalSigningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9238CEEB243B486700089F67 /* ARDKDigitalSigningDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF083A244DFBA800332CE6 /* ARDKMutableSigner.h in Headers */ = {isa = PBXBuildFile; fileRef = 925DA4FE23E862800007E67A /* ARDKMutableSigner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF083B244DFBBB00332CE6 /* ARDKMutableSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 925DA50823E87C820007E67A /* ARDKMutableSigner.m */; };
+		92DF083C244DFBBB00332CE6 /* ARDKCertDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 921D620C23E4460A00B2BB5A /* ARDKCertDetailViewController.h */; };
+		92DF083D244DFBBB00332CE6 /* ARDKCertDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921D620923E4460900B2BB5A /* ARDKCertDetailViewController.m */; };
+		92DF083E244DFBBB00332CE6 /* ARDKCertPickerDialogViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 921D620A23E4460900B2BB5A /* ARDKCertPickerDialogViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF083F244DFBBB00332CE6 /* ARDKCertPickerDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921D620E23E4460B00B2BB5A /* ARDKCertPickerDialogViewController.m */; };
+		92DF0840244DFBBB00332CE6 /* ARDKCertVerifyDialogViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 921D620D23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF0841244DFBBB00332CE6 /* ARDKCertVerifyDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921D620B23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.m */; };
+		92DF0842244DFBBB00332CE6 /* ARDKSigning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927D753D2449E09800FD755C /* ARDKSigning.storyboard */; };
+		92DF0843244DFBFA00332CE6 /* ARDKOpenSSLPKCS12Importer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C8FF1C23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF0844244DFC0200332CE6 /* ARDKOpenSSLPKCS12Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8FF1D23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.m */; };
+		92DF0845244DFC0200332CE6 /* ARDKOpenSSLSigningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F18BD224361399001FD646 /* ARDKOpenSSLSigningDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF0846244DFC0200332CE6 /* ARDKOpenSSLSigningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F18BD42436139A001FD646 /* ARDKOpenSSLSigningDelegate.m */; };
+		92DF0847244DFC0200332CE6 /* ARDKOpenSSLKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B73BAD23FC285100BE3195 /* ARDKOpenSSLKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DF0848244DFC0200332CE6 /* ARDKOpenSSLKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B73BAE23FC285200BE3195 /* ARDKOpenSSLKeychain.m */; };
+		92DF0849244DFC0200332CE6 /* ARDKOpenSSLCert.h in Headers */ = {isa = PBXBuildFile; fileRef = 9238CEFF243B5A3400089F67 /* ARDKOpenSSLCert.h */; };
+		92DF084A244DFC0200332CE6 /* ARDKOpenSSLCert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9238CEFE243B5A3300089F67 /* ARDKOpenSSLCert.m */; };
+		92DF084B244DFC0200332CE6 /* ARDKOpenSSLSigner.h in Headers */ = {isa = PBXBuildFile; fileRef = 921D621B23E451E200B2BB5A /* ARDKOpenSSLSigner.h */; };
+		92DF084C244DFC0200332CE6 /* ARDKOpenSSLSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 921D621C23E451E200B2BB5A /* ARDKOpenSSLSigner.m */; };
+		92DF084D244DFC0200332CE6 /* ARDKOpenSSLVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 9238CF00243B5A3400089F67 /* ARDKOpenSSLVerifier.h */; };
+		92DF084E244DFC0200332CE6 /* ARDKOpenSSLVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 9238CF01243B5A3400089F67 /* ARDKOpenSSLVerifier.m */; };
+		92F5CE2E2449F953002502D3 /* ARDKPKCS7.h in Headers */ = {isa = PBXBuildFile; fileRef = 927D75592449F8F400FD755C /* ARDKPKCS7.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A052033839336CE4D6235B35 /* libPods-mupdfdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB7EA40F2734A1EB93D25CD /* libPods-mupdfdk.a */; };
+		DA0B75F422E8931A009AE0E6 /* ARDKBasicDocViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0B75F122E8931A009AE0E6 /* ARDKBasicDocViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA0DFCDC2437911900CA16C5 /* ARDKDefaultFileState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0DFCD82437911700CA16C5 /* ARDKDefaultFileState.m */; };
+		DA0DFCE02437911900CA16C5 /* ARDKDefaultFileState.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0DFCD92437911800CA16C5 /* ARDKDefaultFileState.h */; };
+		DA11A23A248E5A0400817BCA /* Colors-common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA11A238248E595400817BCA /* Colors-common.xcassets */; };
+		DA11A23B248E5A0800817BCA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA11A239248E595400817BCA /* Colors.xcassets */; };
+		DA11A23C248E5A0B00817BCA /* Generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA11A237248E595400817BCA /* Generic.xcassets */; };
+		DA11A240248E647200817BCA /* ARDKEmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DA11A23D248E646100817BCA /* ARDKEmptySegue.m */; };
+		DA131BAC22F1B18D00862FFA /* ARDKViewingState.h in Headers */ = {isa = PBXBuildFile; fileRef = DA131BA822F1B18D00862FFA /* ARDKViewingState.h */; };
+		DA131BB022F1B18D00862FFA /* ARDKViewingState.m in Sources */ = {isa = PBXBuildFile; fileRef = DA131BA922F1B18D00862FFA /* ARDKViewingState.m */; };
+		DA1492E421F0B6ED0052E752 /* MuPDFDKColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACDC3761F90EDEB0077C129 /* MuPDFDKColorPickerViewController.m */; };
+		DA1492E721F0B6ED0052E752 /* ARDKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4266DF1E6DDAB700D2B4C8 /* ARDKTextField.m */; };
+		DA1492E821F0B6ED0052E752 /* MuPDFDKSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCB25E1F9A3B12005D1E0D /* MuPDFDKSelectionView.m */; };
+		DA1492EB21F0B6ED0052E752 /* MuPDFDKLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 303E77DC2126EBAE009C9C07 /* MuPDFDKLib.m */; };
+		DA1492EC21F0B6ED0052E752 /* ARDKTextSelectionRect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D8180219C3EB400B36F99 /* ARDKTextSelectionRect.m */; };
+		DA1492ED21F0B6ED0052E752 /* ARDKSearchProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA04D2AB1B72368900819344 /* ARDKSearchProgressViewController.m */; };
+		DA1492F121F0B6ED0052E752 /* ARDKActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87AF641B01F43D00DD2AEB /* ARDKActivityViewController.m */; };
+		DA1492F221F0B6ED0052E752 /* MuPDFDKFileRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA226A71F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.m */; };
+		DA1492F621F0B6ED0052E752 /* ARDKTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF25C4D1C8DFE420034FE2B /* ARDKTiledLayer.m */; };
+		DA1492F821F0B6ED0052E752 /* ARDKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F0AF91FAB03B700F729EC /* ARDKSettings.m */; };
+		DA1492FC21F0B6ED0052E752 /* MuPDFDKColorPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DACDC3721F90EDEA0077C129 /* MuPDFDKColorPickerCell.m */; };
+		DA14930021F0B6ED0052E752 /* ARDKTintedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6F3A6A21661B4B0057C631 /* ARDKTintedLabel.m */; };
+		DA14930121F0B6ED0052E752 /* MuPDFDKBasicDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA226A11F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.m */; };
+		DA14930321F0B6ED0052E752 /* MuPDFDKTextWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3BB4E5202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.m */; };
+		DA14930621F0B6ED0052E752 /* ARDKRibbonItemStackedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0680D81E65B72200696C88 /* ARDKRibbonItemStackedButton.m */; };
+		DA14930721F0B6ED0052E752 /* ARDKHandlerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C904BBA1DDF751F0024D437 /* ARDKHandlerInfo.m */; };
+		DA14930821F0B6ED0052E752 /* ARDKRibbonItemSplitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B3E3F1E66EAC4008E802B /* ARDKRibbonItemSplitter.m */; };
+		DA14930921F0B6ED0052E752 /* ARDKPageAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6EEA81C724B370021F061 /* ARDKPageAnnotationView.m */; };
+		DA14930E21F0B6ED0052E752 /* ARDKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2C9B41E7C4A7500141367 /* ARDKTextView.m */; };
+		DA14931021F0B6ED0052E752 /* ARDKPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D51211CB69DE7007245AB /* ARDKPrintPageRenderer.m */; };
+		DA14931121F0B6ED0052E752 /* ARDKLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F0AF11FAB00A400F729EC /* ARDKLib.m */; };
+		DA14931321F0B6ED0052E752 /* ARDKPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4E00AE1F0CEDB0001E282E /* ARDKPageView.m */; };
+		DA14931421F0B6ED0052E752 /* MuPDFDKOptionWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3BB4E9202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.m */; };
+		DA14931721F0B6ED0052E752 /* ARDKTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBF9FAD209CA5A100557641 /* ARDKTheme.m */; };
+		DA14931A21F0B6ED0052E752 /* ARDKDocumentSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C13D62C1E23F41B00D800FB /* ARDKDocumentSettings.m */; };
+		DA14931B21F0B6ED0052E752 /* MuPDFDKAnnotInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEBBE3D1FA89860009B6E2E /* MuPDFDKAnnotInfoViewController.m */; };
+		DA14931D21F0B6ED0052E752 /* ARDKDocTypeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE544551E098CD200590ED7 /* ARDKDocTypeDetail.m */; };
+		DA14931E21F0B6ED0052E752 /* ARDKTextPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6A437E1D6F2F8E002F33D3 /* ARDKTextPosition.m */; };
+		DA14932021F0B6ED0052E752 /* ARDKUIContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADAB6D11C46A470001DBBEF /* ARDKUIContainerViewController.m */; };
+		DA14932221F0B6ED0052E752 /* MuPDFDKTocCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23086D1FB1EDFB00846E22 /* MuPDFDKTocCell.m */; };
+		DA14932521F0B6ED0052E752 /* MuPDFDKEditTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA226A51F6C1A460039EC37 /* MuPDFDKEditTabsViewController.m */; };
+		DA14932B21F0B6ED0052E752 /* PlatformBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F0B111FAB1FA200F729EC /* PlatformBitmap.m */; };
+		DA14932C21F0B6ED0052E752 /* ARDKRibbonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0680D41E65B02300696C88 /* ARDKRibbonItem.m */; };
+		DA14932E21F0B6ED0052E752 /* MuPDFDKRadioWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D63ED21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.m */; };
+		DA14933421F0B6ED0052E752 /* ARDKBasicDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA241F581F41BD3F00F296A8 /* ARDKBasicDocumentViewController.m */; };
+		DA14933521F0B6ED0052E752 /* ARDKInternalPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2C9B01E7B0C8E00141367 /* ARDKInternalPasteboard.m */; };
+		DA14933821F0B6ED0052E752 /* ARDKNUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA551B5A1ACEB1F80031CD13 /* ARDKNUpViewController.m */; };
+		DA14933D21F0B6ED0052E752 /* MuPDFDKTocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23086C1FB1EDFB00846E22 /* MuPDFDKTocViewController.m */; };
+		DA14933E21F0B6ED0052E752 /* ARDKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB635321216E5387007D6F82 /* ARDKButton.m */; };
+		DA14933F21F0B6ED0052E752 /* ARDKNUpLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA551B5C1ACEB1F80031CD13 /* ARDKNUpLayout.m */; };
+		DA14934221F0B6ED0052E752 /* ARDKImageViewMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = DA07B8EB1F6927C7009626B3 /* ARDKImageViewMatrix.m */; };
+		DA14934421F0B6ED0052E752 /* ARDKEditTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA241F541F3DC15D00F296A8 /* ARDKEditTabsViewController.m */; };
+		DA14934521F0B6ED0052E752 /* MuPDFDKTextWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA08D4D72195EE2E009CB436 /* MuPDFDKTextWidgetView.m */; };
+		DA14934721F0B6ED0052E752 /* mupdfdk_stream.m in Sources */ = {isa = PBXBuildFile; fileRef = DADE64041FBF26D200B10C23 /* mupdfdk_stream.m */; };
+		DA14934A21F0B6ED0052E752 /* ARDKDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA241F601F444B4F00F296A8 /* ARDKDocumentViewController.m */; };
+		DA14934B21F0B6ED0052E752 /* ARDKDocSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E9ADE1FB43F1C003076B4 /* ARDKDocSession.m */; };
+		DA14934D21F0B6ED0052E752 /* ARDKSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0154041C45143D0044C48B /* ARDKSelectButton.m */; };
+		DA14934E21F0B6ED0052E752 /* ARDKDocErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DA764EFB1CD7591B0029F1B5 /* ARDKDocErrorHandler.m */; };
+		DA14934F21F0B6ED0052E752 /* MuPDFDKFindRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2308731FB4599C00846E22 /* MuPDFDKFindRibbonViewController.m */; };
+		DA14935021F0B6ED0052E752 /* ARDKViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FAD41BF4DF23003D226C /* ARDKViewRenderer.m */; };
+		DA14935121F0B6ED0052E752 /* ARDKTextRange.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6A43821D6F2FB8002F33D3 /* ARDKTextRange.m */; };
+		DA14935421F0B6ED0052E752 /* ARDKPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACDB35E1BFB637A001EBED3 /* ARDKPagesViewController.m */; };
+		DA14935621F0B6ED0052E752 /* CALayer+ARDKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAADCA1E1B6638CD00A183A3 /* CALayer+ARDKAdditions.m */; };
+		DA14935821F0B6ED0052E752 /* MuPDFDKAnnotateRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAECE6D71F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.m */; };
+		DA14935921F0B6ED0052E752 /* MuPDFDKLineWidthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACDC3741F90EDEB0077C129 /* MuPDFDKLineWidthViewController.m */; };
+		DA14935A21F0B6ED0052E752 /* MuPDFDKPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA226AB1F6C1A460039EC37 /* MuPDFDKPageView.m */; };
+		DA14935D21F0B6ED0052E752 /* ARDKContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADC69A91C2962EA00AAE9DD /* ARDKContainerViewController.m */; };
+		DA14936121F0B6ED0052E752 /* MuPDFDKDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA226A31F6C1A460039EC37 /* MuPDFDKDocumentViewController.m */; };
+		DA14936321F0B6ED0052E752 /* libmupdf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA226F01F6C59480039EC37 /* libmupdf.a */; };
+		DA14936421F0B6ED0052E752 /* libmupdf-third.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA226F11F6C59480039EC37 /* libmupdf-third.a */; };
+		DA14936721F0B6ED0052E752 /* ARDKButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EB635322216E5388007D6F82 /* ARDKButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14936821F0B6ED0052E752 /* MuPDFDKLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 303E77DF2126EBCF009C9C07 /* MuPDFDKLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14936921F0B6ED0052E752 /* ARDKTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = EB5252FB209B1796007A530D /* ARDKTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14936D21F0B6ED0052E752 /* ARDKFileState.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5731A61FB052860037606D /* ARDKFileState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937021F0B6ED0052E752 /* ARDKSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5F0AF71FAB03A600F729EC /* ARDKSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937121F0B6ED0052E752 /* MuPDFDKWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7D63E921ECA9D600BBD2A0 /* MuPDFDKWidgetView.h */; };
+		DA14937321F0B6ED0052E752 /* ARDKLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5F0AF31FAB00B200F729EC /* ARDKLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937421F0B6ED0052E752 /* platform-headers.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5F0AEA1FAAFE2000F729EC /* platform-headers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937721F0B6ED0052E752 /* ARDKBasicDocViewAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = DA494D1D1F34C8680031EB51 /* ARDKBasicDocViewAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937821F0B6ED0052E752 /* MuPDFDKBasicDocumentViewAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = DAECE6E21F8F6E280017596A /* MuPDFDKBasicDocumentViewAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937B21F0B6ED0052E752 /* ARDKBasicDocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA241F571F41BD3E00F296A8 /* ARDKBasicDocumentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14937C21F0B6ED0052E752 /* ARDKRibbonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0680D31E65B02300696C88 /* ARDKRibbonItem.h */; };
+		DA14938021F0B6ED0052E752 /* MuPDFDKBasicDocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226A01F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14938121F0B6ED0052E752 /* ARDKDocViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = DA494D211F386B010031EB51 /* ARDKDocViewInternal.h */; };
+		DA14938221F0B6ED0052E752 /* ARDKRibbonItemSplitter.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0B3E3E1E66EAC4008E802B /* ARDKRibbonItemSplitter.h */; };
+		DA14938421F0B6ED0052E752 /* ARDKTextRange.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6A43811D6F2FB8002F33D3 /* ARDKTextRange.h */; };
+		DA14938521F0B6ED0052E752 /* ARDKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4266DE1E6DDAB700D2B4C8 /* ARDKTextField.h */; };
+		DA14938721F0B6ED0052E752 /* ARDKImageViewMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = DA07B8EA1F6927C7009626B3 /* ARDKImageViewMatrix.h */; };
+		DA14938821F0B6ED0052E752 /* MuPDFDKAnnotateRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAECE6D61F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.h */; };
+		DA14938921F0B6ED0052E752 /* ARDKEditTabsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA241F531F3DC15D00F296A8 /* ARDKEditTabsViewController.h */; };
+		DA14938A21F0B6ED0052E752 /* MuPDFDKRadioWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7D63EC21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.h */; };
+		DA14938B21F0B6ED0052E752 /* ARDKSecureFS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D583F2D1FA85C0A000B2775 /* ARDKSecureFS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14938C21F0B6ED0052E752 /* ARDKViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA2FAD31BF4DF23003D226C /* ARDKViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14938E21F0B6ED0052E752 /* MuPDFDKTextWidgetView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA08D4D62195EE2E009CB436 /* MuPDFDKTextWidgetView.h */; };
+		DA14938F21F0B6ED0052E752 /* ARDKTintedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6F3A6921661B4B0057C631 /* ARDKTintedLabel.h */; };
+		DA14939021F0B6ED0052E752 /* ARDKGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5731A81FB0558B0037606D /* ARDKGeometry.h */; };
+		DA14939421F0B6ED0052E752 /* MuPDFDKUI.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226D11F6C30480039EC37 /* MuPDFDKUI.h */; };
+		DA14939521F0B6ED0052E752 /* MuPDFDKDocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226A21F6C1A460039EC37 /* MuPDFDKDocumentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14939721F0B6ED0052E752 /* MuPDFDKTextWidgetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3BB4E4202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.h */; };
+		DA14939821F0B6ED0052E752 /* MuPDFDKTocCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DA23086A1FB1EDD400846E22 /* MuPDFDKTocCell.h */; };
+		DA14939921F0B6ED0052E752 /* ARDKInternalPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC2C9AF1E7B0C8E00141367 /* ARDKInternalPasteboard.h */; };
+		DA14939B21F0B6ED0052E752 /* ARDKDocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA241F5F1F444B4F00F296A8 /* ARDKDocumentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA14939C21F0B6ED0052E752 /* MuPDFDKOptionWidgetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3BB4E8202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.h */; };
+		DA14939E21F0B6ED0052E752 /* MuPDFDKTocViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2308701FB1EE1100846E22 /* MuPDFDKTocViewController.h */; };
+		DA14939F21F0B6ED0052E752 /* MuPDFDKFindRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2308721FB4599C00846E22 /* MuPDFDKFindRibbonViewController.h */; };
+		DA1493A021F0B6ED0052E752 /* MuPDFDKColorPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DACDC3731F90EDEB0077C129 /* MuPDFDKColorPickerViewController.h */; };
+		DA1493A321F0B6ED0052E752 /* ARDKPrintPageRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4D51201CB69DE7007245AB /* ARDKPrintPageRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493A421F0B6ED0052E752 /* MuPDFDKLineWidthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DACDC3751F90EDEB0077C129 /* MuPDFDKLineWidthViewController.h */; };
+		DA1493A621F0B6ED0052E752 /* ARDKSelectButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0154031C45143D0044C48B /* ARDKSelectButton.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DA1493A721F0B6ED0052E752 /* MuPDFDKEditTabsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226A41F6C1A460039EC37 /* MuPDFDKEditTabsViewController.h */; };
+		DA1493A821F0B6ED0052E752 /* ARDKDocumentSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C13D62B1E23F41B00D800FB /* ARDKDocumentSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493AB21F0B6ED0052E752 /* MuPDFDKColorPickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DACDC3711F90EDEA0077C129 /* MuPDFDKColorPickerCell.h */; };
+		DA1493AC21F0B6ED0052E752 /* ARDKHandlerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C904BB91DDF751F0024D437 /* ARDKHandlerInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493B021F0B6ED0052E752 /* ARDKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC2C9B31E7C4A7500141367 /* ARDKTextView.h */; };
+		DA1493B121F0B6ED0052E752 /* MuPDFDKDocViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226D21F6C30480039EC37 /* MuPDFDKDocViewInternal.h */; };
+		DA1493B221F0B6ED0052E752 /* ARDKDocTypeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE544541E098CD200590ED7 /* ARDKDocTypeDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493B521F0B6ED0052E752 /* ARDKDocErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = DA764EFA1CD7591B0029F1B5 /* ARDKDocErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493B621F0B6ED0052E752 /* MuPDFDKAnnotInfoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAEBBE3E1FA89861009B6E2E /* MuPDFDKAnnotInfoViewController.h */; };
+		DA1493B821F0B6ED0052E752 /* ARDKTextSelectionRect.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0D817F219C3EB400B36F99 /* ARDKTextSelectionRect.h */; };
+		DA1493BA21F0B6ED0052E752 /* MuPDFDKSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFCB25D1F9A3B12005D1E0D /* MuPDFDKSelectionView.h */; };
+		DA1493BB21F0B6ED0052E752 /* ARDKPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4E00AD1F0CEDB0001E282E /* ARDKPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493BF21F0B6ED0052E752 /* ARDKUI.h in Headers */ = {isa = PBXBuildFile; fileRef = DA241F511F3DB15600F296A8 /* ARDKUI.h */; };
+		DA1493C021F0B6ED0052E752 /* MuPDFDKPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226AA1F6C1A460039EC37 /* MuPDFDKPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1493C321F0B6ED0052E752 /* ARDKRibbonItemStackedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0680D71E65B72200696C88 /* ARDKRibbonItemStackedButton.h */; };
+		DA1493C421F0B6ED0052E752 /* MuPDFDKFileRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA226A61F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.h */; };
+		DA1493CB21F0B6ED0052E752 /* mupdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA226B81F6C1A7C0039EC37 /* mupdf.storyboard */; };
+		DA1493CD21F0B6ED0052E752 /* ARDKSearchProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6054D71D914DDA007070AD /* ARDKSearchProgressViewController.xib */; };
+		DA1493D321F0B6ED0052E752 /* fontmap in Resources */ = {isa = PBXBuildFile; fileRef = DA23A219203F1AE900C65819 /* fontmap */; };
+		DA1493D421F0B6ED0052E752 /* mupdfcallouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACDC35C1F90EAF20077C129 /* mupdfcallouts.storyboard */; };
+		DA1493D521F0B6ED0052E752 /* ARDKActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6054D31D914DDA007070AD /* ARDKActivityViewController.xib */; };
+		DA14945221F0BBDE0052E752 /* ARDKTextPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6A437D1D6F2F8E002F33D3 /* ARDKTextPosition.h */; };
+		DA14945321F0BFCE0052E752 /* ARDKStackedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DA24CF631C9870C3004D27CD /* ARDKStackedButton.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DA14945421F0BFD00052E752 /* ARDKStackedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA24CF641C9870C3004D27CD /* ARDKStackedButton.m */; };
+		DA14945521F0BFFD0052E752 /* ARDKUIDimensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7A1FFD1DBE0AF700045483 /* ARDKUIDimensions.h */; };
+		DA14945621F0C0010052E752 /* ARDKUIDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7A1FFE1DBE0AF700045483 /* ARDKUIDimensions.m */; };
+		DA23227B21F62DC800F2495A /* MuPDFDKAnnotatingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = DAECE6E11F8F6A8D0017596A /* MuPDFDKAnnotatingMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA4067E923F56EF100281BCA /* ARDKBasicDocumentViewProtected.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4067E623F56EF100281BCA /* ARDKBasicDocumentViewProtected.h */; };
+		DA65EEF32449A79400E42469 /* ARDKActivityViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA87AF631B01F43D00DD2AEB /* ARDKActivityViewController.h */; };
+		DA709C1D24193CBF008762FD /* ARDKRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA709C1924193CBF008762FD /* ARDKRibbonViewController.h */; };
+		DA709C2124193CBF008762FD /* ARDKRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA709C1A24193CBF008762FD /* ARDKRibbonViewController.m */; };
+		DA7394F021F222D000424CDA /* mupdfdk.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7394EF21F222D000424CDA /* mupdfdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA967356237076330050824A /* ARDKPageGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = DA967353237076330050824A /* ARDKPageGeometry.m */; };
+		DA96735B2370766B0050824A /* ARDKPageGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9673582370766B0050824A /* ARDKPageGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA9DDC9D2281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9DDC992281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.h */; };
+		DA9DDCA02281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9DDC9A2281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.m */; };
+		DAB5782623E848A7003C1F72 /* ARDKPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB5782323E848A7003C1F72 /* ARDKPageController.h */; };
+		DAC3F6002445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC3F5FC2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.h */; };
+		DAC3F6042445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC3F5FD2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.m */; };
+		DADF3D29223927C3004C5D65 /* pdf_signer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF3F0C92239069D005D451D /* pdf_signer.h */; };
+		DADF3D2B223927C7004C5D65 /* pdf_signer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF3F0C82239069D005D451D /* pdf_signer.m */; };
+		DAF6E2A923EACCEE00C4A9A9 /* ARDKCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF6E2A523EACCEE00C4A9A9 /* ARDKCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAF6E2AD23EACCEE00C4A9A9 /* ARDKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6E2A623EACCEE00C4A9A9 /* ARDKCollectionViewCell.m */; };
+		DAF6E2B223EAD70800C4A9A9 /* ARDKPageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF6E2AF23EAD70800C4A9A9 /* ARDKPageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAFAD99922E9F36900EF08D8 /* ARDKDocSession.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFAD99622E9F36900EF08D8 /* ARDKDocSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAFC79A422146A5900835C4A /* MuPDFDKPagesRibbonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFC79A222146A5900835C4A /* MuPDFDKPagesRibbonViewController.h */; };
+		DAFC79A522146A5900835C4A /* MuPDFDKPagesRibbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC79A322146A5900835C4A /* MuPDFDKPagesRibbonViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA1492DF21F0B6ED0052E752 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA3D78231A91F9AC005D6510 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA4B34D31F55A6B0006014B9;
+			remoteInfo = "MuPDF-generated";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00938D9FCB8FF388F8D9938F /* Pods-mupdfdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mupdfdk.release.xcconfig"; path = "Target Support Files/Pods-mupdfdk/Pods-mupdfdk.release.xcconfig"; sourceTree = "<group>"; };
+		19D7D28CC536F909F61EBC2E /* Pods-mupdfdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mupdfdk.debug.xcconfig"; path = "Target Support Files/Pods-mupdfdk/Pods-mupdfdk.debug.xcconfig"; sourceTree = "<group>"; };
+		303E77DC2126EBAE009C9C07 /* MuPDFDKLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKLib.m; sourceTree = "<group>"; };
+		303E77DF2126EBCF009C9C07 /* MuPDFDKLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKLib.h; sourceTree = "<group>"; };
+		42480A0250B9155D1F9E8A39 /* Pods-mupdfdk.fortify debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mupdfdk.fortify debug.xcconfig"; path = "Target Support Files/Pods-mupdfdk/Pods-mupdfdk.fortify debug.xcconfig"; sourceTree = "<group>"; };
+		7C13D62B1E23F41B00D800FB /* ARDKDocumentSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocumentSettings.h; sourceTree = "<group>"; };
+		7C13D62C1E23F41B00D800FB /* ARDKDocumentSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDocumentSettings.m; sourceTree = "<group>"; };
+		7C4266DE1E6DDAB700D2B4C8 /* ARDKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTextField.h; sourceTree = "<group>"; };
+		7C4266DF1E6DDAB700D2B4C8 /* ARDKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTextField.m; sourceTree = "<group>"; };
+		7C4D51201CB69DE7007245AB /* ARDKPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKPrintPageRenderer.h; sourceTree = "<group>"; };
+		7C4D51211CB69DE7007245AB /* ARDKPrintPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKPrintPageRenderer.m; sourceTree = "<group>"; };
+		7C904BB91DDF751F0024D437 /* ARDKHandlerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKHandlerInfo.h; sourceTree = "<group>"; };
+		7C904BBA1DDF751F0024D437 /* ARDKHandlerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKHandlerInfo.m; sourceTree = "<group>"; };
+		7CC2C9AF1E7B0C8E00141367 /* ARDKInternalPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKInternalPasteboard.h; sourceTree = "<group>"; };
+		7CC2C9B01E7B0C8E00141367 /* ARDKInternalPasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKInternalPasteboard.m; sourceTree = "<group>"; };
+		7CC2C9B31E7C4A7500141367 /* ARDKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTextView.h; sourceTree = "<group>"; };
+		7CC2C9B41E7C4A7500141367 /* ARDKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTextView.m; sourceTree = "<group>"; };
+		7CF25C4C1C8DFE420034FE2B /* ARDKTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTiledLayer.h; sourceTree = "<group>"; };
+		7CF25C4D1C8DFE420034FE2B /* ARDKTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTiledLayer.m; sourceTree = "<group>"; };
+		7CF6EEA71C724B370021F061 /* ARDKPageAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKPageAnnotationView.h; sourceTree = "<group>"; };
+		7CF6EEA81C724B370021F061 /* ARDKPageAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKPageAnnotationView.m; sourceTree = "<group>"; };
+		9210BAC2241FA80100D8697B /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		921D620923E4460900B2BB5A /* ARDKCertDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKCertDetailViewController.m; sourceTree = "<group>"; };
+		921D620A23E4460900B2BB5A /* ARDKCertPickerDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKCertPickerDialogViewController.h; sourceTree = "<group>"; };
+		921D620B23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKCertVerifyDialogViewController.m; sourceTree = "<group>"; };
+		921D620C23E4460A00B2BB5A /* ARDKCertDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKCertDetailViewController.h; sourceTree = "<group>"; };
+		921D620D23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKCertVerifyDialogViewController.h; sourceTree = "<group>"; };
+		921D620E23E4460B00B2BB5A /* ARDKCertPickerDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKCertPickerDialogViewController.m; sourceTree = "<group>"; };
+		921D621B23E451E200B2BB5A /* ARDKOpenSSLSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLSigner.h; sourceTree = "<group>"; };
+		921D621C23E451E200B2BB5A /* ARDKOpenSSLSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLSigner.m; sourceTree = "<group>"; };
+		922A76CE22E89A3A00180AA8 /* BAFBlackberryAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAFBlackberryAnalytics.framework; path = bbrelease/BAFBlackberryAnalytics.framework; sourceTree = "<group>"; };
+		9238CEEB243B486700089F67 /* ARDKDigitalSigningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDigitalSigningDelegate.h; sourceTree = "<group>"; };
+		9238CEFE243B5A3300089F67 /* ARDKOpenSSLCert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLCert.m; sourceTree = "<group>"; };
+		9238CEFF243B5A3400089F67 /* ARDKOpenSSLCert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLCert.h; sourceTree = "<group>"; };
+		9238CF00243B5A3400089F67 /* ARDKOpenSSLVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLVerifier.h; sourceTree = "<group>"; };
+		9238CF01243B5A3400089F67 /* ARDKOpenSSLVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLVerifier.m; sourceTree = "<group>"; };
+		924557C22369C8210020EF56 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		925DA4FE23E862800007E67A /* ARDKMutableSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKMutableSigner.h; sourceTree = "<group>"; };
+		925DA50823E87C820007E67A /* ARDKMutableSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKMutableSigner.m; sourceTree = "<group>"; };
+		926CF238243F131E00ED0586 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../Pods/OpenSSL-Universal/ios/lib/libcrypto.a"; sourceTree = "<group>"; };
+		926CF239243F131F00ED0586 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../Pods/OpenSSL-Universal/ios/lib/libssl.a"; sourceTree = "<group>"; };
+		926F051F225E0496002FBD47 /* DeviceCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceCheck.framework; path = System/Library/Frameworks/DeviceCheck.framework; sourceTree = SDKROOT; };
+		927D753D2449E09800FD755C /* ARDKSigning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARDKSigning.storyboard; sourceTree = "<group>"; };
+		927D75592449F8F400FD755C /* ARDKPKCS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDKPKCS7.h; path = objc/ARDKPKCS7.h; sourceTree = "<group>"; };
+		9288F030234E2F68009B3FCB /* BAFBlackberryAnalyticsAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = BAFBlackberryAnalyticsAssets.bundle; path = bbrelease/BAFBlackberryAnalytics.framework/BAFBlackberryAnalyticsAssets.bundle; sourceTree = "<group>"; };
+		92A7C24C247BB0AB00AF4E67 /* libswiftCoreFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreFoundation.tbd; path = usr/lib/swift/libswiftCoreFoundation.tbd; sourceTree = SDKROOT; };
+		92A7C256247BB1F700AF4E67 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		92B2B8711F73FFB300AC760A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		92B2B8741F73FFF000AC760A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		92B2B8761F7402FB00AC760A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		92B73BAD23FC285100BE3195 /* ARDKOpenSSLKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLKeychain.h; sourceTree = "<group>"; };
+		92B73BAE23FC285200BE3195 /* ARDKOpenSSLKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLKeychain.m; sourceTree = "<group>"; };
+		92C8FF1C23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLPKCS12Importer.h; sourceTree = "<group>"; };
+		92C8FF1D23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLPKCS12Importer.m; sourceTree = "<group>"; };
+		92DE933B1F710A4000543A7B /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = System/Library/Frameworks/GD.framework; sourceTree = SDKROOT; };
+		92DE93431F711A7000543A7B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		92DE93451F711A8100543A7B /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		92DE93471F711D4B00543A7B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		92DE93491F711DD500543A7B /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		92DE934B1F711DE800543A7B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		92DE934D1F711DFA00543A7B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		92DE934F1F711E2800543A7B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92DF085C2450997000332CE6 /* mupdfdk.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = mupdfdk.modulemap; sourceTree = "<group>"; };
+		92F18BD224361399001FD646 /* ARDKOpenSSLSigningDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKOpenSSLSigningDelegate.h; sourceTree = "<group>"; };
+		92F18BD42436139A001FD646 /* ARDKOpenSSLSigningDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKOpenSSLSigningDelegate.m; sourceTree = "<group>"; };
+		9D0E9ADE1FB43F1C003076B4 /* ARDKDocSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDocSession.m; sourceTree = "<group>"; };
+		9D5731A61FB052860037606D /* ARDKFileState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKFileState.h; sourceTree = "<group>"; };
+		9D5731A81FB0558B0037606D /* ARDKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKGeometry.h; sourceTree = "<group>"; };
+		9D583F2D1FA85C0A000B2775 /* ARDKSecureFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKSecureFS.h; sourceTree = "<group>"; };
+		9D5F0AEA1FAAFE2000F729EC /* platform-headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "platform-headers.h"; sourceTree = "<group>"; };
+		9D5F0AF11FAB00A400F729EC /* ARDKLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKLib.m; sourceTree = "<group>"; };
+		9D5F0AF31FAB00B200F729EC /* ARDKLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKLib.h; sourceTree = "<group>"; };
+		9D5F0AF71FAB03A600F729EC /* ARDKSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKSettings.h; sourceTree = "<group>"; };
+		9D5F0AF91FAB03B700F729EC /* ARDKSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKSettings.m; sourceTree = "<group>"; };
+		9D5F0B111FAB1FA200F729EC /* PlatformBitmap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformBitmap.m; sourceTree = "<group>"; };
+		DA0154031C45143D0044C48B /* ARDKSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKSelectButton.h; sourceTree = "<group>"; };
+		DA0154041C45143D0044C48B /* ARDKSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKSelectButton.m; sourceTree = "<group>"; };
+		DA04D2AA1B72368900819344 /* ARDKSearchProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKSearchProgressViewController.h; sourceTree = "<group>"; };
+		DA04D2AB1B72368900819344 /* ARDKSearchProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKSearchProgressViewController.m; sourceTree = "<group>"; };
+		DA0680D31E65B02300696C88 /* ARDKRibbonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKRibbonItem.h; sourceTree = "<group>"; };
+		DA0680D41E65B02300696C88 /* ARDKRibbonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKRibbonItem.m; sourceTree = "<group>"; };
+		DA0680D71E65B72200696C88 /* ARDKRibbonItemStackedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKRibbonItemStackedButton.h; sourceTree = "<group>"; };
+		DA0680D81E65B72200696C88 /* ARDKRibbonItemStackedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKRibbonItemStackedButton.m; sourceTree = "<group>"; };
+		DA07B8EA1F6927C7009626B3 /* ARDKImageViewMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKImageViewMatrix.h; sourceTree = "<group>"; };
+		DA07B8EB1F6927C7009626B3 /* ARDKImageViewMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKImageViewMatrix.m; sourceTree = "<group>"; };
+		DA08D4D62195EE2E009CB436 /* MuPDFDKTextWidgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKTextWidgetView.h; sourceTree = "<group>"; };
+		DA08D4D72195EE2E009CB436 /* MuPDFDKTextWidgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKTextWidgetView.m; sourceTree = "<group>"; };
+		DA0B3E3E1E66EAC4008E802B /* ARDKRibbonItemSplitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKRibbonItemSplitter.h; sourceTree = "<group>"; };
+		DA0B3E3F1E66EAC4008E802B /* ARDKRibbonItemSplitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKRibbonItemSplitter.m; sourceTree = "<group>"; };
+		DA0B75F122E8931A009AE0E6 /* ARDKBasicDocViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKBasicDocViewDelegate.h; sourceTree = "<group>"; };
+		DA0D817F219C3EB400B36F99 /* ARDKTextSelectionRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKTextSelectionRect.h; sourceTree = "<group>"; };
+		DA0D8180219C3EB400B36F99 /* ARDKTextSelectionRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKTextSelectionRect.m; sourceTree = "<group>"; };
+		DA0DFCD82437911700CA16C5 /* ARDKDefaultFileState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDefaultFileState.m; sourceTree = "<group>"; };
+		DA0DFCD92437911800CA16C5 /* ARDKDefaultFileState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDefaultFileState.h; sourceTree = "<group>"; };
+		DA0F7D8E1EA64D3400438673 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DA0F7D901EA64D4100438673 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA11A237248E595400817BCA /* Generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Generic.xcassets; sourceTree = "<group>"; };
+		DA11A238248E595400817BCA /* Colors-common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Colors-common.xcassets"; sourceTree = "<group>"; };
+		DA11A239248E595400817BCA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DA11A23D248E646100817BCA /* ARDKEmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKEmptySegue.m; sourceTree = "<group>"; };
+		DA11A23E248E646100817BCA /* ARDKEmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKEmptySegue.h; sourceTree = "<group>"; };
+		DA131BA822F1B18D00862FFA /* ARDKViewingState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKViewingState.h; sourceTree = "<group>"; };
+		DA131BA922F1B18D00862FFA /* ARDKViewingState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKViewingState.m; sourceTree = "<group>"; };
+		DA1493DD21F0B6ED0052E752 /* mupdfdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mupdfdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1493DE21F0B6EE0052E752 /* mupdfdk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mupdfdk-Info.plist"; sourceTree = "<group>"; };
+		DA23086A1FB1EDD400846E22 /* MuPDFDKTocCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKTocCell.h; sourceTree = "<group>"; };
+		DA23086C1FB1EDFB00846E22 /* MuPDFDKTocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKTocViewController.m; sourceTree = "<group>"; };
+		DA23086D1FB1EDFB00846E22 /* MuPDFDKTocCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKTocCell.m; sourceTree = "<group>"; };
+		DA2308701FB1EE1100846E22 /* MuPDFDKTocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKTocViewController.h; sourceTree = "<group>"; };
+		DA2308721FB4599C00846E22 /* MuPDFDKFindRibbonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKFindRibbonViewController.h; sourceTree = "<group>"; };
+		DA2308731FB4599C00846E22 /* MuPDFDKFindRibbonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKFindRibbonViewController.m; sourceTree = "<group>"; };
+		DA23A219203F1AE900C65819 /* fontmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontmap; sourceTree = "<group>"; };
+		DA241F511F3DB15600F296A8 /* ARDKUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKUI.h; sourceTree = "<group>"; };
+		DA241F531F3DC15D00F296A8 /* ARDKEditTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKEditTabsViewController.h; sourceTree = "<group>"; };
+		DA241F541F3DC15D00F296A8 /* ARDKEditTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKEditTabsViewController.m; sourceTree = "<group>"; };
+		DA241F571F41BD3E00F296A8 /* ARDKBasicDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKBasicDocumentViewController.h; sourceTree = "<group>"; };
+		DA241F581F41BD3F00F296A8 /* ARDKBasicDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKBasicDocumentViewController.m; sourceTree = "<group>"; };
+		DA241F5F1F444B4F00F296A8 /* ARDKDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocumentViewController.h; sourceTree = "<group>"; };
+		DA241F601F444B4F00F296A8 /* ARDKDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDocumentViewController.m; sourceTree = "<group>"; };
+		DA241F691F45BA3900F296A8 /* ARDKDocumentViewControllerPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKDocumentViewControllerPrivate.h; sourceTree = "<group>"; };
+		DA24CF631C9870C3004D27CD /* ARDKStackedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKStackedButton.h; sourceTree = "<group>"; };
+		DA24CF641C9870C3004D27CD /* ARDKStackedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKStackedButton.m; sourceTree = "<group>"; };
+		DA3BB4E4202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKTextWidgetViewController.h; sourceTree = "<group>"; };
+		DA3BB4E5202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKTextWidgetViewController.m; sourceTree = "<group>"; };
+		DA3BB4E8202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKOptionWidgetViewController.h; sourceTree = "<group>"; };
+		DA3BB4E9202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKOptionWidgetViewController.m; sourceTree = "<group>"; };
+		DA4067E623F56EF100281BCA /* ARDKBasicDocumentViewProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKBasicDocumentViewProtected.h; sourceTree = "<group>"; };
+		DA494D1D1F34C8680031EB51 /* ARDKBasicDocViewAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKBasicDocViewAPI.h; sourceTree = "<group>"; };
+		DA494D211F386B010031EB51 /* ARDKDocViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocViewInternal.h; sourceTree = "<group>"; };
+		DA49DC1A1DA3E5740042A706 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC1B1DA3E5740042A706 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA49DC1C1DA3E5740042A706 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC1D1DA3E5740042A706 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC1E1DA3E5740042A706 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC1F1DA3E5740042A706 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC201DA3E5740042A706 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC211DA3E5740042A706 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC221DA3E5740042A706 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC231DA3E5740042A706 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA49DC241DA3E5740042A706 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC251DA3E5740042A706 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC261DA3E5740042A706 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA49DC271DA3E5740042A706 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA49DC281DA3E5740042A706 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA49DC291DA3E5740042A706 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA49DC2A1DA3E5740042A706 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/ARDKSearchProgressViewController.strings"; sourceTree = "<group>"; };
+		DA4D059D1A9384F3008671B6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		DA4E00AD1F0CEDB0001E282E /* ARDKPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKPageView.h; sourceTree = "<group>"; };
+		DA4E00AE1F0CEDB0001E282E /* ARDKPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKPageView.m; sourceTree = "<group>"; };
+		DA551B591ACEB1F80031CD13 /* ARDKNUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKNUpViewController.h; sourceTree = "<group>"; };
+		DA551B5A1ACEB1F80031CD13 /* ARDKNUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKNUpViewController.m; sourceTree = "<group>"; };
+		DA551B5B1ACEB1F80031CD13 /* ARDKNUpLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKNUpLayout.h; sourceTree = "<group>"; };
+		DA551B5C1ACEB1F80031CD13 /* ARDKNUpLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKNUpLayout.m; sourceTree = "<group>"; };
+		DA6054D21D914DDA007070AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ARDKActivityViewController.xib; sourceTree = "<group>"; };
+		DA6054D51D914DDA007070AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ARDKActivityViewController.strings; sourceTree = "<group>"; };
+		DA6054D61D914DDA007070AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ARDKSearchProgressViewController.xib; sourceTree = "<group>"; };
+		DA6054D91D914DDA007070AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ARDKSearchProgressViewController.strings; sourceTree = "<group>"; };
+		DA6A437D1D6F2F8E002F33D3 /* ARDKTextPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTextPosition.h; sourceTree = "<group>"; };
+		DA6A437E1D6F2F8E002F33D3 /* ARDKTextPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTextPosition.m; sourceTree = "<group>"; };
+		DA6A43811D6F2FB8002F33D3 /* ARDKTextRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTextRange.h; sourceTree = "<group>"; };
+		DA6A43821D6F2FB8002F33D3 /* ARDKTextRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTextRange.m; sourceTree = "<group>"; };
+		DA709C1924193CBF008762FD /* ARDKRibbonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKRibbonViewController.h; sourceTree = "<group>"; };
+		DA709C1A24193CBF008762FD /* ARDKRibbonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKRibbonViewController.m; sourceTree = "<group>"; };
+		DA7394EF21F222D000424CDA /* mupdfdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mupdfdk.h; sourceTree = "<group>"; };
+		DA764EFA1CD7591B0029F1B5 /* ARDKDocErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocErrorHandler.h; sourceTree = "<group>"; };
+		DA764EFB1CD7591B0029F1B5 /* ARDKDocErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDocErrorHandler.m; sourceTree = "<group>"; };
+		DA7A1FFD1DBE0AF700045483 /* ARDKUIDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKUIDimensions.h; sourceTree = "<group>"; };
+		DA7A1FFE1DBE0AF700045483 /* ARDKUIDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKUIDimensions.m; sourceTree = "<group>"; };
+		DA7D0F491C5F7B9800D0B876 /* ARDKActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKActivityIndicator.h; sourceTree = "<group>"; };
+		DA7D63E921ECA9D600BBD2A0 /* MuPDFDKWidgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKWidgetView.h; sourceTree = "<group>"; };
+		DA7D63EC21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKRadioWidgetView.h; sourceTree = "<group>"; };
+		DA7D63ED21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKRadioWidgetView.m; sourceTree = "<group>"; };
+		DA87AF631B01F43D00DD2AEB /* ARDKActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKActivityViewController.h; sourceTree = "<group>"; };
+		DA87AF641B01F43D00DD2AEB /* ARDKActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKActivityViewController.m; sourceTree = "<group>"; };
+		DA967353237076330050824A /* ARDKPageGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKPageGeometry.m; sourceTree = "<group>"; };
+		DA9673582370766B0050824A /* ARDKPageGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKPageGeometry.h; sourceTree = "<group>"; };
+		DA9DDC992281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKRedactRibbonViewController.h; sourceTree = "<group>"; };
+		DA9DDC9A2281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKRedactRibbonViewController.m; sourceTree = "<group>"; };
+		DAA226A01F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKBasicDocumentViewController.h; sourceTree = "<group>"; };
+		DAA226A11F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKBasicDocumentViewController.m; sourceTree = "<group>"; };
+		DAA226A21F6C1A460039EC37 /* MuPDFDKDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKDocumentViewController.h; sourceTree = "<group>"; };
+		DAA226A31F6C1A460039EC37 /* MuPDFDKDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKDocumentViewController.m; sourceTree = "<group>"; };
+		DAA226A41F6C1A460039EC37 /* MuPDFDKEditTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKEditTabsViewController.h; sourceTree = "<group>"; };
+		DAA226A51F6C1A460039EC37 /* MuPDFDKEditTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKEditTabsViewController.m; sourceTree = "<group>"; };
+		DAA226A61F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKFileRibbonViewController.h; sourceTree = "<group>"; };
+		DAA226A71F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKFileRibbonViewController.m; sourceTree = "<group>"; };
+		DAA226AA1F6C1A460039EC37 /* MuPDFDKPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKPageView.h; sourceTree = "<group>"; };
+		DAA226AB1F6C1A460039EC37 /* MuPDFDKPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKPageView.m; sourceTree = "<group>"; };
+		DAA226B91F6C1A7C0039EC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/mupdf.storyboard; sourceTree = "<group>"; };
+		DAA226BB1F6C1AA20039EC37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226BC1F6C1AA50039EC37 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226BD1F6C1AA80039EC37 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226BE1F6C1AAB0039EC37 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226BF1F6C1AAF0039EC37 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C01F6C1AB20039EC37 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C11F6C1AB60039EC37 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C21F6C1ABB0039EC37 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C31F6C1ABF0039EC37 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C41F6C1AC20039EC37 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C51F6C1AC50039EC37 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C61F6C1AC80039EC37 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226C71F6C1ACB0039EC37 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226C81F6C1ACE0039EC37 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226C91F6C1AD20039EC37 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226CA1F6C1AD60039EC37 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/mupdf.strings; sourceTree = "<group>"; };
+		DAA226CB1F6C1AD90039EC37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226CC1F6C1ADB0039EC37 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/mupdf.strings"; sourceTree = "<group>"; };
+		DAA226D11F6C30480039EC37 /* MuPDFDKUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKUI.h; sourceTree = "<group>"; };
+		DAA226D21F6C30480039EC37 /* MuPDFDKDocViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKDocViewInternal.h; sourceTree = "<group>"; };
+		DAA226F01F6C59480039EC37 /* libmupdf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmupdf.a; path = sodk/libmupdf.a; sourceTree = "<group>"; };
+		DAA226F11F6C59480039EC37 /* libmupdf-third.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmupdf-third.a"; path = "sodk/libmupdf-third.a"; sourceTree = "<group>"; };
+		DAA2FAD31BF4DF23003D226C /* ARDKViewRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKViewRenderer.h; sourceTree = "<group>"; };
+		DAA2FAD41BF4DF23003D226C /* ARDKViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKViewRenderer.m; sourceTree = "<group>"; };
+		DAADCA1D1B6638CD00A183A3 /* CALayer+ARDKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ARDKAdditions.h"; sourceTree = "<group>"; };
+		DAADCA1E1B6638CD00A183A3 /* CALayer+ARDKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ARDKAdditions.m"; sourceTree = "<group>"; };
+		DAB5782323E848A7003C1F72 /* ARDKPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKPageController.h; sourceTree = "<group>"; };
+		DABBABA21B7DFAF300B0AA35 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DAC3F5FC2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKDocumentViewDefaultHandlers.h; sourceTree = "<group>"; };
+		DAC3F5FD2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKDocumentViewDefaultHandlers.m; sourceTree = "<group>"; };
+		DACDB35D1BFB637A001EBED3 /* ARDKPagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKPagesViewController.h; sourceTree = "<group>"; };
+		DACDB35E1BFB637A001EBED3 /* ARDKPagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKPagesViewController.m; sourceTree = "<group>"; };
+		DACDC35D1F90EAF20077C129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/mupdfcallouts.storyboard; sourceTree = "<group>"; };
+		DACDC35F1F90EB0C0077C129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3601F90EB0F0077C129 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3611F90EB110077C129 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC3621F90EB140077C129 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC3631F90EB1A0077C129 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3641F90EB1C0077C129 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3651F90EB1F0077C129 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3661F90EB220077C129 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3671F90EB260077C129 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3681F90EB280077C129 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC3691F90EB2B0077C129 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC36A1F90EB2F0077C129 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC36B1F90EB320077C129 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC36C1F90EB360077C129 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC36D1F90EB380077C129 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC36E1F90EB3A0077C129 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/mupdfcallouts.strings; sourceTree = "<group>"; };
+		DACDC36F1F90EB3D0077C129 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC3701F90EB3F0077C129 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/mupdfcallouts.strings"; sourceTree = "<group>"; };
+		DACDC3711F90EDEA0077C129 /* MuPDFDKColorPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKColorPickerCell.h; sourceTree = "<group>"; };
+		DACDC3721F90EDEA0077C129 /* MuPDFDKColorPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKColorPickerCell.m; sourceTree = "<group>"; };
+		DACDC3731F90EDEB0077C129 /* MuPDFDKColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKColorPickerViewController.h; sourceTree = "<group>"; };
+		DACDC3741F90EDEB0077C129 /* MuPDFDKLineWidthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKLineWidthViewController.m; sourceTree = "<group>"; };
+		DACDC3751F90EDEB0077C129 /* MuPDFDKLineWidthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKLineWidthViewController.h; sourceTree = "<group>"; };
+		DACDC3761F90EDEB0077C129 /* MuPDFDKColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKColorPickerViewController.m; sourceTree = "<group>"; };
+		DADAB6D01C46A470001DBBEF /* ARDKUIContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKUIContainerViewController.h; sourceTree = "<group>"; };
+		DADAB6D11C46A470001DBBEF /* ARDKUIContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKUIContainerViewController.m; sourceTree = "<group>"; };
+		DADC69A81C2962EA00AAE9DD /* ARDKContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKContainerViewController.h; sourceTree = "<group>"; };
+		DADC69A91C2962EA00AAE9DD /* ARDKContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKContainerViewController.m; sourceTree = "<group>"; };
+		DADE64041FBF26D200B10C23 /* mupdfdk_stream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mupdfdk_stream.m; sourceTree = "<group>"; };
+		DADE64061FBF26EB00B10C23 /* mupdfdk_stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mupdfdk_stream.h; sourceTree = "<group>"; };
+		DAE544541E098CD200590ED7 /* ARDKDocTypeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocTypeDetail.h; sourceTree = "<group>"; };
+		DAE544551E098CD200590ED7 /* ARDKDocTypeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKDocTypeDetail.m; sourceTree = "<group>"; };
+		DAE657E5250672AE00456497 /* exported.symbols */ = {isa = PBXFileReference; lastKnownFileType = text; path = exported.symbols; sourceTree = "<group>"; };
+		DAEBBE3D1FA89860009B6E2E /* MuPDFDKAnnotInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKAnnotInfoViewController.m; sourceTree = "<group>"; };
+		DAEBBE3E1FA89861009B6E2E /* MuPDFDKAnnotInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuPDFDKAnnotInfoViewController.h; sourceTree = "<group>"; };
+		DAECE6D61F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKAnnotateRibbonViewController.h; sourceTree = "<group>"; };
+		DAECE6D71F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKAnnotateRibbonViewController.m; sourceTree = "<group>"; };
+		DAECE6E11F8F6A8D0017596A /* MuPDFDKAnnotatingMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKAnnotatingMode.h; sourceTree = "<group>"; };
+		DAECE6E21F8F6E280017596A /* MuPDFDKBasicDocumentViewAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKBasicDocumentViewAPI.h; sourceTree = "<group>"; };
+		DAF3F0C82239069D005D451D /* pdf_signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pdf_signer.m; path = ../ardk/objc/pdf_signer.m; sourceTree = "<group>"; };
+		DAF3F0C92239069D005D451D /* pdf_signer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pdf_signer.h; path = ../ardk/objc/pdf_signer.h; sourceTree = "<group>"; };
+		DAF6E2A523EACCEE00C4A9A9 /* ARDKCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKCollectionViewCell.h; sourceTree = "<group>"; };
+		DAF6E2A623EACCEE00C4A9A9 /* ARDKCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDKCollectionViewCell.m; sourceTree = "<group>"; };
+		DAF6E2AF23EAD70800C4A9A9 /* ARDKPageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDKPageCell.h; sourceTree = "<group>"; };
+		DAFAD99622E9F36900EF08D8 /* ARDKDocSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKDocSession.h; sourceTree = "<group>"; };
+		DAFC79A222146A5900835C4A /* MuPDFDKPagesRibbonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKPagesRibbonViewController.h; sourceTree = "<group>"; };
+		DAFC79A322146A5900835C4A /* MuPDFDKPagesRibbonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKPagesRibbonViewController.m; sourceTree = "<group>"; };
+		DAFCB25D1F9A3B12005D1E0D /* MuPDFDKSelectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuPDFDKSelectionView.h; sourceTree = "<group>"; };
+		DAFCB25E1F9A3B12005D1E0D /* MuPDFDKSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuPDFDKSelectionView.m; sourceTree = "<group>"; };
+		EB271EB6228D37A500B08ECB /* LauncherBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LauncherBundle.bundle; path = bbbeta/LauncherBundle.bundle; sourceTree = "<group>"; };
+		EB271EB7228D37A500B08ECB /* Launcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Launcher.framework; path = bbbeta/Launcher.framework; sourceTree = "<group>"; };
+		EB40245D2292A4AE009CE3D4 /* gdstubcpp-veracode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "gdstubcpp-veracode.cpp"; sourceTree = "<group>"; };
+		EB40245E2292A4AE009CE3D4 /* gdstubcpp-veracode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "gdstubcpp-veracode.hpp"; sourceTree = "<group>"; };
+		EB4392DA22030E8B00B30814 /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = "dynamics-veracode/GD.framework"; sourceTree = "<group>"; };
+		EB5252FB209B1796007A530D /* ARDKTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTheme.h; sourceTree = "<group>"; };
+		EB52F8E1213F1FB100958424 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EB635321216E5387007D6F82 /* ARDKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKButton.m; sourceTree = "<group>"; };
+		EB635322216E5388007D6F82 /* ARDKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKButton.h; sourceTree = "<group>"; };
+		EB6F3A6921661B4B0057C631 /* ARDKTintedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDKTintedLabel.h; sourceTree = "<group>"; };
+		EB6F3A6A21661B4B0057C631 /* ARDKTintedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTintedLabel.m; sourceTree = "<group>"; };
+		EB74D7981F97AB8B00BCF18B /* Launcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Launcher.framework; path = bbrelease/Launcher.framework; sourceTree = "<group>"; };
+		EB74D7991F97AB8B00BCF18B /* LauncherBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LauncherBundle.bundle; path = bbrelease/LauncherBundle.bundle; sourceTree = "<group>"; };
+		EBBF9FAD209CA5A100557641 /* ARDKTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDKTheme.m; sourceTree = "<group>"; };
+		EBD67959227C993800EA76AE /* Launcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Launcher.framework; path = "dynamics-veracode/Launcher.framework"; sourceTree = "<group>"; };
+		EBD6795A227C993800EA76AE /* LauncherBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LauncherBundle.bundle; path = "dynamics-veracode/LauncherBundle.bundle"; sourceTree = "<group>"; };
+		F0811721B22A7A45F0B2AF4D /* Pods-mupdfdk.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mupdfdk.profile.xcconfig"; path = "Target Support Files/Pods-mupdfdk/Pods-mupdfdk.profile.xcconfig"; sourceTree = "<group>"; };
+		FAB7EA40F2734A1EB93D25CD /* libPods-mupdfdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mupdfdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA14936221F0B6ED0052E752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA14936321F0B6ED0052E752 /* libmupdf.a in Frameworks */,
+				DA14936421F0B6ED0052E752 /* libmupdf-third.a in Frameworks */,
+				A052033839336CE4D6235B35 /* libPods-mupdfdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0944D4B545DC828B63C5FBCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92A7C256247BB1F700AF4E67 /* AVFoundation.framework */,
+				92A7C24C247BB0AB00AF4E67 /* libswiftCoreFoundation.tbd */,
+				926CF238243F131E00ED0586 /* libcrypto.a */,
+				926CF239243F131F00ED0586 /* libssl.a */,
+				9210BAC2241FA80100D8697B /* Network.framework */,
+				924557C22369C8210020EF56 /* SafariServices.framework */,
+				EB9D458F23351ED900970049 /* bbrelease */,
+				EB271EB5228D36E100B08ECB /* bbbeta */,
+				926F051F225E0496002FBD47 /* DeviceCheck.framework */,
+				EB4392D522030C8600B30814 /* veracode */,
+				EB52F8E1213F1FB100958424 /* WebKit.framework */,
+				92B2B8761F7402FB00AC760A /* libstdc++.6.0.9.tbd */,
+				92B2B8741F73FFF000AC760A /* libc++.tbd */,
+				92B2B8711F73FFB300AC760A /* libstdc++.tbd */,
+				92DE934F1F711E2800543A7B /* CoreData.framework */,
+				92DE934D1F711DFA00543A7B /* SystemConfiguration.framework */,
+				92DE934B1F711DE800543A7B /* MessageUI.framework */,
+				92DE93491F711DD500543A7B /* LocalAuthentication.framework */,
+				92DE93451F711A8100543A7B /* libstdc++.6.tbd */,
+				92DE93431F711A7000543A7B /* libz.tbd */,
+				DAA226F01F6C59480039EC37 /* libmupdf.a */,
+				DAA226F11F6C59480039EC37 /* libmupdf-third.a */,
+				92DE93471F711D4B00543A7B /* CoreTelephony.framework */,
+				92DE933B1F710A4000543A7B /* GD.framework */,
+				DA0F7D901EA64D4100438673 /* QuartzCore.framework */,
+				DA0F7D8E1EA64D3400438673 /* Security.framework */,
+				FAB7EA40F2734A1EB93D25CD /* libPods-mupdfdk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92067AEB2445D70F00345968 /* OpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				92C8FF1C23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.h */,
+				92C8FF1D23D1C6FA00EA189C /* ARDKOpenSSLPKCS12Importer.m */,
+				92F18BD224361399001FD646 /* ARDKOpenSSLSigningDelegate.h */,
+				92F18BD42436139A001FD646 /* ARDKOpenSSLSigningDelegate.m */,
+				92B73BAD23FC285100BE3195 /* ARDKOpenSSLKeychain.h */,
+				92B73BAE23FC285200BE3195 /* ARDKOpenSSLKeychain.m */,
+				9238CEFF243B5A3400089F67 /* ARDKOpenSSLCert.h */,
+				9238CEFE243B5A3300089F67 /* ARDKOpenSSLCert.m */,
+				921D621B23E451E200B2BB5A /* ARDKOpenSSLSigner.h */,
+				921D621C23E451E200B2BB5A /* ARDKOpenSSLSigner.m */,
+				9238CF00243B5A3400089F67 /* ARDKOpenSSLVerifier.h */,
+				9238CF01243B5A3400089F67 /* ARDKOpenSSLVerifier.m */,
+			);
+			name = OpenSSL;
+			sourceTree = "<group>";
+		};
+		926CF1D3243E26F600ED0586 /* signing */ = {
+			isa = PBXGroup;
+			children = (
+				927D75592449F8F400FD755C /* ARDKPKCS7.h */,
+				925DA4FE23E862800007E67A /* ARDKMutableSigner.h */,
+				925DA50823E87C820007E67A /* ARDKMutableSigner.m */,
+				9238CEEB243B486700089F67 /* ARDKDigitalSigningDelegate.h */,
+				921D620C23E4460A00B2BB5A /* ARDKCertDetailViewController.h */,
+				921D620923E4460900B2BB5A /* ARDKCertDetailViewController.m */,
+				921D620A23E4460900B2BB5A /* ARDKCertPickerDialogViewController.h */,
+				921D620E23E4460B00B2BB5A /* ARDKCertPickerDialogViewController.m */,
+				921D620D23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.h */,
+				921D620B23E4460A00B2BB5A /* ARDKCertVerifyDialogViewController.m */,
+				927D753D2449E09800FD755C /* ARDKSigning.storyboard */,
+				92067AEB2445D70F00345968 /* OpenSSL */,
+			);
+			name = signing;
+			sourceTree = "<group>";
+		};
+		C29DA90817EC9C2B479AC27E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19D7D28CC536F909F61EBC2E /* Pods-mupdfdk.debug.xcconfig */,
+				42480A0250B9155D1F9E8A39 /* Pods-mupdfdk.fortify debug.xcconfig */,
+				00938D9FCB8FF388F8D9938F /* Pods-mupdfdk.release.xcconfig */,
+				F0811721B22A7A45F0B2AF4D /* Pods-mupdfdk.profile.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA3D78221A91F9AC005D6510 = {
+			isa = PBXGroup;
+			children = (
+				0944D4B545DC828B63C5FBCB /* Frameworks */,
+				DA4D059D1A9384F3008671B6 /* Accelerate.framework */,
+				DABBABA21B7DFAF300B0AA35 /* MobileCoreServices.framework */,
+				DA3D782C1A91F9AC005D6510 /* Products */,
+				DAFBA356247667F200380837 /* ardk */,
+				DAA226CD1F6C2B240039EC37 /* mupdf */,
+				C29DA90817EC9C2B479AC27E /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DA3D782C1A91F9AC005D6510 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA1493DD21F0B6ED0052E752 /* mupdfdk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAA226CD1F6C2B240039EC37 /* mupdf */ = {
+			isa = PBXGroup;
+			children = (
+				DA11A238248E595400817BCA /* Colors-common.xcassets */,
+				DA11A239248E595400817BCA /* Colors.xcassets */,
+				DA11A237248E595400817BCA /* Generic.xcassets */,
+				DA1493DE21F0B6EE0052E752 /* mupdfdk-Info.plist */,
+				92DF085C2450997000332CE6 /* mupdfdk.modulemap */,
+				DA23A219203F1AE900C65819 /* fontmap */,
+				DAA226B81F6C1A7C0039EC37 /* mupdf.storyboard */,
+				DACDC35C1F90EAF20077C129 /* mupdfcallouts.storyboard */,
+				DADE64061FBF26EB00B10C23 /* mupdfdk_stream.h */,
+				DADE64041FBF26D200B10C23 /* mupdfdk_stream.m */,
+				DA7394EF21F222D000424CDA /* mupdfdk.h */,
+				DAECE6D61F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.h */,
+				DAECE6D71F8E6FCA0017596A /* MuPDFDKAnnotateRibbonViewController.m */,
+				DAECE6E11F8F6A8D0017596A /* MuPDFDKAnnotatingMode.h */,
+				DAEBBE3E1FA89861009B6E2E /* MuPDFDKAnnotInfoViewController.h */,
+				DAEBBE3D1FA89860009B6E2E /* MuPDFDKAnnotInfoViewController.m */,
+				DAA226A01F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.h */,
+				DAA226A11F6C1A460039EC37 /* MuPDFDKBasicDocumentViewController.m */,
+				DAECE6E21F8F6E280017596A /* MuPDFDKBasicDocumentViewAPI.h */,
+				DACDC3711F90EDEA0077C129 /* MuPDFDKColorPickerCell.h */,
+				DACDC3721F90EDEA0077C129 /* MuPDFDKColorPickerCell.m */,
+				DACDC3731F90EDEB0077C129 /* MuPDFDKColorPickerViewController.h */,
+				DACDC3761F90EDEB0077C129 /* MuPDFDKColorPickerViewController.m */,
+				DAA226A21F6C1A460039EC37 /* MuPDFDKDocumentViewController.h */,
+				DAA226A31F6C1A460039EC37 /* MuPDFDKDocumentViewController.m */,
+				DAA226A41F6C1A460039EC37 /* MuPDFDKEditTabsViewController.h */,
+				DAA226A51F6C1A460039EC37 /* MuPDFDKEditTabsViewController.m */,
+				DAA226A61F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.h */,
+				DAA226A71F6C1A460039EC37 /* MuPDFDKFileRibbonViewController.m */,
+				DA2308721FB4599C00846E22 /* MuPDFDKFindRibbonViewController.h */,
+				DA2308731FB4599C00846E22 /* MuPDFDKFindRibbonViewController.m */,
+				303E77DF2126EBCF009C9C07 /* MuPDFDKLib.h */,
+				303E77DC2126EBAE009C9C07 /* MuPDFDKLib.m */,
+				DACDC3751F90EDEB0077C129 /* MuPDFDKLineWidthViewController.h */,
+				DACDC3741F90EDEB0077C129 /* MuPDFDKLineWidthViewController.m */,
+				DA3BB4E8202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.h */,
+				DA3BB4E9202DE1C7001E09E1 /* MuPDFDKOptionWidgetViewController.m */,
+				DAFC79A222146A5900835C4A /* MuPDFDKPagesRibbonViewController.h */,
+				DAFC79A322146A5900835C4A /* MuPDFDKPagesRibbonViewController.m */,
+				DAA226AA1F6C1A460039EC37 /* MuPDFDKPageView.h */,
+				DAA226AB1F6C1A460039EC37 /* MuPDFDKPageView.m */,
+				DA7D63EC21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.h */,
+				DA7D63ED21ECE02000BBD2A0 /* MuPDFDKRadioWidgetView.m */,
+				DA9DDC992281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.h */,
+				DA9DDC9A2281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.m */,
+				DAFCB25D1F9A3B12005D1E0D /* MuPDFDKSelectionView.h */,
+				DAFCB25E1F9A3B12005D1E0D /* MuPDFDKSelectionView.m */,
+				DA08D4D62195EE2E009CB436 /* MuPDFDKTextWidgetView.h */,
+				DA08D4D72195EE2E009CB436 /* MuPDFDKTextWidgetView.m */,
+				DA3BB4E4202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.h */,
+				DA3BB4E5202C6BC4001E09E1 /* MuPDFDKTextWidgetViewController.m */,
+				DA23086A1FB1EDD400846E22 /* MuPDFDKTocCell.h */,
+				DA23086D1FB1EDFB00846E22 /* MuPDFDKTocCell.m */,
+				DA2308701FB1EE1100846E22 /* MuPDFDKTocViewController.h */,
+				DA23086C1FB1EDFB00846E22 /* MuPDFDKTocViewController.m */,
+				DAA226D11F6C30480039EC37 /* MuPDFDKUI.h */,
+				DAA226D21F6C30480039EC37 /* MuPDFDKDocViewInternal.h */,
+				DA7D63E921ECA9D600BBD2A0 /* MuPDFDKWidgetView.h */,
+				DAF3F0C92239069D005D451D /* pdf_signer.h */,
+				DAF3F0C82239069D005D451D /* pdf_signer.m */,
+			);
+			name = mupdf;
+			path = mupdfdk;
+			sourceTree = "<group>";
+		};
+		DAFBA356247667F200380837 /* ardk */ = {
+			isa = PBXGroup;
+			children = (
+				DAE657E5250672AE00456497 /* exported.symbols */,
+				DAFBA35924767F7500380837 /* objc */,
+				926CF1D3243E26F600ED0586 /* signing */,
+				DA7D0F491C5F7B9800D0B876 /* ARDKActivityIndicator.h */,
+				DA87AF631B01F43D00DD2AEB /* ARDKActivityViewController.h */,
+				DA87AF641B01F43D00DD2AEB /* ARDKActivityViewController.m */,
+				DA6054D31D914DDA007070AD /* ARDKActivityViewController.xib */,
+				DA241F571F41BD3E00F296A8 /* ARDKBasicDocumentViewController.h */,
+				DA241F581F41BD3F00F296A8 /* ARDKBasicDocumentViewController.m */,
+				DA4067E623F56EF100281BCA /* ARDKBasicDocumentViewProtected.h */,
+				DA494D1D1F34C8680031EB51 /* ARDKBasicDocViewAPI.h */,
+				DA0B75F122E8931A009AE0E6 /* ARDKBasicDocViewDelegate.h */,
+				EB635322216E5388007D6F82 /* ARDKButton.h */,
+				EB635321216E5387007D6F82 /* ARDKButton.m */,
+				DAF6E2A523EACCEE00C4A9A9 /* ARDKCollectionViewCell.h */,
+				DAF6E2A623EACCEE00C4A9A9 /* ARDKCollectionViewCell.m */,
+				DADC69A81C2962EA00AAE9DD /* ARDKContainerViewController.h */,
+				DADC69A91C2962EA00AAE9DD /* ARDKContainerViewController.m */,
+				DA0DFCD92437911800CA16C5 /* ARDKDefaultFileState.h */,
+				DA0DFCD82437911700CA16C5 /* ARDKDefaultFileState.m */,
+				DA764EFA1CD7591B0029F1B5 /* ARDKDocErrorHandler.h */,
+				DA764EFB1CD7591B0029F1B5 /* ARDKDocErrorHandler.m */,
+				DAFAD99622E9F36900EF08D8 /* ARDKDocSession.h */,
+				9D0E9ADE1FB43F1C003076B4 /* ARDKDocSession.m */,
+				DAE544541E098CD200590ED7 /* ARDKDocTypeDetail.h */,
+				DAE544551E098CD200590ED7 /* ARDKDocTypeDetail.m */,
+				7C13D62B1E23F41B00D800FB /* ARDKDocumentSettings.h */,
+				7C13D62C1E23F41B00D800FB /* ARDKDocumentSettings.m */,
+				DA241F5F1F444B4F00F296A8 /* ARDKDocumentViewController.h */,
+				DA241F601F444B4F00F296A8 /* ARDKDocumentViewController.m */,
+				DA241F691F45BA3900F296A8 /* ARDKDocumentViewControllerPrivate.h */,
+				DAC3F5FC2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.h */,
+				DAC3F5FD2445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.m */,
+				DA494D211F386B010031EB51 /* ARDKDocViewInternal.h */,
+				DA241F531F3DC15D00F296A8 /* ARDKEditTabsViewController.h */,
+				DA241F541F3DC15D00F296A8 /* ARDKEditTabsViewController.m */,
+				DA11A23E248E646100817BCA /* ARDKEmptySegue.h */,
+				DA11A23D248E646100817BCA /* ARDKEmptySegue.m */,
+				7C904BB91DDF751F0024D437 /* ARDKHandlerInfo.h */,
+				7C904BBA1DDF751F0024D437 /* ARDKHandlerInfo.m */,
+				DA07B8EA1F6927C7009626B3 /* ARDKImageViewMatrix.h */,
+				DA07B8EB1F6927C7009626B3 /* ARDKImageViewMatrix.m */,
+				7CC2C9AF1E7B0C8E00141367 /* ARDKInternalPasteboard.h */,
+				7CC2C9B01E7B0C8E00141367 /* ARDKInternalPasteboard.m */,
+				DA551B5B1ACEB1F80031CD13 /* ARDKNUpLayout.h */,
+				DA551B5C1ACEB1F80031CD13 /* ARDKNUpLayout.m */,
+				DA551B591ACEB1F80031CD13 /* ARDKNUpViewController.h */,
+				DA551B5A1ACEB1F80031CD13 /* ARDKNUpViewController.m */,
+				7CF6EEA71C724B370021F061 /* ARDKPageAnnotationView.h */,
+				7CF6EEA81C724B370021F061 /* ARDKPageAnnotationView.m */,
+				DAF6E2AF23EAD70800C4A9A9 /* ARDKPageCell.h */,
+				DAB5782323E848A7003C1F72 /* ARDKPageController.h */,
+				DA9673582370766B0050824A /* ARDKPageGeometry.h */,
+				DA967353237076330050824A /* ARDKPageGeometry.m */,
+				DACDB35D1BFB637A001EBED3 /* ARDKPagesViewController.h */,
+				DACDB35E1BFB637A001EBED3 /* ARDKPagesViewController.m */,
+				DA4E00AD1F0CEDB0001E282E /* ARDKPageView.h */,
+				DA4E00AE1F0CEDB0001E282E /* ARDKPageView.m */,
+				7C4D51201CB69DE7007245AB /* ARDKPrintPageRenderer.h */,
+				7C4D51211CB69DE7007245AB /* ARDKPrintPageRenderer.m */,
+				DA0680D31E65B02300696C88 /* ARDKRibbonItem.h */,
+				DA0680D41E65B02300696C88 /* ARDKRibbonItem.m */,
+				DA0B3E3E1E66EAC4008E802B /* ARDKRibbonItemSplitter.h */,
+				DA0B3E3F1E66EAC4008E802B /* ARDKRibbonItemSplitter.m */,
+				DA0680D71E65B72200696C88 /* ARDKRibbonItemStackedButton.h */,
+				DA0680D81E65B72200696C88 /* ARDKRibbonItemStackedButton.m */,
+				DA709C1924193CBF008762FD /* ARDKRibbonViewController.h */,
+				DA709C1A24193CBF008762FD /* ARDKRibbonViewController.m */,
+				DA04D2AA1B72368900819344 /* ARDKSearchProgressViewController.h */,
+				DA04D2AB1B72368900819344 /* ARDKSearchProgressViewController.m */,
+				DA6054D71D914DDA007070AD /* ARDKSearchProgressViewController.xib */,
+				DA0154031C45143D0044C48B /* ARDKSelectButton.h */,
+				DA0154041C45143D0044C48B /* ARDKSelectButton.m */,
+				7C4266DE1E6DDAB700D2B4C8 /* ARDKTextField.h */,
+				7C4266DF1E6DDAB700D2B4C8 /* ARDKTextField.m */,
+				7CC2C9B31E7C4A7500141367 /* ARDKTextView.h */,
+				7CC2C9B41E7C4A7500141367 /* ARDKTextView.m */,
+				7CF25C4C1C8DFE420034FE2B /* ARDKTiledLayer.h */,
+				7CF25C4D1C8DFE420034FE2B /* ARDKTiledLayer.m */,
+				EB6F3A6921661B4B0057C631 /* ARDKTintedLabel.h */,
+				EB6F3A6A21661B4B0057C631 /* ARDKTintedLabel.m */,
+				DA241F511F3DB15600F296A8 /* ARDKUI.h */,
+				DADAB6D01C46A470001DBBEF /* ARDKUIContainerViewController.h */,
+				DADAB6D11C46A470001DBBEF /* ARDKUIContainerViewController.m */,
+				DA131BA822F1B18D00862FFA /* ARDKViewingState.h */,
+				DA131BA922F1B18D00862FFA /* ARDKViewingState.m */,
+				DAA2FAD31BF4DF23003D226C /* ARDKViewRenderer.h */,
+				DAA2FAD41BF4DF23003D226C /* ARDKViewRenderer.m */,
+				DAADCA1D1B6638CD00A183A3 /* CALayer+ARDKAdditions.h */,
+				DAADCA1E1B6638CD00A183A3 /* CALayer+ARDKAdditions.m */,
+				9D5F0AEA1FAAFE2000F729EC /* platform-headers.h */,
+				9D5F0B111FAB1FA200F729EC /* PlatformBitmap.m */,
+				DA24CF631C9870C3004D27CD /* ARDKStackedButton.h */,
+				DA24CF641C9870C3004D27CD /* ARDKStackedButton.m */,
+				DA6A437D1D6F2F8E002F33D3 /* ARDKTextPosition.h */,
+				DA6A437E1D6F2F8E002F33D3 /* ARDKTextPosition.m */,
+				DA6A43811D6F2FB8002F33D3 /* ARDKTextRange.h */,
+				DA6A43821D6F2FB8002F33D3 /* ARDKTextRange.m */,
+				DA0D817F219C3EB400B36F99 /* ARDKTextSelectionRect.h */,
+				DA0D8180219C3EB400B36F99 /* ARDKTextSelectionRect.m */,
+				DA7A1FFD1DBE0AF700045483 /* ARDKUIDimensions.h */,
+				DA7A1FFE1DBE0AF700045483 /* ARDKUIDimensions.m */,
+			);
+			path = ardk;
+			sourceTree = "<group>";
+		};
+		DAFBA35924767F7500380837 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				9D5731A61FB052860037606D /* ARDKFileState.h */,
+				9D5731A81FB0558B0037606D /* ARDKGeometry.h */,
+				9D5F0AF31FAB00B200F729EC /* ARDKLib.h */,
+				9D5F0AF11FAB00A400F729EC /* ARDKLib.m */,
+				9D583F2D1FA85C0A000B2775 /* ARDKSecureFS.h */,
+				9D5F0AF71FAB03A600F729EC /* ARDKSettings.h */,
+				9D5F0AF91FAB03B700F729EC /* ARDKSettings.m */,
+				EB5252FB209B1796007A530D /* ARDKTheme.h */,
+				EBBF9FAD209CA5A100557641 /* ARDKTheme.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		EB271EB5228D36E100B08ECB /* bbbeta */ = {
+			isa = PBXGroup;
+			children = (
+				EB271EB7228D37A500B08ECB /* Launcher.framework */,
+				EB271EB6228D37A500B08ECB /* LauncherBundle.bundle */,
+			);
+			name = bbbeta;
+			sourceTree = "<group>";
+		};
+		EB4392D522030C8600B30814 /* veracode */ = {
+			isa = PBXGroup;
+			children = (
+				EBD67959227C993800EA76AE /* Launcher.framework */,
+				EBD6795A227C993800EA76AE /* LauncherBundle.bundle */,
+				EB4392DA22030E8B00B30814 /* GD.framework */,
+				EB40245D2292A4AE009CE3D4 /* gdstubcpp-veracode.cpp */,
+				EB40245E2292A4AE009CE3D4 /* gdstubcpp-veracode.hpp */,
+			);
+			name = veracode;
+			sourceTree = "<group>";
+		};
+		EB9D458F23351ED900970049 /* bbrelease */ = {
+			isa = PBXGroup;
+			children = (
+				922A76CE22E89A3A00180AA8 /* BAFBlackberryAnalytics.framework */,
+				9288F030234E2F68009B3FCB /* BAFBlackberryAnalyticsAssets.bundle */,
+				EB74D7981F97AB8B00BCF18B /* Launcher.framework */,
+				EB74D7991F97AB8B00BCF18B /* LauncherBundle.bundle */,
+			);
+			name = bbrelease;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DA14936621F0B6ED0052E752 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23227B21F62DC800F2495A /* MuPDFDKAnnotatingMode.h in Headers */,
+				92DF083C244DFBBB00332CE6 /* ARDKCertDetailViewController.h in Headers */,
+				DA14936721F0B6ED0052E752 /* ARDKButton.h in Headers */,
+				DA14936821F0B6ED0052E752 /* MuPDFDKLib.h in Headers */,
+				DA14936921F0B6ED0052E752 /* ARDKTheme.h in Headers */,
+				92DF0847244DFC0200332CE6 /* ARDKOpenSSLKeychain.h in Headers */,
+				DA14936D21F0B6ED0052E752 /* ARDKFileState.h in Headers */,
+				DA14937021F0B6ED0052E752 /* ARDKSettings.h in Headers */,
+				DA0B75F422E8931A009AE0E6 /* ARDKBasicDocViewDelegate.h in Headers */,
+				DAF6E2A923EACCEE00C4A9A9 /* ARDKCollectionViewCell.h in Headers */,
+				DA14937121F0B6ED0052E752 /* MuPDFDKWidgetView.h in Headers */,
+				DA14937321F0B6ED0052E752 /* ARDKLib.h in Headers */,
+				DA14937421F0B6ED0052E752 /* platform-headers.h in Headers */,
+				DAFC79A422146A5900835C4A /* MuPDFDKPagesRibbonViewController.h in Headers */,
+				DA14937721F0B6ED0052E752 /* ARDKBasicDocViewAPI.h in Headers */,
+				DA14937821F0B6ED0052E752 /* MuPDFDKBasicDocumentViewAPI.h in Headers */,
+				DA14945521F0BFFD0052E752 /* ARDKUIDimensions.h in Headers */,
+				DA14937B21F0B6ED0052E752 /* ARDKBasicDocumentViewController.h in Headers */,
+				DA14937C21F0B6ED0052E752 /* ARDKRibbonItem.h in Headers */,
+				DA14938021F0B6ED0052E752 /* MuPDFDKBasicDocumentViewController.h in Headers */,
+				DA14938121F0B6ED0052E752 /* ARDKDocViewInternal.h in Headers */,
+				DA14938221F0B6ED0052E752 /* ARDKRibbonItemSplitter.h in Headers */,
+				DA14945221F0BBDE0052E752 /* ARDKTextPosition.h in Headers */,
+				92DF083A244DFBA800332CE6 /* ARDKMutableSigner.h in Headers */,
+				DA14938421F0B6ED0052E752 /* ARDKTextRange.h in Headers */,
+				DA14938521F0B6ED0052E752 /* ARDKTextField.h in Headers */,
+				926CF2A5243F750900ED0586 /* ARDKDigitalSigningDelegate.h in Headers */,
+				DA14938721F0B6ED0052E752 /* ARDKImageViewMatrix.h in Headers */,
+				DA0DFCE02437911900CA16C5 /* ARDKDefaultFileState.h in Headers */,
+				DA14938821F0B6ED0052E752 /* MuPDFDKAnnotateRibbonViewController.h in Headers */,
+				DA14938921F0B6ED0052E752 /* ARDKEditTabsViewController.h in Headers */,
+				DA14938A21F0B6ED0052E752 /* MuPDFDKRadioWidgetView.h in Headers */,
+				DA14938B21F0B6ED0052E752 /* ARDKSecureFS.h in Headers */,
+				DA14938C21F0B6ED0052E752 /* ARDKViewRenderer.h in Headers */,
+				DA14938E21F0B6ED0052E752 /* MuPDFDKTextWidgetView.h in Headers */,
+				DA14938F21F0B6ED0052E752 /* ARDKTintedLabel.h in Headers */,
+				DA14939021F0B6ED0052E752 /* ARDKGeometry.h in Headers */,
+				DA14939421F0B6ED0052E752 /* MuPDFDKUI.h in Headers */,
+				DA4067E923F56EF100281BCA /* ARDKBasicDocumentViewProtected.h in Headers */,
+				92DF0845244DFC0200332CE6 /* ARDKOpenSSLSigningDelegate.h in Headers */,
+				DAC3F6002445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.h in Headers */,
+				DA14939521F0B6ED0052E752 /* MuPDFDKDocumentViewController.h in Headers */,
+				DAFAD99922E9F36900EF08D8 /* ARDKDocSession.h in Headers */,
+				92DF0840244DFBBB00332CE6 /* ARDKCertVerifyDialogViewController.h in Headers */,
+				DA14939721F0B6ED0052E752 /* MuPDFDKTextWidgetViewController.h in Headers */,
+				92DF084D244DFC0200332CE6 /* ARDKOpenSSLVerifier.h in Headers */,
+				DA14939821F0B6ED0052E752 /* MuPDFDKTocCell.h in Headers */,
+				DA14939921F0B6ED0052E752 /* ARDKInternalPasteboard.h in Headers */,
+				DA14939B21F0B6ED0052E752 /* ARDKDocumentViewController.h in Headers */,
+				DA9DDC9D2281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.h in Headers */,
+				DA14939C21F0B6ED0052E752 /* MuPDFDKOptionWidgetViewController.h in Headers */,
+				DA65EEF32449A79400E42469 /* ARDKActivityViewController.h in Headers */,
+				DA14939E21F0B6ED0052E752 /* MuPDFDKTocViewController.h in Headers */,
+				DA14939F21F0B6ED0052E752 /* MuPDFDKFindRibbonViewController.h in Headers */,
+				DA1493A021F0B6ED0052E752 /* MuPDFDKColorPickerViewController.h in Headers */,
+				DA1493A321F0B6ED0052E752 /* ARDKPrintPageRenderer.h in Headers */,
+				DA1493A421F0B6ED0052E752 /* MuPDFDKLineWidthViewController.h in Headers */,
+				DA709C1D24193CBF008762FD /* ARDKRibbonViewController.h in Headers */,
+				DA1493A621F0B6ED0052E752 /* ARDKSelectButton.h in Headers */,
+				DA1493A721F0B6ED0052E752 /* MuPDFDKEditTabsViewController.h in Headers */,
+				DA14945321F0BFCE0052E752 /* ARDKStackedButton.h in Headers */,
+				DA96735B2370766B0050824A /* ARDKPageGeometry.h in Headers */,
+				DA1493A821F0B6ED0052E752 /* ARDKDocumentSettings.h in Headers */,
+				DA1493AB21F0B6ED0052E752 /* MuPDFDKColorPickerCell.h in Headers */,
+				DA7394F021F222D000424CDA /* mupdfdk.h in Headers */,
+				DADF3D29223927C3004C5D65 /* pdf_signer.h in Headers */,
+				DA1493AC21F0B6ED0052E752 /* ARDKHandlerInfo.h in Headers */,
+				92DF0849244DFC0200332CE6 /* ARDKOpenSSLCert.h in Headers */,
+				DA1493B021F0B6ED0052E752 /* ARDKTextView.h in Headers */,
+				DA1493B121F0B6ED0052E752 /* MuPDFDKDocViewInternal.h in Headers */,
+				DA1493B221F0B6ED0052E752 /* ARDKDocTypeDetail.h in Headers */,
+				DA1493B521F0B6ED0052E752 /* ARDKDocErrorHandler.h in Headers */,
+				DA1493B621F0B6ED0052E752 /* MuPDFDKAnnotInfoViewController.h in Headers */,
+				DA131BAC22F1B18D00862FFA /* ARDKViewingState.h in Headers */,
+				DA1493B821F0B6ED0052E752 /* ARDKTextSelectionRect.h in Headers */,
+				DA1493BA21F0B6ED0052E752 /* MuPDFDKSelectionView.h in Headers */,
+				92DF083E244DFBBB00332CE6 /* ARDKCertPickerDialogViewController.h in Headers */,
+				DA1493BB21F0B6ED0052E752 /* ARDKPageView.h in Headers */,
+				DA1493BF21F0B6ED0052E752 /* ARDKUI.h in Headers */,
+				DAF6E2B223EAD70800C4A9A9 /* ARDKPageCell.h in Headers */,
+				DA1493C021F0B6ED0052E752 /* MuPDFDKPageView.h in Headers */,
+				DA1493C321F0B6ED0052E752 /* ARDKRibbonItemStackedButton.h in Headers */,
+				DA1493C421F0B6ED0052E752 /* MuPDFDKFileRibbonViewController.h in Headers */,
+				92DF0843244DFBFA00332CE6 /* ARDKOpenSSLPKCS12Importer.h in Headers */,
+				DAB5782623E848A7003C1F72 /* ARDKPageController.h in Headers */,
+				92F5CE2E2449F953002502D3 /* ARDKPKCS7.h in Headers */,
+				92DF084B244DFC0200332CE6 /* ARDKOpenSSLSigner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		DA4B34D31F55A6B0006014B9 /* MuPDF-generated */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = DA4B34D81F55A6B0006014B9 /* Build configuration list for PBXLegacyTarget "MuPDF-generated" */;
+			buildPhases = (
+			);
+			buildToolPath = setup_build.sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "MuPDF-generated";
+			passBuildSettingsInEnvironment = 0;
+			productName = "MuPDF-generated";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		DA1492DD21F0B6ED0052E752 /* mupdfdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1493D821F0B6ED0052E752 /* Build configuration list for PBXNativeTarget "mupdfdk" */;
+			buildPhases = (
+				ECF7841CB2846D1225CC979D /* [CP] Check Pods Manifest.lock */,
+				DA1492E021F0B6ED0052E752 /* ShellScript */,
+				DA1492E121F0B6ED0052E752 /* Sources */,
+				DA14936221F0B6ED0052E752 /* Frameworks */,
+				DA14936621F0B6ED0052E752 /* Headers */,
+				DA1493C521F0B6ED0052E752 /* Resources */,
+				DA1493D721F0B6ED0052E752 /* Copy framework into example app */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA1492DE21F0B6ED0052E752 /* PBXTargetDependency */,
+			);
+			name = mupdfdk;
+			productName = sodk;
+			productReference = DA1493DD21F0B6ED0052E752 /* mupdfdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA3D78231A91F9AC005D6510 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Artifex Software Inc";
+				TargetAttributes = {
+					DA1492DD21F0B6ED0052E752 = {
+						DevelopmentTeam = 7M9658FA5G;
+					};
+					DA4B34D31F55A6B0006014B9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7M9658FA5G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DA3D78261A91F9AC005D6510 /* Build configuration list for PBXProject "mupdfdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+				de,
+				"es-ES",
+				"es-MX",
+				fr,
+				he,
+				it,
+				ja,
+				ko,
+				nl,
+				pl,
+				"pt-PT",
+				"pt-BR",
+				ru,
+				th,
+				tr,
+				"zh-Hans",
+				"zh-Hant",
+				es,
+				sv,
+				da,
+			);
+			mainGroup = DA3D78221A91F9AC005D6510;
+			productRefGroup = DA3D782C1A91F9AC005D6510 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA4B34D31F55A6B0006014B9 /* MuPDF-generated */,
+				DA1492DD21F0B6ED0052E752 /* mupdfdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA1493C521F0B6ED0052E752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DF0842244DFBBB00332CE6 /* ARDKSigning.storyboard in Resources */,
+				DA11A23A248E5A0400817BCA /* Colors-common.xcassets in Resources */,
+				DA1493CB21F0B6ED0052E752 /* mupdf.storyboard in Resources */,
+				DA1493CD21F0B6ED0052E752 /* ARDKSearchProgressViewController.xib in Resources */,
+				DA1493D321F0B6ED0052E752 /* fontmap in Resources */,
+				DA11A23B248E5A0800817BCA /* Colors.xcassets in Resources */,
+				DA1493D421F0B6ED0052E752 /* mupdfcallouts.storyboard in Resources */,
+				DA1493D521F0B6ED0052E752 /* ARDKActivityViewController.xib in Resources */,
+				DA11A23C248E5A0B00817BCA /* Generic.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA1492E021F0B6ED0052E752 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/libmupdf.a",
+				"$(DERIVED_FILE_DIR)/libmupdf-third.a",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash ./build_libs.sh\n";
+		};
+		DA1493D721F0B6ED0052E752 /* Copy framework into example app */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy framework into example app";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pwd\nDEST=mupdfdk-examples/mupdfdk-examples/\nrm -rf \"$DEST/$FULL_PRODUCT_NAME\"\ncp -R \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" \"$DEST\"\n";
+		};
+		ECF7841CB2846D1225CC979D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mupdfdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA1492E121F0B6ED0052E752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1492E421F0B6ED0052E752 /* MuPDFDKColorPickerViewController.m in Sources */,
+				DA1492E721F0B6ED0052E752 /* ARDKTextField.m in Sources */,
+				DA1492E821F0B6ED0052E752 /* MuPDFDKSelectionView.m in Sources */,
+				92DF0841244DFBBB00332CE6 /* ARDKCertVerifyDialogViewController.m in Sources */,
+				DA1492EB21F0B6ED0052E752 /* MuPDFDKLib.m in Sources */,
+				92DF0846244DFC0200332CE6 /* ARDKOpenSSLSigningDelegate.m in Sources */,
+				DA1492EC21F0B6ED0052E752 /* ARDKTextSelectionRect.m in Sources */,
+				DA0DFCDC2437911900CA16C5 /* ARDKDefaultFileState.m in Sources */,
+				DA1492ED21F0B6ED0052E752 /* ARDKSearchProgressViewController.m in Sources */,
+				DA1492F121F0B6ED0052E752 /* ARDKActivityViewController.m in Sources */,
+				DA1492F221F0B6ED0052E752 /* MuPDFDKFileRibbonViewController.m in Sources */,
+				DA1492F621F0B6ED0052E752 /* ARDKTiledLayer.m in Sources */,
+				DA1492F821F0B6ED0052E752 /* ARDKSettings.m in Sources */,
+				DA1492FC21F0B6ED0052E752 /* MuPDFDKColorPickerCell.m in Sources */,
+				DA709C2124193CBF008762FD /* ARDKRibbonViewController.m in Sources */,
+				DA14930021F0B6ED0052E752 /* ARDKTintedLabel.m in Sources */,
+				92DF084C244DFC0200332CE6 /* ARDKOpenSSLSigner.m in Sources */,
+				DA14945421F0BFD00052E752 /* ARDKStackedButton.m in Sources */,
+				DA14930121F0B6ED0052E752 /* MuPDFDKBasicDocumentViewController.m in Sources */,
+				DA14930321F0B6ED0052E752 /* MuPDFDKTextWidgetViewController.m in Sources */,
+				DA967356237076330050824A /* ARDKPageGeometry.m in Sources */,
+				DA14930621F0B6ED0052E752 /* ARDKRibbonItemStackedButton.m in Sources */,
+				92DF0848244DFC0200332CE6 /* ARDKOpenSSLKeychain.m in Sources */,
+				DA14930721F0B6ED0052E752 /* ARDKHandlerInfo.m in Sources */,
+				DA14930821F0B6ED0052E752 /* ARDKRibbonItemSplitter.m in Sources */,
+				DA14930921F0B6ED0052E752 /* ARDKPageAnnotationView.m in Sources */,
+				DA14930E21F0B6ED0052E752 /* ARDKTextView.m in Sources */,
+				DA14931021F0B6ED0052E752 /* ARDKPrintPageRenderer.m in Sources */,
+				DA14931121F0B6ED0052E752 /* ARDKLib.m in Sources */,
+				DA14931321F0B6ED0052E752 /* ARDKPageView.m in Sources */,
+				DAF6E2AD23EACCEE00C4A9A9 /* ARDKCollectionViewCell.m in Sources */,
+				DA14931421F0B6ED0052E752 /* MuPDFDKOptionWidgetViewController.m in Sources */,
+				DA14931721F0B6ED0052E752 /* ARDKTheme.m in Sources */,
+				DA14931A21F0B6ED0052E752 /* ARDKDocumentSettings.m in Sources */,
+				DA131BB022F1B18D00862FFA /* ARDKViewingState.m in Sources */,
+				DA14931B21F0B6ED0052E752 /* MuPDFDKAnnotInfoViewController.m in Sources */,
+				DA14931D21F0B6ED0052E752 /* ARDKDocTypeDetail.m in Sources */,
+				DA14931E21F0B6ED0052E752 /* ARDKTextPosition.m in Sources */,
+				DA14932021F0B6ED0052E752 /* ARDKUIContainerViewController.m in Sources */,
+				DADF3D2B223927C7004C5D65 /* pdf_signer.m in Sources */,
+				DA14932221F0B6ED0052E752 /* MuPDFDKTocCell.m in Sources */,
+				DA9DDCA02281CDF30090F4DE /* MuPDFDKRedactRibbonViewController.m in Sources */,
+				DA14932521F0B6ED0052E752 /* MuPDFDKEditTabsViewController.m in Sources */,
+				DA14932B21F0B6ED0052E752 /* PlatformBitmap.m in Sources */,
+				92DF0844244DFC0200332CE6 /* ARDKOpenSSLPKCS12Importer.m in Sources */,
+				DA14932C21F0B6ED0052E752 /* ARDKRibbonItem.m in Sources */,
+				DA14932E21F0B6ED0052E752 /* MuPDFDKRadioWidgetView.m in Sources */,
+				DA14933421F0B6ED0052E752 /* ARDKBasicDocumentViewController.m in Sources */,
+				DA14933521F0B6ED0052E752 /* ARDKInternalPasteboard.m in Sources */,
+				DA14933821F0B6ED0052E752 /* ARDKNUpViewController.m in Sources */,
+				DA14945621F0C0010052E752 /* ARDKUIDimensions.m in Sources */,
+				DA14933D21F0B6ED0052E752 /* MuPDFDKTocViewController.m in Sources */,
+				DA14933E21F0B6ED0052E752 /* ARDKButton.m in Sources */,
+				DA14933F21F0B6ED0052E752 /* ARDKNUpLayout.m in Sources */,
+				DA14934221F0B6ED0052E752 /* ARDKImageViewMatrix.m in Sources */,
+				DA14934421F0B6ED0052E752 /* ARDKEditTabsViewController.m in Sources */,
+				92DF083B244DFBBB00332CE6 /* ARDKMutableSigner.m in Sources */,
+				DA14934521F0B6ED0052E752 /* MuPDFDKTextWidgetView.m in Sources */,
+				92DF083F244DFBBB00332CE6 /* ARDKCertPickerDialogViewController.m in Sources */,
+				DA14934721F0B6ED0052E752 /* mupdfdk_stream.m in Sources */,
+				DA14934A21F0B6ED0052E752 /* ARDKDocumentViewController.m in Sources */,
+				DA14934B21F0B6ED0052E752 /* ARDKDocSession.m in Sources */,
+				DA14934D21F0B6ED0052E752 /* ARDKSelectButton.m in Sources */,
+				DA14934E21F0B6ED0052E752 /* ARDKDocErrorHandler.m in Sources */,
+				92DF084E244DFC0200332CE6 /* ARDKOpenSSLVerifier.m in Sources */,
+				DA14934F21F0B6ED0052E752 /* MuPDFDKFindRibbonViewController.m in Sources */,
+				92DF084A244DFC0200332CE6 /* ARDKOpenSSLCert.m in Sources */,
+				DA14935021F0B6ED0052E752 /* ARDKViewRenderer.m in Sources */,
+				DA14935121F0B6ED0052E752 /* ARDKTextRange.m in Sources */,
+				DA11A240248E647200817BCA /* ARDKEmptySegue.m in Sources */,
+				DA14935421F0B6ED0052E752 /* ARDKPagesViewController.m in Sources */,
+				DA14935621F0B6ED0052E752 /* CALayer+ARDKAdditions.m in Sources */,
+				DA14935821F0B6ED0052E752 /* MuPDFDKAnnotateRibbonViewController.m in Sources */,
+				DA14935921F0B6ED0052E752 /* MuPDFDKLineWidthViewController.m in Sources */,
+				DA14935A21F0B6ED0052E752 /* MuPDFDKPageView.m in Sources */,
+				DA14935D21F0B6ED0052E752 /* ARDKContainerViewController.m in Sources */,
+				92DF083D244DFBBB00332CE6 /* ARDKCertDetailViewController.m in Sources */,
+				DA14936121F0B6ED0052E752 /* MuPDFDKDocumentViewController.m in Sources */,
+				DAFC79A522146A5900835C4A /* MuPDFDKPagesRibbonViewController.m in Sources */,
+				DAC3F6042445DCB70023F6BA /* ARDKDocumentViewDefaultHandlers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA1492DE21F0B6ED0052E752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA4B34D31F55A6B0006014B9 /* MuPDF-generated */;
+			targetProxy = DA1492DF21F0B6ED0052E752 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA6054D31D914DDA007070AD /* ARDKActivityViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA6054D21D914DDA007070AD /* Base */,
+				DA6054D51D914DDA007070AD /* en */,
+			);
+			name = ARDKActivityViewController.xib;
+			sourceTree = "<group>";
+		};
+		DA6054D71D914DDA007070AD /* ARDKSearchProgressViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA6054D61D914DDA007070AD /* Base */,
+				DA6054D91D914DDA007070AD /* en */,
+				DA49DC1A1DA3E5740042A706 /* de */,
+				DA49DC1B1DA3E5740042A706 /* es-MX */,
+				DA49DC1C1DA3E5740042A706 /* fr */,
+				DA49DC1D1DA3E5740042A706 /* he */,
+				DA49DC1E1DA3E5740042A706 /* it */,
+				DA49DC1F1DA3E5740042A706 /* ja */,
+				DA49DC201DA3E5740042A706 /* ko */,
+				DA49DC211DA3E5740042A706 /* nl */,
+				DA49DC221DA3E5740042A706 /* pl */,
+				DA49DC231DA3E5740042A706 /* pt-BR */,
+				DA49DC241DA3E5740042A706 /* ru */,
+				DA49DC251DA3E5740042A706 /* th */,
+				DA49DC261DA3E5740042A706 /* tr */,
+				DA49DC271DA3E5740042A706 /* zh-Hans */,
+				DA49DC281DA3E5740042A706 /* zh-Hant */,
+				DA49DC291DA3E5740042A706 /* pt-PT */,
+				DA49DC2A1DA3E5740042A706 /* es-ES */,
+			);
+			name = ARDKSearchProgressViewController.xib;
+			sourceTree = "<group>";
+		};
+		DAA226B81F6C1A7C0039EC37 /* mupdf.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA226B91F6C1A7C0039EC37 /* Base */,
+				DAA226BB1F6C1AA20039EC37 /* en */,
+				DAA226BC1F6C1AA50039EC37 /* de */,
+				DAA226BD1F6C1AA80039EC37 /* es-ES */,
+				DAA226BE1F6C1AAB0039EC37 /* es-MX */,
+				DAA226BF1F6C1AAF0039EC37 /* fr */,
+				DAA226C01F6C1AB20039EC37 /* he */,
+				DAA226C11F6C1AB60039EC37 /* it */,
+				DAA226C21F6C1ABB0039EC37 /* ja */,
+				DAA226C31F6C1ABF0039EC37 /* ko */,
+				DAA226C41F6C1AC20039EC37 /* nl */,
+				DAA226C51F6C1AC50039EC37 /* pl */,
+				DAA226C61F6C1AC80039EC37 /* pt-PT */,
+				DAA226C71F6C1ACB0039EC37 /* pt-BR */,
+				DAA226C81F6C1ACE0039EC37 /* ru */,
+				DAA226C91F6C1AD20039EC37 /* th */,
+				DAA226CA1F6C1AD60039EC37 /* tr */,
+				DAA226CB1F6C1AD90039EC37 /* zh-Hans */,
+				DAA226CC1F6C1ADB0039EC37 /* zh-Hant */,
+			);
+			name = mupdf.storyboard;
+			sourceTree = "<group>";
+		};
+		DACDC35C1F90EAF20077C129 /* mupdfcallouts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACDC35D1F90EAF20077C129 /* Base */,
+				DACDC35F1F90EB0C0077C129 /* en */,
+				DACDC3601F90EB0F0077C129 /* de */,
+				DACDC3611F90EB110077C129 /* es-ES */,
+				DACDC3621F90EB140077C129 /* es-MX */,
+				DACDC3631F90EB1A0077C129 /* fr */,
+				DACDC3641F90EB1C0077C129 /* he */,
+				DACDC3651F90EB1F0077C129 /* it */,
+				DACDC3661F90EB220077C129 /* ja */,
+				DACDC3671F90EB260077C129 /* ko */,
+				DACDC3681F90EB280077C129 /* nl */,
+				DACDC3691F90EB2B0077C129 /* pl */,
+				DACDC36A1F90EB2F0077C129 /* pt-PT */,
+				DACDC36B1F90EB320077C129 /* pt-BR */,
+				DACDC36C1F90EB360077C129 /* ru */,
+				DACDC36D1F90EB380077C129 /* th */,
+				DACDC36E1F90EB3A0077C129 /* tr */,
+				DACDC36F1F90EB3D0077C129 /* zh-Hans */,
+				DACDC3701F90EB3F0077C129 /* zh-Hant */,
+			);
+			name = mupdfcallouts.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C80D0C31CD375BF00E274C0 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		7CF329891C516EE9007258F7 /* Fortify Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+			};
+			name = "Fortify Debug";
+		};
+		DA1493D921F0B6ED0052E752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19D7D28CC536F909F61EBC2E /* Pods-mupdfdk.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 2.0.0.6;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2.0.0.6;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				EXPORTED_SYMBOLS_FILE = "$(PROJECT_DIR)/ardk/exported.symbols";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ardk",
+					"$(PROJECT_DIR)/mupdfdk",
+					"$(PROJECT_DIR)/ardk/objc",
+					"$(PROJECT_DIR)/mupdfdk/mupdf/include",
+				);
+				INFOPLIST_FILE = "mupdfdk/mupdfdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/smart-office-nui",
+				);
+				MODULEMAP_FILE = "$(PROJECT_DIR)/mupdfdk/mupdfdk.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artifex.mupdfdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA1493DA21F0B6ED0052E752 /* Fortify Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42480A0250B9155D1F9E8A39 /* Pods-mupdfdk.fortify debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2.0.0.6;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2.0.0.6;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				EXPORTED_SYMBOLS_FILE = "$(PROJECT_DIR)/ardk/exported.symbols";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ardk",
+					"$(PROJECT_DIR)/mupdfdk",
+					"$(PROJECT_DIR)/ardk/objc",
+					"$(PROJECT_DIR)/mupdfdk/mupdf/include",
+				);
+				INFOPLIST_FILE = "mupdfdk/mupdfdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/smart-office-nui",
+				);
+				MODULEMAP_FILE = "$(PROJECT_DIR)/mupdfdk/mupdfdk.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artifex.mupdfdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Fortify Debug";
+		};
+		DA1493DB21F0B6ED0052E752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00938D9FCB8FF388F8D9938F /* Pods-mupdfdk.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2.0.0.6;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2.0.0.6;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				EXPORTED_SYMBOLS_FILE = "$(PROJECT_DIR)/ardk/exported.symbols";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ardk",
+					"$(PROJECT_DIR)/mupdfdk",
+					"$(PROJECT_DIR)/ardk/objc",
+					"$(PROJECT_DIR)/mupdfdk/mupdf/include",
+				);
+				INFOPLIST_FILE = "mupdfdk/mupdfdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/smart-office-nui",
+				);
+				MODULEMAP_FILE = "$(PROJECT_DIR)/mupdfdk/mupdfdk.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artifex.mupdfdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
+				SUPPORTS_MACCATALYST = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA1493DC21F0B6ED0052E752 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0811721B22A7A45F0B2AF4D /* Pods-mupdfdk.profile.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2.0.0.6;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2.0.0.6;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				EXPORTED_SYMBOLS_FILE = "$(PROJECT_DIR)/ardk/exported.symbols";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ardk",
+					"$(PROJECT_DIR)/mupdfdk",
+					"$(PROJECT_DIR)/ardk/objc",
+					"$(PROJECT_DIR)/mupdfdk/mupdf/include",
+				);
+				INFOPLIST_FILE = "mupdfdk/mupdfdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/smart-office-nui",
+				);
+				MODULEMAP_FILE = "$(PROJECT_DIR)/mupdfdk/mupdfdk.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artifex.mupdfdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		DA3D784C1A91F9AC005D6510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		DA3D784D1A91F9AC005D6510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
+				SDKROOT = iphoneos;
+				STRIP_BITCODE_FROM_COPIED_FILES = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA4B34D41F55A6B0006014B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA4B34D51F55A6B0006014B9 /* Fortify Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Fortify Debug";
+		};
+		DA4B34D61F55A6B0006014B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA4B34D71F55A6B0006014B9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7M9658FA5G;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Profile;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA1493D821F0B6ED0052E752 /* Build configuration list for PBXNativeTarget "mupdfdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1493D921F0B6ED0052E752 /* Debug */,
+				DA1493DA21F0B6ED0052E752 /* Fortify Debug */,
+				DA1493DB21F0B6ED0052E752 /* Release */,
+				DA1493DC21F0B6ED0052E752 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3D78261A91F9AC005D6510 /* Build configuration list for PBXProject "mupdfdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3D784C1A91F9AC005D6510 /* Debug */,
+				7CF329891C516EE9007258F7 /* Fortify Debug */,
+				DA3D784D1A91F9AC005D6510 /* Release */,
+				7C80D0C31CD375BF00E274C0 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4B34D81F55A6B0006014B9 /* Build configuration list for PBXLegacyTarget "MuPDF-generated" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4B34D41F55A6B0006014B9 /* Debug */,
+				DA4B34D51F55A6B0006014B9 /* Fortify Debug */,
+				DA4B34D61F55A6B0006014B9 /* Release */,
+				DA4B34D71F55A6B0006014B9 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA3D78231A91F9AC005D6510 /* Project object */;
+}

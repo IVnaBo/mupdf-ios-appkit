@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "Yazar ismini güncellemek mi yoksa şu anki ismi muhafaza etmek mi istersiniz?";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "Redaksiyonların uygulanması geri alınamaz. Devam etmek istiyor musunuz?";
+
+/* Name recorded against changes made to the document */
+"Author" = "Yazar";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "REDAKSİYON";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "Bu belge henüz uygulanmamış olan redaksiyon işaretlemeleri içeriyor. Uygulanana kadar bu işaretlemelerle ilgili herhangi bir içerik orada bulunmayı sürdürecektir. Devam etmek istediğinizden emin misiniz?";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "Bırak";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "Dosya kaydedilemedi";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "ŞURADA AÇ:";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "YAZDIR";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "KORU";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "KAYDET";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "FARKLI KAYDET";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "PDF'Yİ KAYDET";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "ŞURAYA KAYDET:";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "Dosyanın kaydedilmesi başarısız.\nHata kodu SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "PAYLAŞ";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "Paragraf özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Changed run properties" = "Çalıştırma özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Changed section properties" = "Bölüm özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Changed table cell properties" = "Tablo hücre özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Changed Table Grid" = "Tablo Kılavuzu değiştirildi";
+
+/* Description of document alteration */
+"Changed table properties" = "Tablo özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Changed table row properties" = "Tablo satırı özellikleri değiştirildi";
+
+/* Description of document alteration */
+"Deleted text" = "Metin silindi";
+
+/* Description of document alteration */
+"Inserted paragraph" = "Paragraf eklendi";
+
+/* Description of document alteration */
+"Inserted table cell" = "Tablo hücresi eklendi";
+
+/* Description of document alteration */
+"Inserted table row" = "Tablo satırı eklendi";
+
+/* Description of document alteration */
+"Inserted text" = "Metin eklendi";
+
+/* Description of document alteration */
+"No Changed" = "Numara Değiştirildi";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "NOT YAZ";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "DOSYA";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "BUL";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "SAYFALAR";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "Slayt gösterisinin sonu. Çıkmak için dokunun.";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "Para birimi";
+
+/* Type of number format used in spreadsheets */
+"Date" = "Tarih";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "Kesir";
+
+/* Type of number format used in spreadsheets */
+"General" = "Genel";
+
+/* Type of number format used in spreadsheets */
+"Number" = "Numara";
+
+/* Label for continue with editing button */
+"Continue editing" = "Düzenlemeye devam et";
+
+/* Label for discard changes button */
+"Discard" = "Vazgeç";
+
+/* Label for save changes button */
+"Save" = "Kaydet";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "Kaydedilmemiş değişiklikler var";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "Düzenlemeye devam etmek ve değişikliklerinizi kaydetmek ya da değişikliklerinizden vazgeçmek mi istersiniz?";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "Yükleniyor…";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "SAYFA %1$zd/%2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "Bu belgeden '%@' çalışma sayfasını silmek istediğinizden emin misiniz?";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "İptal et";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "Çalışma Sayfasını Sil";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "HATA AYIKLAMA";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "DÜZENLE";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "FORMAT";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "FORMÜLLER";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "EKLE";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "Desteklenmiyor";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "KONTROL ET";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Office 1997-2007 formatındaki belgeler için gözden geçirme eylemleri desteklenmemektedir. Bu dosyayı daha yeni bir formata dönüştürmek için lütfen bir masaüstü bilgisayarda kurulu olan Office uygulamasını kullanın.";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "SLAYTLAR";
+
+/* Continue searching the document */
+"Continue" = "Devam et";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "Aramaya devam edilsin mi?";
+
+/* The search has found no more tracked changes */
+"No more found" = "Daha fazla bulunmadı";
+
+/* Stop searching the document */
+"Stop" = "Durdur";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "KABUL ET";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "YAZAR";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "YORUM";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "SİL";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "İLERİ";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "ÖNCEKİ";
+
+/* Caption for button that rejects a change */
+"REJECT" = "REDDET";
+
+/* Label of button for retaining the current author */
+"Retain" = "Muhafaza et";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "DEĞİŞİKLİKLERİ GÖSTER";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "DEĞİŞİKLİKLERİ İZLE";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "Yazar değişiklikleri izleme";
+/* Label of button for updating the author */
+"Update" = "Güncelle";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "Sekizde birler";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "Yarımda birler";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "Yüzde birler";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "Dörtte birler";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "Onaltıda birler";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "Onda birler";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "En fazla bir hane";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "En fazla üç hane";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "En fazla iki hane";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "Slayt animasyonunun sonu. Çıkmak için dokunun.";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "Belge yüklenemedi";
+
+/* Warning of problem loading document */
+"Document is empty" = "Belge boş";
+
+/* Warning of problem loading document */
+"Document is too large" = "Belge çok büyük";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "Belge desteklenmeyen bir şifreleme kullanıyor";
+
+/* Label for button to accept password and open the document */
+"OK" = "Tamam";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "Şifre";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "Şifre gerekiyor";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "Lütfen bu belge için şifreyi girin";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "Belge yüklenemedi";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "Desteklenmeyen belge türü";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "KOPYALA";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "PDF'Yİ ŞURADA AÇ:";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "Muhasebe";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "Özel";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "Tarih ve Saat";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "Yüzde";
+
+/* Label on No button */
+"No" = "Hayır";
+
+/* Label on Okay button */
+"Okay" = "Tamam";
+
+/* Label on Yes button */
+"Yes" = "Evet";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "Çoğalt";
+
+/* Country name */
+"Australia" = "Avustralya";
+
+/* Country name */
+"Canada" = "Kanada";
+
+/* Country name */
+"China" = "Çin";
+
+/* Country name */
+"India" = "Hindistan";
+
+/* Country name */
+"Japan" = "Japonya";
+
+/* Country name */
+"Korea" = "Kore";
+
+/* Refrence to user's current location - the country */
+"Local" = "Yerel";
+
+/* Country name */
+"New Zealand" = "Yeni Zelanda";
+
+/* Country name */
+"Singapore" = "Singapur";
+
+/* Country name */
+"South Africa" = "Güney Afrika";
+
+/* Country name */
+"United Kingdom" = "Birleşik Krallık";
+
+/* Country name */
+"United States" = "Birleşik Devletler";
+

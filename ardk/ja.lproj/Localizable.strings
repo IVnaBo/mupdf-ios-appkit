@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "作成者名を更新しますか？それとも現在のものを保持しますか？";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "墨消しは一度適用すると元に戻すことができません。続行しますか？";
+
+/* Name recorded against changes made to the document */
+"Author" = "作成者";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "墨消し";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "この文書にはまだ適用されていない墨消しマークが含まれます。このマークがついたコンテンツは、墨消しが適用されるまで残ります。本当に続行しますか？";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "95.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "95.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "85.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "消去";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "ファイルを保存できませんでした";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "アプリで開く";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "印刷";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "保護";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "保存";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "名前を付けて保存";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "PDFで保存";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "保存先";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "ファイルが保存できませんでした。\nエラーコード：SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "共有";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "段落のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed run properties" = "実行のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed section properties" = "セクションのプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed table cell properties" = "表のセルのプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed Table Grid" = "表のグリッドが変更されました";
+
+/* Description of document alteration */
+"Changed table properties" = "表のプロパティが変更されました";
+
+/* Description of document alteration */
+"Changed table row properties" = "表の行のプロパティが変更されました";
+
+/* Description of document alteration */
+"Deleted text" = "テキストが削除されました";
+
+/* Description of document alteration */
+"Inserted paragraph" = "パラグラフが挿入されました";
+
+/* Description of document alteration */
+"Inserted table cell" = "表のセルが挿入されました";
+
+/* Description of document alteration */
+"Inserted table row" = "表の行が挿入されました";
+
+/* Description of document alteration */
+"Inserted text" = "テキストが挿入されました";
+
+/* Description of document alteration */
+"No Changed" = "変更なし";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "コメント";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ファイル";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "検索";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "ページ";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "スライドショーが終わりました。タップで終了します。";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "通貨";
+
+/* Type of number format used in spreadsheets */
+"Date" = "日付";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "分数";
+
+/* Type of number format used in spreadsheets */
+"General" = "全般";
+
+/* Type of number format used in spreadsheets */
+"Number" = "数値";
+
+/* Label for continue with editing button */
+"Continue editing" = "編集を続行";
+
+/* Label for discard changes button */
+"Discard" = "破棄";
+
+/* Label for save changes button */
+"Save" = "保存";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "保存されていない変更があります";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "編集を続行しますか？それとも変更を保存しますか？あるいは変更を破棄しますか？";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "読み込み中...";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "ページ %1$zd / %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "この文書からシート「%@」を本当に削除しますか？";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "キャンセル";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "シートを削除する";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "デバッグ";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "編集";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "形式";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "数式";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "挿入";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "サポートされていません";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "校閲";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Office 1997～2007の形式のドキュメントは、校閲操作に対応しておりません。デスクトップコンピューターでOfficeを使用して、ファイルをより新しい形式に変換してください。";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "スライド";
+
+/* Continue searching the document */
+"Continue" = "続行";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "検索を続けますか？";
+
+/* The search has found no more tracked changes */
+"No more found" = "他には見つかりませんでした";
+
+/* Stop searching the document */
+"Stop" = "中止";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "承諾";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "作成者";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "コメント";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "削除";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "次へ";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "前へ";
+
+/* Caption for button that rejects a change */
+"REJECT" = "拒否";
+
+/* Label of button for retaining the current author */
+"Retain" = "保持";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "変更箇所を表示する";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "変更履歴を記録する";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "変更履歴の作成者";
+/* Label of button for updating the author */
+"Update" = "更新";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "分母を8に設定";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "分母を2に設定";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "分母を100に設定";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "分母を4に設定";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "分母を16に設定";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "分母を10に設定";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "最大1桁";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "最大3桁";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "最大2桁";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "アニメーションが終わりました。タップで終了します。";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "ドキュメントを読み込めませんでした";
+
+/* Warning of problem loading document */
+"Document is empty" = "ドキュメントが空です";
+
+/* Warning of problem loading document */
+"Document is too large" = "ドキュメントのサイズが大きすぎます";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "ドキュメントにサポートされていない暗号化が施されています";
+
+/* Label for button to accept password and open the document */
+"OK" = "OK";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "パスワード";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "パスワードが必要です";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "このドキュメントのパスワードを入力してください";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "ドキュメントを読み込めませんでした";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "未対応の種類のドキュメントです";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "コピー";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "PDFをアプリで開く";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "会計";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "カスタム";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "日付と時間";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "パーセンテージ";
+
+/* Label on No button */
+"No" = "いいえ";
+
+/* Label on Okay button */
+"Okay" = "OK";
+
+/* Label on Yes button */
+"Yes" = "はい";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "複製";
+
+/* Country name */
+"Australia" = "オーストラリア";
+
+/* Country name */
+"Canada" = "カナダ";
+
+/* Country name */
+"China" = "中国";
+
+/* Country name */
+"India" = "インド";
+
+/* Country name */
+"Japan" = "日本";
+
+/* Country name */
+"Korea" = "韓国";
+
+/* Refrence to user's current location - the country */
+"Local" = "ローカル";
+
+/* Country name */
+"New Zealand" = "ニュージーランド";
+
+/* Country name */
+"Singapore" = "シンガポール";
+
+/* Country name */
+"South Africa" = "南アフリカ";
+
+/* Country name */
+"United Kingdom" = "イギリス";
+
+/* Country name */
+"United States" = "アメリカ";
+

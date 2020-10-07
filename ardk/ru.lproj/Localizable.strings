@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "Обновить имя автора или сохранить предыдущего?";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "Редактирование нельзя отменить. Продолжить?";
+
+/* Name recorded against changes made to the document */
+"Author" = "Автор";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "РЕДАКТИРОВАНИЕ";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "В этом документе содержатся еще не примененные метки редактирования. Содержимое, связанное с этими метками, останется до их применения. Продолжить?";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "95.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "100.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "100.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "110.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "Закрыть";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "Не удалось сохранить файл";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "ОТКРЫТЬ В";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "ПЕЧАТЬ";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "ЗАЩИТА";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "СОХРАНИТЬ";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "СОХРАНИТЬ КАК";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "СОХРАНИТЬ PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "СОХРАНИТЬ В";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "Не удалось сохранить файл.\nКод ошибки: SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "ОПУБЛИКОВАТЬ";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "Изменены свойства абзаца";
+
+/* Description of document alteration */
+"Changed run properties" = "Изменены свойства запуска";
+
+/* Description of document alteration */
+"Changed section properties" = "Изменены свойства раздела";
+
+/* Description of document alteration */
+"Changed table cell properties" = "Изменены свойства ячейки таблицы";
+
+/* Description of document alteration */
+"Changed Table Grid" = "Изменена сетка таблицы";
+
+/* Description of document alteration */
+"Changed table properties" = "Изменены свойства таблицы";
+
+/* Description of document alteration */
+"Changed table row properties" = "Изменены свойства строки в таблице";
+
+/* Description of document alteration */
+"Deleted text" = "Удаленный текст";
+
+/* Description of document alteration */
+"Inserted paragraph" = "Вставлен абзац";
+
+/* Description of document alteration */
+"Inserted table cell" = "Вставлена ячейка в таблицу";
+
+/* Description of document alteration */
+"Inserted table row" = "Вставлена строка в таблицу";
+
+/* Description of document alteration */
+"Inserted text" = "Вставлен текст";
+
+/* Description of document alteration */
+"No Changed" = "Без изменений";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "АННОТАЦИЯ";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ФАЙЛ";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "НАЙТИ";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "СТРАНИЦЫ";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "Конец слайдшоу. Нажмите, чтобы выйти.";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "Валюта";
+
+/* Type of number format used in spreadsheets */
+"Date" = "Дата";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "Дробный";
+
+/* Type of number format used in spreadsheets */
+"General" = "Общий";
+
+/* Type of number format used in spreadsheets */
+"Number" = "Численный";
+
+/* Label for continue with editing button */
+"Continue editing" = "Продолжить редактирование";
+
+/* Label for discard changes button */
+"Discard" = "Сбросить";
+
+/* Label for save changes button */
+"Save" = "Сохранить";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "Остались несохраненные изменения";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "Продолжить редактирование, сохранить изменения или удалить их?";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "Загрузка…";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "СТР. %1$zd ИЗ %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "Удалить лист «%@» из этого документа?";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "Отмена";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "Удалить лист";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "ОТЛАДКА";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "ПРАВКА";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "ФОРМАТ";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "ФОРМУЛЫ";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "ВСТАВКА";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "Не поддерживается";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "ПРОВЕРКА";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Функция проверки не поддерживается для документов формата Office 1997–2007. Сохраните файл в новом формате, открыв его на ПК.";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "СЛАЙДЫ";
+
+/* Continue searching the document */
+"Continue" = "Продолжить";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "Продолжить поиск?";
+
+/* The search has found no more tracked changes */
+"No more found" = "Больше ничего не найдено";
+
+/* Stop searching the document */
+"Stop" = "Стоп";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ПРИНЯТЬ";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "АВТОР";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "КОММЕНТАРИЙ";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "УДАЛИТЬ";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "ДАЛЕЕ";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "НАЗАД";
+
+/* Caption for button that rejects a change */
+"REJECT" = "ОТКЛОНИТЬ";
+
+/* Label of button for retaining the current author */
+"Retain" = "Сохранить";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "ПОКАЗАТЬ ИЗМЕНЕНИЯ";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "ОТСЛЕЖ. ИЗМЕНЕНИЙ";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "Автор изменений";
+/* Label of button for updating the author */
+"Update" = "Обновить";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "Восьмые";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "Половины";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "Сотые";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "Четверти";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "Шестнадцатые";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "Десятые";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "До 1 цифры";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "До 3 цифр";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "До 2 цифр";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "Конец слайд-анимации. Нажмите, чтобы выйти.";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "Не удалось загрузить документ";
+
+/* Warning of problem loading document */
+"Document is empty" = "Документ пуст";
+
+/* Warning of problem loading document */
+"Document is too large" = "Слишком крупный документ";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "Шифрование в документе не поддерживается";
+
+/* Label for button to accept password and open the document */
+"OK" = "ОК";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "Пароль";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "Введите пароль";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "Введите пароль к этому документу";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "Не удалось загрузить документ";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "Тип документа не поддерживается";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "КОПИРОВАТЬ";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "ОТКРЫТЬ PDF В";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "Финансовый";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "Пользоват.";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "Дата и время";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "Процентный";
+
+/* Label on No button */
+"No" = "Нет";
+
+/* Label on Okay button */
+"Okay" = "ОК";
+
+/* Label on Yes button */
+"Yes" = "Да";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "Дублировать";
+
+/* Country name */
+"Australia" = "Австралия";
+
+/* Country name */
+"Canada" = "Канада";
+
+/* Country name */
+"China" = "Китай";
+
+/* Country name */
+"India" = "Индия";
+
+/* Country name */
+"Japan" = "Япония";
+
+/* Country name */
+"Korea" = "Корея";
+
+/* Refrence to user's current location - the country */
+"Local" = "Местное";
+
+/* Country name */
+"New Zealand" = "Новая Зеландия";
+
+/* Country name */
+"Singapore" = "Сингапур";
+
+/* Country name */
+"South Africa" = "Южная Африка";
+
+/* Country name */
+"United Kingdom" = "Великобритания";
+
+/* Country name */
+"United States" = "США";
+

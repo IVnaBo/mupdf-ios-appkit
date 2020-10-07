@@ -1,0 +1,361 @@
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "คุณต้องการอัพเดทชื่อผู้เขียนหรือใช้ชื่อที่มีอยู่";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "การทำการแก้ไขไม่สามารถยกเลิกได้ คุณต้องการดำเนินการต่อหรือไม่";
+
+/* Name recorded against changes made to the document */
+"Author" = "ผู้เขียน";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "แก้ไข";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "เอกสารนี้มีเครื่องหมายการแก้ไขที่ยังไม่ได้ใช้ เนื้อหาใดๆ ที่เกี่ยวข้องกับเครื่องหมายเหล่านี้จะยังคงปรากฏอยู่จนกว่าจะมีการนำไปใช้ คุณแน่ใจหรือว่าต้องการดำเนินการต่อ";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "80.0 FormulasRibbonButtonWidth";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "ยกเลิก";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "ไม่สามารถบันทึกไฟล์ได้";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "เปิดใน";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "พิมพ์";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "ป้องกัน";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "บันทึก";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "บันทึกเป็น";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "บันทึก PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "บันทึกไปยัง";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "การบันทึกไฟล์ล้มเหลว\nโค้ดผิดพลาด SO%@";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "แบ่งปัน";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "คุณสมบัติพารากราฟมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed run properties" = "คุณสมบัติรันมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed section properties" = "คุณสมบัติหมวดหมู่มีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table cell properties" = "คุณสมบัติเซลล์ตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed Table Grid" = "กริดตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table properties" = "คุณสมบัติตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Changed table row properties" = "คุณสมบัติแถวของตารางมีการเปลี่ยนแปลง";
+
+/* Description of document alteration */
+"Deleted text" = "ข้อความถูกลบแล้ว";
+
+/* Description of document alteration */
+"Inserted paragraph" = "พารากราฟถูกแทรก";
+
+/* Description of document alteration */
+"Inserted table cell" = "เซลล์ตารางถูกแทรก";
+
+/* Description of document alteration */
+"Inserted table row" = "แถวตารางถูกแทรก";
+
+/* Description of document alteration */
+"Inserted text" = "ข้อความถูกแทรก";
+
+/* Description of document alteration */
+"No Changed" = "ไม่มีการเปลี่ยนแปลง";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "บันทึกหมายเหตุ";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ไฟล์";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "ค้นหา";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "หน้า";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "จบสไลด์โชว์ แตะเพื่อออก";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "สกุลเงิน";
+
+/* Type of number format used in spreadsheets */
+"Date" = "วันที่";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "เศษส่วน";
+
+/* Type of number format used in spreadsheets */
+"General" = "ทั่วไป";
+
+/* Type of number format used in spreadsheets */
+"Number" = "หมายเลข";
+
+/* Label for continue with editing button */
+"Continue editing" = "ดำเนินการแก้ไขต่อ";
+
+/* Label for discard changes button */
+"Discard" = "ละทิ้ง";
+
+/* Label for save changes button */
+"Save" = "บันทึก";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "มีรายการเปลี่ยนแปลงที่ยังไม่ได้บันทึก";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "คุณต้องการดำเนินการแก้ไขต่อ บันทึกการเปลี่ยนแปลง หรือยกเลิกการเปลี่ยนแปลง";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "กำลังโหลด...";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "หน้า %1$zd จาก %2$d";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "คุณแน่ใจหรือว่าต้องการลบชีท '%@' จากเอกสารนี้";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "ยกเลิก";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "ลบชีท";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "แก้จุดบกพร่อง";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "แก้ไข";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "รูปแบบ";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "สูตร";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "แทรก";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "ไม่รองรับ";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "รีวิว";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "คำสั่งรีวิวไม่รองรับสำหรับเอกสารที่มีรูปแบบไฟล์ Office 1997-2007 กรุณาใช้ Office บนคอมพิวเตอร์เดสก์ทอปเพื่อแปลงไฟล์เป็นรูปแบบไฟล์ที่ใหม่ขึ้น";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "สไลด์";
+
+/* Continue searching the document */
+"Continue" = "ดำเนินการต่อ";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "ค้นหาต่อไปหรือไม่";
+
+/* The search has found no more tracked changes */
+"No more found" = "ไม่พบรายการอื่น";
+
+/* Stop searching the document */
+"Stop" = "หยุด";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ยอมรับ";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "ผู้เขียน";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "ความคิดเห็น";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "ลบ";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "ถัดไป";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "ก่อนหน้า";
+
+/* Caption for button that rejects a change */
+"REJECT" = "ปฏิเสธ";
+
+/* Label of button for retaining the current author */
+"Retain" = "ใช้ที่มีอยู่";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "แสดงการเปลี่ยนแปลง";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "ติดตามการแก้ไข";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "ผู้เขียนที่ติดตามการแก้ไข";
+/* Label of button for updating the author */
+"Update" = "อัพเดท";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "แปดส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "สองส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "ร้อยส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "สี่ส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "สิบหกส่วน";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "สิบส่วน";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "ตัวเลขไม่เกินหนึ่งตัว";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "ตัวเลขไม่เกินสามตัว";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "ตัวเลขไม่เกินสองตัว";
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "จบสไลด์แอนิเมชั่น แตะเพื่อออก";
+
+/* Warning of problem loading document */
+"Document could not be loaded" = "ไม่สามารถโหลดเอกสารได้";
+
+/* Warning of problem loading document */
+"Document is empty" = "เอกสารว่างเปล่า";
+
+/* Warning of problem loading document */
+"Document is too large" = "เอกสารมีขนาดใหญ่เกินไป";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "เอกสารใช้การเข้ารหัสลับที่ไม่รองรับ";
+
+/* Label for button to accept password and open the document */
+"OK" = "ตกลง";
+
+/* Placeholder in textfield that accepts a password */
+"Password" = "รหัสผ่าน";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "ต้องการรหัสผ่าน";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "กรุณากรอกรหัสผ่านสำหรับเอกสารนี้";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "ไม่สามารถโหลดเอกสารได้";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "ประเภทไฟล์ไม่รองรับ";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "คัดลอก";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "เปิด PDF ใน";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "บัญชี";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "กำหนดเอง";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "วันที่และเวลา";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "ร้อยละ";
+
+/* Label on No button */
+"No" = "ไม่";
+
+/* Label on Okay button */
+"Okay" = "ตกลง";
+
+/* Label on Yes button */
+"Yes" = "ใช่";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "ทำซ้ำ";
+
+/* Country name */
+"Australia" = "ประเทศออสเตรเลีย";
+
+/* Country name */
+"Canada" = "ประเทศแคนาดา";
+
+/* Country name */
+"China" = "ประเทศจีน";
+
+/* Country name */
+"India" = "ประเทศอินเดีย";
+
+/* Country name */
+"Japan" = "ประเทศญี่ปุ่น";
+
+/* Country name */
+"Korea" = "ประเทศเกาหลี";
+
+/* Refrence to user's current location - the country */
+"Local" = "ท้องถิ่น";
+
+/* Country name */
+"New Zealand" = "ประเทศนิวซีแลนด์";
+
+/* Country name */
+"Singapore" = "ประเทศสิงคโปร์";
+
+/* Country name */
+"South Africa" = "ประเทศแอฟริกาใต้";
+
+/* Country name */
+"United Kingdom" = "ประเทศอังกฤษ";
+
+/* Country name */
+"United States" = "ประเทศสหรัฐอเมริกา";
+

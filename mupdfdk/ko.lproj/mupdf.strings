@@ -1,0 +1,68 @@
+/* Class = "UIButton"; normalTitle = "SAVE AS"; ObjectID = "BcR-rE-vok"; */
+"BcR-rE-vok.normalTitle" = "다음으로 저장";
+
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "Cbt-8x-nM9"; */
+"Cbt-8x-nM9.normalTitle" = "파일";
+
+/* Class = "UIButton"; normalTitle = "OPEN IN"; ObjectID = "Nb8-OS-gH7"; */
+"Nb8-OS-gH7.normalTitle" = "다음에서 열기";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "Tkj-tW-h1c"; */
+"Tkj-tW-h1c.normalTitle" = "공유";
+/* Class = "UILabel"; text = "LOADING..."; ObjectID = "fUk-Sp-RdJ"; */
+"fUk-Sp-RdJ.text" = "불러오는 중...";
+
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "lT1-8D-PNZ"; */
+"lT1-8D-PNZ.normalTitle" = "저장";
+
+/* Class = "UIButton"; normalTitle = "PRINT"; ObjectID = "mh8-H5-qn1"; */
+"mh8-H5-qn1.normalTitle" = "인쇄";
+/* Class = "UIButton"; normalTitle = "LAST PAGE"; ObjectID = "74T-og-ENW"; */
+"74T-og-ENW.normalTitle" = "마지막 페이지";
+
+/* Class = "UIButton"; normalTitle = "DRAW"; ObjectID = "0yg-Fs-H81"; */
+"0yg-Fs-H81.normalTitle" = "그리기";
+
+/* Class = "UIButton"; normalTitle = "FIRST PAGE"; ObjectID = "Svk-up-6Xp"; */
+"Svk-up-6Xp.normalTitle" = "첫 페이지";
+
+/* Class = "UITextField"; placeholder = "Find"; ObjectID = "NVZ-3p-pvE"; */
+"NVZ-3p-pvE.placeholder" = "찾기";
+
+/* Class = "UIButton"; normalTitle = "NOTE"; ObjectID = "GIL-FW-ELQ"; */
+"GIL-FW-ELQ.normalTitle" = "메모";
+
+/* Class = "UIButton"; normalTitle = "HIGHLIGHT"; ObjectID = "Ane-TF-Bch"; */
+"Ane-TF-Bch.normalTitle" = "하이라이트";
+
+
+/* Class = "UIButton"; normalTitle = "ANNOTATE"; ObjectID = "You-SO-fit"; */
+"You-SO-fit.normalTitle" = "주석";
+
+/* Class = "UIButton"; normalTitle = "FIND"; ObjectID = "Xeh-Y8-b2a"; */
+"Xeh-Y8-b2a.normalTitle" = "찾기";
+
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "XHH-YZ-jjl"; */
+"XHH-YZ-jjl.normalTitle" = "파일";
+/* Class = "UIButton"; normalTitle = "PREVIOUS"; ObjectID = "fOn-3i-23s"; */
+"fOn-3i-23s.normalTitle" = "이전";
+
+
+/* Class = "UIButton"; normalTitle = "PAGES"; ObjectID = "urr-VY-God"; */
+"urr-VY-God.normalTitle" = "페이지";
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "l63-Lm-thV"; */
+"l63-Lm-thV.normalTitle" = "다음";
+
+/* Class = "UIButton"; normalTitle = "DELETE"; ObjectID = "rtd-Q0-cv6"; */
+"rtd-Q0-cv6.normalTitle" = "삭제";
+
+
+/* Class = "UIButton"; normalTitle = "ANNOTATE"; ObjectID = "zT2-E7-63U"; */
+"zT2-E7-63U.normalTitle" = "각주";
+
+/* Class = "UIButton"; normalTitle = "PAGES"; ObjectID = "v0a-Om-0JO"; */
+"v0a-Om-0JO.normalTitle" = "페이지";
+/* Class = "UIButton"; normalTitle = "FILE"; ObjectID = "zkg-ed-bk3"; */
+"zkg-ed-bk3.normalTitle" = "파일";
+

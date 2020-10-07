@@ -1,0 +1,27 @@
+/* Class = "UIButton"; normalTitle = "Thousand separator"; ObjectID = "Oz9-J3-Fxc"; */
+"Oz9-J3-Fxc.normalTitle" = "千位分隔符";
+
+/* Class = "UIButton"; normalTitle = "Scientific"; ObjectID = "6UX-fq-EbG"; */
+"6UX-fq-EbG.normalTitle" = "科學";
+
+/* Class = "UIButton"; normalTitle = "Edit Function"; ObjectID = "Bq2-3u-Vka"; */
+"Bq2-3u-Vka.normalTitle" = "編輯函數";
+
+/* Class = "UIButton"; normalTitle = "Create New"; ObjectID = "P8A-t4-OPT"; */
+"P8A-t4-OPT.normalTitle" = "新增";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "QSb-kt-UNF"; */
+"QSb-kt-UNF.normalTitle" = "小數點後第 2 位";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "sjd-bc-OjR"; */
+"sjd-bc-OjR.normalTitle" = "小數點後第 2 位";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "D19-gV-vmv"; */
+"D19-gV-vmv.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "45k-OH-Tmf"; */
+"45k-OH-Tmf.text" = "標籤";
+
+/* Class = "UILabel"; text = "Bookmarks"; ObjectID = "OvY-rg-yxY"; */
+"OvY-rg-yxY.text" = "書籤";
+

@@ -1,0 +1,27 @@
+/* Class = "UIButton"; normalTitle = "Thousand separator"; ObjectID = "Oz9-J3-Fxc"; */
+"Oz9-J3-Fxc.normalTitle" = "Separator dziesiętny";
+
+/* Class = "UIButton"; normalTitle = "Scientific"; ObjectID = "6UX-fq-EbG"; */
+"6UX-fq-EbG.normalTitle" = "Naukowe";
+
+/* Class = "UIButton"; normalTitle = "Edit Function"; ObjectID = "Bq2-3u-Vka"; */
+"Bq2-3u-Vka.normalTitle" = "Edytuj funkcję";
+
+/* Class = "UIButton"; normalTitle = "Create New"; ObjectID = "P8A-t4-OPT"; */
+"P8A-t4-OPT.normalTitle" = "Utwórz nowy";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "QSb-kt-UNF"; */
+"QSb-kt-UNF.normalTitle" = "Dwa miejsca dziesiętne";
+
+/* Class = "UIButton"; normalTitle = "Two Decimal Places"; ObjectID = "sjd-bc-OjR"; */
+"sjd-bc-OjR.normalTitle" = "Dwa miejsca dziesięte";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "D19-gV-vmv"; */
+"D19-gV-vmv.normalTitle" = "Anuluj";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "45k-OH-Tmf"; */
+"45k-OH-Tmf.text" = "Etykieta";
+
+/* Class = "UILabel"; text = "Bookmarks"; ObjectID = "OvY-rg-yxY"; */
+"OvY-rg-yxY.text" = "Zakładki";
+

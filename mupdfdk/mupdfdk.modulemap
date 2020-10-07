@@ -1,0 +1,10 @@
+framework module mupdfdk {
+  umbrella header "sodk.h"
+  exclude header "ARDKOpenSSLKeychain.h"
+  exclude header "ARDKCertPickerDialogViewController.h"
+  exclude header "ARDKCertVerifyDialogViewController.h"
+  exclude header "ARDKMutableSigner.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,505 @@
+/* Title of alert controller */
+"File already exists" = "El archivo ya existe";
+
+/* String displayed to indicate that a given attribute is not present in this certifcate */
+"-" = "-";
+
+/* Do not translate */
+"70.0 AlignmentButtonWidth" = "70.0 AlignmentButtonWidth";
+
+/* Do not translate */
+"70.0 DefaultRibbonButtonWidth" = "70.0 DefaultRibbonButtonWidth";
+
+/* Do not translate */
+"70.0 TrackChangesButtonWidth" = "70.0 TrackChangesButtonWidth";
+
+/* Do not translate */
+"80.0 FormulasRibbonButtonWidth" = "85.0 FormulasRibbonButtonWidth";
+
+/* Caption for button that accepts a change */
+"ACCEPT" = "ACEPTAR";
+
+/* Member of a list of possible spreadsheet number formats */
+"Accounting" = "Contabilidad";
+
+/* Text used in tab to select annotation operations */
+"ANNOTATE" = "ANOTAR";
+
+/* Warning when user attempts to apply the marked redactions. */
+"Applying redactions cannot be undone. Do you want to continue?" = "La aplicación de redacciones no se puede deshacer. ¿Quieres continuar?";
+
+/* Dialog message asking the user to confirm that they want to delete the named excel sheet from this document */
+"Are you sure that you want to delete the sheet '%@' from this document?" = "¿Seguro que quieres borrar la hoja \"%@\" de este documento?";
+
+/* Description of how to display a number as a fraction */
+"As Eighths" = "Como octavos";
+
+/* Description of how to display a number as a fraction */
+"As Halves" = "Como mitades";
+
+/* Description of how to display a number as a fraction */
+"As Hundredths" = "Como centésimas";
+
+/* Description of how to display a number as a fraction */
+"As Quarters" = "Como cuartos";
+
+/* Description of how to display a number as a fraction */
+"As Sixteenths" = "Como dieciseisavos";
+
+/* Description of how to display a number as a fraction */
+"As Tenths" = "Como décimas";
+
+/* Country name */
+"Australia" = "Australia";
+
+/* Name recorded against changes made to the document */
+"Author" = "Autor";
+
+/* Caption for button that changes the author for subsequent edits */
+"AUTHOR" = "AUTOR";
+
+/* Label for available certificates section on the certificate picker dialog */
+"Available Certificates" = "Certificados disponibles";
+
+/* Country name */
+"Canada" = "Canadá";
+
+/* Label for dialog button cancel the deletion of an excel sheet */
+"Cancel" = "Cancelar";
+
+/* Label for certificate details section on the certificate picker dialog */
+"Certificate Details" = "Detalles del certificado";
+
+/* Description of document alteration */
+"Changed paragraph properties" = "Propiedades del párrafo cambiadas";
+
+/* Description of document alteration */
+"Changed run properties" = "Propiedades de la ejecución cambiadas";
+
+/* Description of document alteration */
+"Changed section properties" = "Propiedades de la sección cambiadas";
+
+/* Description of document alteration */
+"Changed table cell properties" = "Propiedades de la celda de la tabla cambiadas";
+
+/* Description of document alteration */
+"Changed Table Grid" = "Cuadrícula de la tabla cambiada";
+
+/* Description of document alteration */
+"Changed table properties" = "Propiedades de la tabla cambiadas";
+
+/* Description of document alteration */
+"Changed table row properties" = "Se cambiaron las propiedades de la fila de la tabla";
+
+/* Country name */
+"China" = "China";
+
+/* Title of alert controller */
+"Choose filename" = "Nombre de archivo elegido";
+
+/* Button text */
+"Comment" = "Comentario";
+
+/* Caption for button that adds a comment to the document */
+"COMMENT" = "COMENTARIO";
+
+/* Certificate details 'IssuedBy.CommonName' attribute name
+   Certificate details 'IssuedTo.CommonName' attribute name */
+"Common Name (CN)" = "Nombre común (CN)";
+
+/* Continue searching the document */
+"Continue" = "Continuar";
+
+/* Label for continue with editing button */
+"Continue editing" = "Continuar editando";
+
+/* Text displayed within button for copying selected text to the clipboard */
+"COPY" = "COPIAR";
+
+/* Certificate details 'IssuedTo.Country' attribute name */
+"Country (C)" = "País (C)";
+
+/* Type of number format used in spreadsheets */
+"Currency" = "Moneda";
+
+/* Member of a list of possible spreadsheet number formats. \"Custom\" in the sense of \"Customizable\" */
+"Custom" = "Personalizado";
+
+/* Type of number format used in spreadsheets */
+"Date" = "Fecha";
+
+/* Member of a list of possible spreadsheet number formats */
+"Date and Time" = "Fecha y hora";
+
+/* Text used in tab to select debug operations */
+"DEBUG" = "DEPURACIÓN";
+
+/* Caption for button that deletes a comment from the document */
+"DELETE" = "BORRAR";
+
+/* Label for dialog button confirm the deletion of an excel sheet
+   Title of dialog warning that the user is about to delete an excel sheet */
+"Delete Sheet" = "Borrar hoja";
+
+/* Description of document alteration */
+"Deleted text" = "Texto borrado";
+
+/* Label for discard changes button */
+"Discard" = "Rechazar";
+
+/* Label for button to remove dialog without action */
+"Dismiss" = "Descartar";
+
+/* Message of alert controller */
+"Do you wish to overwrite the existing file?" = "¿Deseas sobrescribir el archivo existente?";
+
+
+/* Message displayed at the end of an animated slide */
+"End of slide animation. Tap to exit." = "Fin de la animación de diapositivas. Toca para salir.";
+/* Warning of problem loading document */
+"Document could not be loaded" = "No se pudo cargar el documento";
+
+/* Signature verifier message that there was a document digest failure */
+"Document digest failure" = "Falla del resumen del documento";
+
+/* Warning of problem loading document */
+"Document is empty" = "El documento está vacío";
+
+/* Warning of problem loading document */
+"Document is too large" = "El documento es demasiado largo";
+
+/* Label for document signature verification dialog title */
+"Document Signature Verification" = "Verificación de la firma del documento";
+
+/* Warning of problem loading document */
+"Document uses unsupported encryption" = "El documento usa encriptación incompatible";
+
+/* Menu item for adding to the document a copy of an existing page */
+"Duplicate" = "Duplicar";
+
+/* Text used in tab to select editing operations */
+"EDIT" = "Editar";
+
+/* Certificate details 'IssuedTo.Email' attribute name */
+"Email" = "Correo electrónico";
+
+/* Message displayed at the end of a slide show */
+"End of slideshow. Tap to exit." = "Fin de la presentación. Tocar para salir.";
+
+/* Heading for the certificate details 'Extended Key Usage' section */
+"Extended Key Usage" = "Uso extendido de la llave";
+
+/* Text used in tab to select file-based operations */
+"FILE" = "ARCHIVO";
+
+/* Title for dialog warning the user the document could not be saved */
+"File could not be saved" = "No se pudo guardar el archivo";
+
+/* Text used in tab to select text-search operations */
+"FIND" = "BUSCAR";
+
+/* Heading for the certificate details 'Fingerprints' section */
+"Fingerprint" = "Huella digital";
+
+/* Text used in tab to select formatting operations */
+"FORMAT" = "FORMATO";
+
+/* Text used in tab to select formula-insertion operations */
+"FORMULAS" = "FÓRMULAS";
+
+/* Type of number format used in spreadsheets */
+"Fraction" = "Fracción";
+
+/* Type of number format used in spreadsheets */
+"General" = "General";
+
+/* Country name */
+"India" = "India";
+
+/* Text used in tab to select insertion operations */
+"INSERT" = "INSERTAR";
+
+/* Description of document alteration */
+"Inserted paragraph" = "Párrafo insertado";
+
+/* Description of document alteration */
+"Inserted table cell" = "Celda de la tabla insertada";
+
+/* Description of document alteration */
+"Inserted table row" = "Fila de la tabla insertada";
+
+/* Description of document alteration */
+"Inserted text" = "Texto insertado";
+
+/* Prompt to ask tell the user that the PKCS12 password was incorrect, and to try again */
+"Invalid password, please try again" = "La contraseña no es válida, inténtalo de nuevo";
+
+/* Heading for the certificate details 'Issued By' section */
+"Issued By" = "Emitido por";
+
+/* Heading for the certificate details 'Issued To' section */
+"Issued To" = "Emitido para";
+
+/* Country name */
+"Japan" = "Japón";
+
+/* Continue search by wrapping around to the start or end of the document */
+"Keep searching?" = "¿Seguir buscando?";
+
+/* Heading for the certificate details 'Key Usage' section */
+"Key Usage" = "Uso de la llave";
+
+/* Country name */
+"Korea" = "Corea";
+
+/* Placeholder text for document page indicator while document loads the first page */
+"Loading..." = "Cargando...";
+
+/* Refrence to user's current location - the country */
+"Local" = "Local";
+
+/* Certificate details 'IssuedTo.Locality' attribute name */
+"Locality (L)" = "Localidad (L)";
+
+/* Button title for dismissing alert view and requesting not to see it again. */
+"Never show this again" = "No mostrar esto de nuevo";
+
+/* Country name */
+"New Zealand" = "Nueva Zelanda";
+
+/* Caption for button that moves to the next change */
+"NEXT" = "SIGUIENTE";
+
+/* Label on No button */
+"No" = "No";
+
+/* Description of document alteration */
+"No Changed" = "Sin cambios";
+
+/* The search has found no more tracked changes */
+"No more found" = "No se encontraron más";
+
+/* Title for dialog warning of an unsuported document type */
+"Not supported" = "No es compatible";
+
+/* Certificate details 'PeriodOfValidity.NotValidAfter' attribute name */
+"Not Valid After" = "No es válido después de";
+
+/* Certificate details 'PeriodOfValidity.NotValidBefore' attribute name */
+"Not Valid Before" = "No es válido antes de";
+
+/* Type of number format used in spreadsheets */
+"Number" = "Número";
+
+/* Button title for dismissing alert view.
+   Caption on OK button
+   Label for button to accept password and open the document */
+"OK" = "OK";
+
+/* Label on Okay button */
+"Okay" = "Ok";
+
+/* Text displayed within button for opening the document in another app */
+"OPEN IN" = "ABRIR EN";
+
+/* Text displayed within button for opening the document in another app in PDF format */
+"OPEN PDF IN" = "ABRIR PDF EN";
+
+/* Certificate details 'IssuedBy.Organization' attribute name
+   Certificate details 'IssuedTo.Organization' attribute name */
+"Organization (O)" = "Organización (O)";
+
+/* Certificate details 'IssuedBy.OrganizationalUnit' attribute name
+   Certificate details 'IssuedTo.OrganizationlUnit' attribute name */
+"Organizational Unit (OU)" = "Unidad organizacional (UO)";
+
+/* Button text */
+"Overwrite" = "Sobrescribir";
+
+/* Position through document indicator */
+"PAGE %zd OF %d" = "PÁGINA %1$zd DE %2$d";
+
+/* Text used in tab to select page-navigation operations */
+"PAGES" = "PÁGINAS";
+
+
+/* Label for button to accept password and open the document */
+"Open" = "OK";
+/* Placeholder in textfield that accepts a password */
+"Password" = "Contraseña";
+
+/* Prompt to ask the user for the password for the file PKCS12 file %@ being imported */
+"Password for PKCS12 file: '%@'" = "Contraseña para el archivo PKCS12: \"%@\"";
+
+/* Title for alert dialog when warning that a password is required */
+"Password required" = "Se requiere la contraseña";
+
+/* Member of a list of possible spreadsheet number formats */
+"Percentage" = "Porcentaje";
+
+/* Heading for the certificate details 'Period Of Validity' section */
+"Period Of Validity" = "Periodo de validez";
+
+/* Message for alert dialog when warning that a password is required */
+"Please enter the password for this document" = "Por favor, ingresa la contraseña de este documento";
+
+/* Caption for button that moves to the previous change */
+"PREVIOUS" = "ANTERIOR";
+
+/* Text displayed within button for printing the document */
+"PRINT" = "IMPRIMIR";
+
+/* Text displayed within button for adding password protection to a document */
+"PROTECT" = "PROTEGER";
+
+/* Text used in tab to select redaction operations */
+"REDACT" = "REDACTAR";
+
+/* Caption for button that rejects a change */
+"REJECT" = "RECHAZAR";
+
+/* Label of button for retaining the current author */
+"Retain" = "Retener";
+
+/* Text used in tab to select tracked-changes operations */
+"REVIEW" = "REVISAR";
+
+/* Message for dialog warning of an unsuported document type */
+"Review actions are not supported for Office 1997-2007 format documents. Please use Office on a desktop computer to convert the file to the newer format." = "Las acciones de revisión no son compatibles para documentos con formato de Office 1997-2007. Por favor, usa Office en una computadora de escritorio para convertir el archivo a un formato más reciente.";
+
+/* Text displayed within button for saving the document */
+"SAVE" = "GUARDAR";
+
+/* Label for save changes button */
+"Save" = "Guardar";
+
+/* Text displayed within button for saving the document to a newly named file */
+"SAVE AS" = "GUARDAR COMO";
+
+/* Text display within button for saving the document in PDF format */
+"SAVE PDF" = "GUARDAR PDF";
+
+/* Text displayed within button for saving the document back to an external app */
+"SAVE TO" = "GUARDAR EN";
+
+/* Message for dialog warning the user the document could not be saved */
+"Saving the file failed.\nError code SO%@" = "No se pudo guardar el archivo.\nCódigo de error SO%@";
+
+/* Certificate details 'IssuedTo.Serial Number' attribute name */
+"Serial Number" = "Número de serie";
+
+/* Certificate details 'Fingerprint.SHA256Fingerprint' attribute name */
+"SHA-256 Fingerprint" = "Huella digital SHA-256";
+
+/* Certificate details 'Fingerprint.SHA1Fingerprint' attribute name */
+"SHA1 Fingerprint" = "Huella digital SHA1";
+
+/* Text displayed within button for sharing the document */
+"SHARE" = "COMPARTIR";
+
+/* Caption for button that toggles the showing of tracked changes */
+"SHOW CHANGES" = "MOSTRAR CAMBIOS";
+
+/* Label for button on certificate picker dialog to sign with the selected certificate */
+"Sign" = "Firmar";
+
+/* Signature verifier message heading to indicate that the signature is valid */
+"Signature valid" = "Firma válida";
+
+/* Signature verifier message heading to indicate a warning about the signature */
+"Signature warning" = "Advertencia de firma";
+
+/* Country name */
+"Singapore" = "Singapur";
+
+/* Text used in tab to select slide-navigation operations */
+"SLIDES" = "DIAPOSITIVAS";
+
+/* Title of alert view informing the user that part of the UI scrolls. */
+"Some button bars are scrollable" = "Algunas barras se pueden deslizar";
+
+/* Message of alert view informing the user that part of the UI scrolls. */
+"Some button bars are too long to fit the screen, and some buttons may be hidden.\nYou can scroll the bar to see what is hidden." = "Algunas barras son demasiado largas para ajustarse a la pantalla, y algunos botones pueden estar ocultos.\nPuedes deslizar la barra para ver qué está oculto.";
+
+/* Country name */
+"South Africa" = "Sudáfrica";
+
+/* Certificate details 'IssuedTo.State' attribute name */
+"State (S)" = "Estado (E)";
+
+/* Stop searching the document */
+"Stop" = "Detener";
+
+/* Title of dialog warning of unsaved changes when closing a document */
+"There are unsaved changes" = "Hay cambios sin guardar";
+
+/* Warning message about redactions being marked but not applied */
+"This document contains redaction marks that have not yet been applied. Any content associated with these marks will still be present until they are applied. Are you sure you want to continue?" = "Este documento contiene marcas de redacción que no se han aplicado. Cualquier contenido asociado con estas marcas seguirá presente hasta que sean aplicadas. ¿Seguro de que desea continuar?";
+
+/* Warning message concerning potential form-filling problems */
+"This document uses dual forms, Acroform and XFA. %@ will use the Acroform. Adobe products preferentially use XFA. Form edits may not be shown in Adobe products. Other PDF viewers should work correctly." = "Este documento usa formularios duales, Acroform y XFA. %@ usará el Acroform. Los productos Adobe usan XFA preferentemente. Es posible que la edición del formulario no se muestre en los productos Adobe. Otros visores de PDF deberán funcionar correctamente.";
+
+/* Signature verfier warning that this signature has been invalidated by changes it prohibits since signing */
+"This signature has been invalidated by changes it prohibits since signing" = "Esta firma ha sido invalidada por cambios que prohíbe desde que se firmó";
+
+/* Signature verifier message that this signature is not trusted */
+"This signature is not trusted" = "Esta firma no es confiable";
+
+/* Signature verfier message that this signature is valid, and only changes it permits have been made since signing */
+"This signature is valid, and only changes it permits have been made since signing" = "Esta firma es válida, y solo los cambios que permite se han realizado desde que se firmó";
+
+/* Prompt to ask tell the user that they have run out of password retry attempts */
+"Too many password retry attempts" = "Demasiados intentos para probar la contraseña";
+
+/* Caption for button that toggles track changes feature */
+"TRACK CHANGES" = "REGISTRAR CAMBIOS";
+
+/* Title of dialog for document loading error */
+"Unable to load document" = "No es posible cargar el documento";
+
+/* Country name */
+"United Kingdom" = "Reino Unido";
+
+/* Country name */
+"United States" = "Estados Unidos";
+
+/* Warning of problem loading document */
+"Unsupported document type" = "Tipo de documento incompatible";
+
+/* Description of how to display a number as a fraction */
+"Up to One digit" = "Hasta un dígito";
+
+/* Description of how to display a number as a fraction */
+"Up to three digits" = "Hasta tres dígitos";
+
+/* Description of how to display a number as a fraction */
+"Up to two digits" = "Hasta dos dígitos";
+
+
+/* Title of dialog for viewing and updating the tracked changes author */
+"Tracked changes author" = "Autor de los cambios registrados";
+/* Label of button for updating the author */
+"Update" = "Actualizar";
+
+/* Certificate details 'ExtendedKeyUsage.Usage' attribute name
+   Certificate details 'KeyUsage.Usage' attribute name */
+"Usage" = "Uso";
+
+/* Signature verifier message heading to indicate that the signature verify operation failed */
+"Verification failed" = "Falló la verificación";
+
+/* Title of alert view presenting a warning */
+"Warning" = "Advertencia";
+
+/* Message of dialog warning of unsaved changes when closing a document */
+"Would you like to continue editing, save your changes or discard your changes?" = "¿Quieres continuar editando, guardar tus cambios o rechazar tus cambios?";
+
+
+/* Message for dialog button to conrinue with existing edit session */
+"Continue with existing edit session" = "Continuar con la sesión de edición actual";
+/* Message of dialog for viewing and updating the tracked changes author */
+"Would you like to update the author name or retain the current one?" = "¿Quieres actualizar el nombre del autor o conservar el actual?";
+
+/* Label on Yes button */
+"Yes" = "Sí";
+
