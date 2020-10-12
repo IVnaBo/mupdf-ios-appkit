@@ -5,14 +5,16 @@
 #import "ARDKPageView.h"
 #import "ARDKBookModePageView.h"
 
-@interface ARDKBookModeBlockHolder : NSObject
-@property(readonly) void (^block)(void);
-+ (instancetype)holderOfBlock:(void (^)(void))block;
+typedef void (^ActionBlock)(void (^done)(void));
+
+@interface ARDKBookModeActionHolder : NSObject
+@property(readonly) ActionBlock block;
++ (instancetype)holderOfAction:(ActionBlock)block;
 @end
 
-@implementation ARDKBookModeBlockHolder
+@implementation ARDKBookModeActionHolder
 
-- (instancetype)initWithBlock:(void (^)(void))block
+- (instancetype)initWithAction:(ActionBlock)block
 {
     self = [super init];
     if (self)
@@ -20,20 +22,21 @@
     return self;
 }
 
-+ (instancetype)holderOfBlock:(void (^)(void))block
++ (instancetype)holderOfAction:(ActionBlock)block
 {
-    return [[ARDKBookModeBlockHolder alloc] initWithBlock:block];
+    return [[ARDKBookModeActionHolder alloc] initWithAction:block];
 }
 
 @end
 
 @interface ARDKBookModePageView ()
-@property NSMutableArray<ARDKBookModeBlockHolder *> *blocks;
+@property NSMutableArray<ARDKBookModeActionHolder *> *actions;
+@property ARDKBitmap *bitmap;
+@property ARDKBitmap *hqBitmap;
 @end
 
 @implementation ARDKBookModePageView
 {
-    ARDKBitmap *_bitmap;
     UIView<ARDKPageCellDelegate> *_pageView;
     CGSize _pageSize;
 }
@@ -45,32 +48,43 @@
     return _pageView;
 }
 
-- (void)doRender
+- (void)doQueuedActions
 {
-    ARDKPageView *pv = (ARDKPageView *)_pageView;
-    CGRect viewRect = {CGPointZero, pv.frame.size};
-    CGFloat scale = UIScreen.mainScreen.scale;
-    CGRect bmRect = ARCGRectScale(viewRect, scale);
-    ARDKBitmap *bm = [ARDKBitmap bitmapFromSubarea:bmRect ofBitmap:_bitmap];
-    [pv displayArea:viewRect atScale:scale usingBitmap:bm whenDone:^{
-        void (^block)(void) = self.blocks.lastObject.block;
-        if (block)
-            block();
-        [self.blocks removeLastObject];
-        if (self.blocks.count > 0)
-            [self doRender];
-    }];
+    ActionBlock nextBlock = self.actions.lastObject.block;
+    nextBlock(^(void){
+        [self.actions removeLastObject];
+        if (self.actions.count > 0)
+            [self doQueuedActions];
+    });
 }
+
+- (void)doQueued:(ActionBlock)block;
+{
+    // We don't want to queue up more than one action. Get rid of previous actions,
+    // other than the one currently running.
+    if (self.actions.count > 1)
+        self.actions = @[self.actions.lastObject].mutableCopy;
+    [self.actions insertObject:[ARDKBookModeActionHolder holderOfAction:block] atIndex:0];
+    if (self.actions.count == 1)
+        [self doQueuedActions];
+}
+
 
 - (void)render:(void (^)(void))completeBlock
 {
-    [self.blocks insertObject:[ARDKBookModeBlockHolder holderOfBlock:^{
-        if (completeBlock)
-            completeBlock();
-    }] atIndex:0];
+    [self doQueued:^(void (^done)(void)) {
+        ARDKPageView *pv = (ARDKPageView *)self.pageView;
+        CGRect viewRect = {CGPointZero, pv.frame.size};
+        CGFloat scale = UIScreen.mainScreen.scale;
+        CGRect bmRect = ARCGRectScale(viewRect, scale);
+        ARDKBitmap *bm = [ARDKBitmap bitmapFromSubarea:bmRect ofBitmap:self.bitmap];
+        [pv displayArea:viewRect atScale:scale usingBitmap:bm whenDone:^{
+            if (completeBlock)
+                completeBlock();
 
-    if (self.blocks.count == 1)
-        [self doRender];
+            done();
+        }];
+    }];
 }
 
 - (void)setPageSize:(CGSize)size
@@ -100,7 +114,8 @@
     self = [super initWithFrame:CGRectZero];
     _pageNumber = pageNumber;
     _bitmap = bitmap;
-    _blocks = [NSMutableArray arrayWithCapacity:2];
+
+    _actions = [NSMutableArray arrayWithCapacity:2];
     return self;
 }
 @end
