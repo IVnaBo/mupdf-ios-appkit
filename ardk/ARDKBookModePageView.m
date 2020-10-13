@@ -31,8 +31,10 @@ typedef void (^ActionBlock)(void (^done)(void));
 
 @interface ARDKBookModePageView ()
 @property NSMutableArray<ARDKBookModeActionHolder *> *actions;
-@property ARDKBitmap *bitmap;
-@property ARDKBitmap *hqBitmap;
+@property(weak) id<ARDKBookModePageViewControllerDelegate> delegate;
+@property(readonly) ARDKBitmap *bitmap;
+@property NSInteger overlayToggle;
+@property BOOL zoomedMode;
 @end
 
 @implementation ARDKBookModePageView
@@ -46,6 +48,33 @@ typedef void (^ActionBlock)(void (^done)(void));
 - (UIView<ARDKPageCellDelegate> *)pageView
 {
     return _pageView;
+}
+
+- (ARDKBitmap *)fullBitmapForIndex:(NSInteger)pageNumber
+{
+    NSInteger index = (pageNumber / 2) % 3;
+    CGSize size = CGSizeMake(_bitmap.width, _bitmap.height / 3);
+    CGRect rect = CGRectMake(0, size.height * index, size.width, size.height);
+    return [ARDKBitmap bitmapFromSubarea:rect ofBitmap:_bitmap];
+}
+
+- (ARDKBitmap *)mainBitmap
+{
+    ARDKBitmap *fullBitmap = [self fullBitmapForIndex:self.pageNumber];
+    NSInteger index = self.pageNumber % 2;
+    CGSize size = CGSizeMake(fullBitmap.width / 2, fullBitmap.height);
+    CGRect rect = CGRectMake(size.width * index, 0, size.width, size.height);
+    return [ARDKBitmap bitmapFromSubarea:rect ofBitmap:fullBitmap];
+}
+
+- (ARDKBitmap *)overlayBitmap0
+{
+    return [self fullBitmapForIndex:self.pageNumber+2];
+}
+
+- (ARDKBitmap *)overlayBitmap1
+{
+    return [self fullBitmapForIndex:self.pageNumber+4];
 }
 
 - (void)doQueuedActions
@@ -69,16 +98,28 @@ typedef void (^ActionBlock)(void (^done)(void));
         [self doQueuedActions];
 }
 
-
-- (void)render:(void (^)(void))completeBlock
+- (void)renderZoomed:(BOOL)zoomed onComplete:(void (^)(void))completeBlock
 {
     [self doQueued:^(void (^done)(void)) {
         ARDKPageView *pv = (ARDKPageView *)self.pageView;
         CGRect viewRect = {CGPointZero, pv.frame.size};
         CGFloat scale = UIScreen.mainScreen.scale;
-        CGRect bmRect = ARCGRectScale(viewRect, scale);
-        ARDKBitmap *bm = [ARDKBitmap bitmapFromSubarea:bmRect ofBitmap:self.bitmap];
-        [pv displayArea:viewRect atScale:scale usingBitmap:bm whenDone:^{
+        CGRect renderRect;
+        ARDKBitmap *renderBm;
+        if (zoomed)
+        {
+            CGRect parentRect = [pv convertRect:self.delegate.view.bounds fromView:self.delegate.view];
+            renderRect = CGRectIntersection(parentRect, viewRect);
+            self.overlayToggle = (self.overlayToggle + 1) % 2;
+            renderBm = self.overlayToggle ? self.overlayBitmap0 : self.overlayBitmap1;
+        }
+        else
+        {
+            renderRect = viewRect;
+            renderBm = self.mainBitmap;
+        }
+
+        [pv displayArea:renderRect atScale:scale usingBitmap:renderBm whenDone:^{
             if (completeBlock)
                 completeBlock();
 
@@ -110,8 +151,10 @@ typedef void (^ActionBlock)(void (^done)(void));
 
 - (instancetype)initForPage:(NSInteger)pageNumber
                  withBitmap:(ARDKBitmap *)bitmap
+                   delegate:(nonnull id<ARDKBookModePageViewControllerDelegate>)delegate
 {
     self = [super initWithFrame:CGRectZero];
+    _delegate = delegate;
     _pageNumber = pageNumber;
     _bitmap = bitmap;
 

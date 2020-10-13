@@ -6,8 +6,19 @@
 #import "ARDKBookModePageViewController.h"
 #import "ARDKBookModeViewController.h"
 
+// In two up mode, allocate a half-screen-sized bitmap to
+// the two pages visible and to the pairs of pages each side
+// of the those (two each side). The four pages not currently
+// visible are pre-rendered ready to be used in the page
+// turning animation.
+//
+// In one up mode, use the same half-screen-sized bitmap
+// as a background for the whole of the page, with a full
+// resolution overlay for just for the visible part.
+
+#define NUM_SCREEN_SIZED_BITMAPS (3)
+#define NUM_PAGES (NUM_SCREEN_SIZED_BITMAPS * 2)
 #define PRE_PAGES (2)
-#define NUM_PAGES (8)
 
 #define NO_DUMMY_PAGE (-1)
 #define LONG_PRESS_MIN_DURATION (0.3)
@@ -150,7 +161,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     return @[topEdge, leftEdge, bottomEdge, widthHalf];
 }
 
-@interface ARDKBookModeViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, ARDKBookModePageViewControllerDelegate>
+@interface ARDKBookModeViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, ARDKBookModePageViewControllerDelegate, UIScrollViewDelegate>
 @property(readonly) UITapGestureRecognizer *tapGesture;
 @property(readonly) UITapGestureRecognizer *dtapGesture;
 @property(readonly) UIPinchGestureRecognizer *pinchGesture;
@@ -167,7 +178,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 @property NSArray<NSLayoutConstraint *> *rightPageConstraints;
 @property NSArray<NSLayoutConstraint *> *currentConstraints;
 @property LayoutType layoutType;
-@property NSMutableArray<ARDKBitmap *> *bitmaps;
+@property ARDKBitmap *bitmap;
 @property NSMutableDictionary<NSNumber *, ARDKBookModePageViewController *> *pageVCs;
 @property CGSize pageSize;
 @property BOOL firstRenderHasCompleted;
@@ -227,25 +238,19 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 
 - (void)ensureBitmaps
 {
-    if (!_bitmaps)
+    if (!_bitmap)
     {
         CGFloat screenScale = UIScreen.mainScreen.scale;
         CGSize screenSize = UIScreen.mainScreen.bounds.size;
-        CGSize size = CGSizeMake(screenSize.width * screenScale / 2, screenSize.height * screenScale);
+        CGSize size = CGSizeMake(screenSize.width * screenScale, screenSize.height * screenScale);
         if (!self.pageControllerDelegate.session.bitmap)
         {
-            self.pageControllerDelegate.session.bitmap = [self.pageControllerDelegate.session.doc bitmapAtSize:CGSizeMake(size.width, size.height * NUM_PAGES)];
+            self.pageControllerDelegate.session.bitmap = [self.pageControllerDelegate.session.doc bitmapAtSize:CGSizeMake(size.width, size.height * NUM_SCREEN_SIZED_BITMAPS)];
         }
 
         [self.pageControllerDelegate.session.bitmap adjustToWidth:size.width];
 
-        _bitmaps = [NSMutableArray arrayWithCapacity:NUM_PAGES];
-        CGRect rect = {CGPointZero, size};
-        for (NSInteger i = 0; i < NUM_PAGES; i++)
-        {
-            [_bitmaps addObject:[ARDKBitmap bitmapFromSubarea:rect ofBitmap:self.pageControllerDelegate.session.bitmap]];
-            rect.origin.y += size.height;
-        }
+        _bitmap = self.pageControllerDelegate.session.bitmap;
     }
 }
 
@@ -261,7 +266,6 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 
     for (NSNumber *n in old)
     {
-        [self.bitmaps addObject:self.pageVCs[n].bitmap];
         [self.pageVCs removeObjectForKey:n];
     }
 
@@ -269,22 +273,23 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     {
         if (p >= 0 && p < _pageCount && !self.pageVCs[@(p)])
         {
-            ARDKBitmap *bitmap = self.bitmaps.lastObject;
-            [self.bitmaps removeLastObject];
-            ARDKBookModePageViewController *pvc = [[ARDKBookModePageViewController alloc] initForPage:p withBitmap:bitmap andDelegate:self];
+            ARDKBookModePageViewController *pvc = [[ARDKBookModePageViewController alloc] initForPage:p withBitmap:_bitmap andDelegate:self];
             self.pageVCs[@(p)] = pvc;
             ARDKBookModePageView *pv = (ARDKBookModePageView *)pvc.view;
             [pv setPageSize:self.pageSize];
             [_pageControllerDelegate setupPageCell:pv forPage:pv.pageNumber];
-            __weak typeof(self) weakSelf = self;
-            [pv render:^{
-                if (!self.firstRenderHasCompleted)
-                {
-                    weakSelf.firstRenderHasCompleted = YES;
-                    if (self.afterFirstRenderBlock)
-                        self.afterFirstRenderBlock();
-                }
-            }];
+            if (self.pageSize.width > 0 && self.pageSize.height > 0)
+            {
+                __weak typeof(self) weakSelf = self;
+                [pv renderZoomed:NO onComplete:^{
+                    if (!self.firstRenderHasCompleted)
+                    {
+                        weakSelf.firstRenderHasCompleted = YES;
+                        if (self.afterFirstRenderBlock)
+                            self.afterFirstRenderBlock();
+                    }
+                }];
+            }
             if (_dummyPage == p)
                 _dummyPage = NO_DUMMY_PAGE;
         }
@@ -295,7 +300,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         ARDKBookModePageView *pv = (ARDKBookModePageView *)self.pageVCs[@(_dummyPage)].view;
         [pv setPageSize:self.pageSize];
         [_pageControllerDelegate setupPageCell:pv forPage:pv.pageNumber];
-        [pv render:nil];
+        [pv renderZoomed:NO onComplete:nil];
     }
 
     if (_currentPage < _pageCount && !_showing)
@@ -304,9 +309,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
         if (_currentPage+1 >= _pageCount)
         {
             // We have to supply pages in pairs, so create an uninitialised one
-            ARDKBitmap *bitmap = self.bitmaps.lastObject;
-            [self.bitmaps removeLastObject];
-            self.pageVCs[@(_currentPage+1)] = [[ARDKBookModePageViewController alloc] initForPage:_currentPage+1 withBitmap:bitmap andDelegate:self];
+            self.pageVCs[@(_currentPage+1)] = [[ARDKBookModePageViewController alloc] initForPage:_currentPage+1 withBitmap:_bitmap andDelegate:self];
             _dummyPage = _currentPage+1;
         }
 
@@ -345,6 +348,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     _pageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:_pageViewController];
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    _scrollView.delegate = self;
     addSubviewFit(self.view, _scrollView);
     _contentView = [[UIView alloc] initWithFrame:self.view.bounds];
     addSubviewFit(_scrollView, _contentView);
@@ -392,6 +396,11 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     [self.view addGestureRecognizer:_longPressGesture];
     [self.view addGestureRecognizer:_dtapGesture];
     [self.view addGestureRecognizer:_pinchGesture];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self requestRenderWithForce:YES];
 }
 
 - (void)handleTap:(UIGestureRecognizer *)gesture
@@ -615,9 +624,28 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
 {
     if (force)
     {
+        NSInteger zoomedPage;
+        switch(_layoutType)
+        {
+            case LayoutType_TwoUp:
+                zoomedPage = -1;
+                break;
+
+            case LayoutType_LeftPage:
+                zoomedPage = _currentPage;
+                break;
+
+            case LayoutType_RightPage:
+                zoomedPage = _currentPage + 1;
+                break;
+        }
+
+        BOOL zoomed = (zoomedPage >= 0);
+
         for (id key in self.pageVCs)
         {
-            [((ARDKBookModePageView *)self.pageVCs[key].view) render:nil];
+            if (zoomedPage == self.pageVCs[key].pageNumber || !zoomed)
+                [((ARDKBookModePageView *)self.pageVCs[key].view) renderZoomed:zoomed onComplete:nil];
         }
     }
 }
@@ -634,9 +662,7 @@ static NSArray<NSLayoutConstraint *> *makeRightPageConstraints(UIView *outer, UI
     {
         // We have to give out pages in pairs, so if we've run out on
         // and odd count, produce a dummy
-        ARDKBitmap *bitmap = self.bitmaps.lastObject;
-        [self.bitmaps removeLastObject];
-        pvc = [[ARDKBookModePageViewController alloc] initForPage:pageNumber+1 withBitmap:bitmap andDelegate:self];
+        pvc = [[ARDKBookModePageViewController alloc] initForPage:pageNumber+1 withBitmap:_bitmap andDelegate:self];
         self.pageVCs[@(pageNumber+1)] = pvc;
         _dummyPage = pageNumber+1;
     }

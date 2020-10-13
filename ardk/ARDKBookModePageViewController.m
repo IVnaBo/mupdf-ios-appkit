@@ -1,6 +1,5 @@
 // Copyright © 2020 Artifex Software Inc. All rights reserved.
 
-#import "ARDKBookModePageView.h"
 #import "ARDKBookModePageViewController.h"
 
 @interface ARDKBookModePageViewController ()
@@ -11,7 +10,7 @@
 
 - (instancetype)initForPage:(NSInteger)pageNumber
                  withBitmap:(ARDKBitmap *)bitmap
-                andDelegate:delegate
+                andDelegate:(id<ARDKBookModePageViewControllerDelegate>)delegate
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self)
@@ -26,7 +25,8 @@
 - (void)loadView
 {
     self.view = [[ARDKBookModePageView alloc] initForPage:self.pageNumber
-                                               withBitmap:self.bitmap];
+                                               withBitmap:self.bitmap
+                                                 delegate:_delegate];
 }
 
 - (void)viewDidLayoutSubviews
