@@ -378,12 +378,20 @@
     }
 }
 
-- (void)invokeSigningAlert:(MuPDFDKWidgetUnsignedSignature *)signatureWidget
+- (void)invokeSigningAlert:(MuPDFDKWidgetUnsignedSignature *)signatureWidget forPage:(MuPDFDKPage *)page
 {
     if (self.session.signingDelegate)
     {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Signature" message:@"Would you like to sign the document" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes" style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        BOOL editable = signatureWidget.wasCreatedInThisSession;
+        NSString *titleString = NSLocalizedString(@"Signature", @"Title of alert box");
+        NSString *signString = NSLocalizedString(@"Would you like to sign the document", @"Message of alert box");
+        NSString *signOrEditString = NSLocalizedString(@"Would you like to sign the document, reposition the field or delete the field", @"Message on alert box");
+        NSString *signButtonTitle = NSLocalizedString(@"Sign", @"Button title for action of signing a document");
+        NSString *repositionTitle = NSLocalizedString(@"Reposition", @"Button title for action of repositioning a form field");
+        NSString *deleteTitle = NSLocalizedString(@"Delete", @"Button title for action of deleting a form field");
+        NSString *cancelTitle = NSLocalizedString(@"Cancel", @"Button title for cancelling action");
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:titleString message:(editable ? signOrEditString : signString) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *signAction = [UIAlertAction actionWithTitle:signButtonTitle style: UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 if (self.session.signingDelegate)
                 {
                     [self.session.signingDelegate createSigner:self
@@ -397,8 +405,21 @@
                          }];
                 }
             }];
-        UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil];
-        [alert addAction:yesAction];
+        [alert addAction:signAction];
+        if (editable)
+        {
+            UIAlertAction *repositionAction = [UIAlertAction actionWithTitle:repositionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [page selectAnnotation:signatureWidget.annot];
+            }];
+            [alert addAction:repositionAction];
+
+            UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:deleteTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [page selectAnnotation:signatureWidget.annot];
+                [((MuPDFDKDoc *)self.doc) deleteSelectedAnnotation];
+            }];
+            [alert addAction:deleteAction];
+        }
+        UIAlertAction *noAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:noAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
@@ -533,7 +554,7 @@
         {
             [weakSelf showArea:widget.rect onPage:weakPageView.pageNumber];
             [weakPageView removeWidgetView];
-            [weakSelf invokeSigningAlert:widget];
+            [weakSelf invokeSigningAlert:widget forPage:weakPageView.page];
         }
     }];
 }

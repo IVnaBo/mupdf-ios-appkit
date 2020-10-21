@@ -102,6 +102,7 @@ typedef enum
 
 @interface MuPDFDKWidget : NSObject
 @property CGRect rect;
+@property MuPDFDKAnnotation *annot;
 - (void)switchCaseText:(nonnull void (^)(MuPDFDKWidgetText *widget))textBlock
               caseList:(nonnull void (^)(MuPDFDKWidgetList *widget))listBlock
              caseRadio:(nonnull void (^)(MuPDFDKWidgetRadio *widget))radioBlock
@@ -147,6 +148,7 @@ typedef enum
 @end
 
 @interface MuPDFDKWidgetUnsignedSignature : MuPDFDKWidget
+@property BOOL wasCreatedInThisSession;
 @property void (^sign)(id<PKCS7Signer> signer, void (^result)(BOOL accepted));
 @end
 

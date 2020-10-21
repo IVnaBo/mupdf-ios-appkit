@@ -807,6 +807,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
 @property BOOL textDirty;
 @property(readonly) fz_page *fzpage;
 @property(readonly) fz_display_list *list;
+@property(readonly) NSMutableArray<NSValue *> *newlyCreatedSignatures;
 @end
 
 @implementation MuPDFDKPage
@@ -849,6 +850,11 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
     _fzpageobj = nil;
 }
 
+- (void)forgetSignatures
+{
+    _newlyCreatedSignatures = [NSMutableArray array];
+}
+
 - (instancetype)initForPage:(NSInteger)pageNum ofDoc:(MuPDFDKDoc *)doc withSize:(CGSize)size update:(void (^)(CGRect))block
 {
     self = [super init];
@@ -858,6 +864,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
         _size = size;
         _pageNum = pageNum;
         _update = block;
+        _newlyCreatedSignatures = [NSMutableArray array];
     }
     return self;
 }
@@ -1419,6 +1426,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                 {
                     MuPDFDKAnnotationInternal *wannot = [MuPDFDKAnnotationInternal annotFromAnnot:w andIndex:index withCtx:ctx];
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.newlyCreatedSignatures addObject:[NSValue valueWithPointer:widget]];
                         [self selectAnnotation:wannot];
                     });
                     break;
@@ -1788,7 +1796,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
     });
 }
 
-- (MuPDFDKWidget *)interpretWidget:(pdf_widget *)focus
+- (MuPDFDKWidget *)interpretWidget:(pdf_widget *)focus withIndex:(NSInteger)index
 {
     fz_context *ctx = self.doc.mulib.ctx;
     const char *text = NULL;
@@ -1885,6 +1893,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                         {
                             // Unsigned
                             MuPDFDKWidgetUnsignedSignature *swidget = [[MuPDFDKWidgetUnsignedSignature alloc] init];
+                            swidget.wasCreatedInThisSession = [self.newlyCreatedSignatures containsObject:[NSValue valueWithPointer:focus]];
                             swidget.sign = ^(id<PKCS7Signer> signer, void (^result)(BOOL accepted)) {
                                 [self signWidget:focus_obj with:signer onCheck:result];
                             };
@@ -1902,6 +1911,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
         if (widget)
         {
             widget.rect = rect_from_fz(pdf_bound_widget(ctx, focus));
+            widget.annot = [MuPDFDKAnnotationInternal annotFromAnnot:focus andIndex:index withCtx:self.doc.mulib.ctx];
         }
     }
     fz_always(ctx)
@@ -1926,7 +1936,8 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
             if (idoc)
             {
                 pdf_widget *focus = NULL;
-
+                NSInteger focusIndex = 0;
+                NSInteger index = 0;
                 for (pdf_widget *w = pdf_first_widget(ctx, (pdf_page *)self.fzpage)
                      ; w
                      ; w = pdf_next_widget(ctx, w))
@@ -1941,7 +1952,12 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                     }
 
                     if (rect.x0 < fz_pt.x && fz_pt.x < rect.x1 && rect.y0 < fz_pt.y && fz_pt.y < rect.y1)
+                    {
                         focus = w;
+                        focusIndex = index;
+                    }
+
+                    ++index;
                 }
 
                 if (focus && !widget_is_visible(ctx, focus))
@@ -1955,7 +1971,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                     pdf_annot_event_down(ctx, focus);
                     pdf_annot_event_up(ctx, focus);
                     [self.doc updatePages];
-                    widget = [self interpretWidget:focus];
+                    widget = [self interpretWidget:focus withIndex:focusIndex];
                 }
             }
         }
@@ -1982,6 +1998,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
             pdf_document *idoc = pdf_specifics(ctx, self.doc.fzdoc);
             if (idoc)
             {
+                NSInteger index = 0;
                 for (focus = pdf_first_widget(ctx, (pdf_page *)self.fzpage); focus; focus = pdf_next_widget(ctx, focus))
                 {
                     if (foundFocus)
@@ -1993,7 +2010,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                         {
                             focus->is_hot = 1;
                             pdf_annot_event_focus(ctx,  focus);
-                            widget = [self interpretWidget:focus];
+                            widget = [self interpretWidget:focus withIndex:index];
                             break;
                         }
                     }
@@ -2003,6 +2020,8 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                         focus->is_hot = 0;
                         pdf_annot_event_blur(ctx, focus);
                     }
+
+                    ++index;
                 }
             }
         }
@@ -2852,7 +2871,9 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
         NSObject<MuPDFDKSelection> *selection = self.selections[n];
         if ([selection isKindOfClass:MuPDFDKAnnotationInternal.class])
         {
-            NSInteger index = ((MuPDFDKAnnotationInternal *)selection).index;
+            MuPDFDKAnnotationInternal *mannot = ((MuPDFDKAnnotationInternal *)selection);
+            NSInteger index = mannot.index;
+            BOOL isWidget = mannot.isWidget;
             dispatch_async(self.mulib.queue, ^{
                 fz_context *ctx = self.mulib.ctx;
                 pdf_document *idoc = pdf_specifics(ctx, self->_fzdoc);
@@ -2862,9 +2883,19 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
                 FzPage *page = [self getFzPage:n.integerValue];
                 fz_try(ctx)
                 {
-                    pdf_annot *annot = page.fzpage ? pdf_first_annot(ctx, (pdf_page *)page.fzpage) : NULL;
-                    for (int i = 0; i < index && annot; i++)
-                        annot = pdf_next_annot(ctx, annot);
+                    pdf_annot *annot;
+                    if (isWidget)
+                    {
+                        annot = page.fzpage ? pdf_first_widget(ctx, (pdf_page *)page.fzpage) : NULL;
+                        for (int i = 0; i < index && annot; i++)
+                            annot = pdf_next_widget(ctx, annot);
+                    }
+                    else
+                    {
+                        annot = page.fzpage ? pdf_first_annot(ctx, (pdf_page *)page.fzpage) : NULL;
+                        for (int i = 0; i < index && annot; i++)
+                            annot = pdf_next_annot(ctx, annot);
+                    }
 
                     if (annot)
                     {
@@ -3491,6 +3522,7 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
                             {
                                 [holder.page drop_page];
                                 [holder.page drop_list];
+                                [holder.page forgetSignatures];
                             }
                         }
 
