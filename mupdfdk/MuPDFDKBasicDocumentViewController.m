@@ -353,6 +353,7 @@
 
 - (void)invokeSignatureVerifyViewController:(MuPDFDKWidgetSignedSignature *)signatureWidget
 {
+    __weak typeof(self) weakSelf = self;
     if (self.session.signingDelegate)
     {
         [self.session.signingDelegate createVerifier:self
@@ -371,15 +372,26 @@
                                                                                invalidChangePoint:invalidChangePoint
                                                                                    designatedName:designatedName
                                                                                       description:description
-                                                                                       onComplete:^(void) {}];
+                                                                                       onComplete:^(void) {
+                                                    [weakSelf.mudoc clearFocus];
+                                                }];
                                             });
                  }
+                 else
+                 {
+                     [weakSelf.mudoc clearFocus];
+                 }
              }];
+    }
+    else
+    {
+        [self.mudoc clearFocus];
     }
 }
 
 - (void)invokeSigningAlert:(MuPDFDKWidgetUnsignedSignature *)signatureWidget forPage:(MuPDFDKPage *)page
 {
+    __weak typeof(self) weakSelf = self;
     if (self.session.signingDelegate)
     {
         BOOL editable = signatureWidget.wasCreatedInThisSession;
@@ -400,9 +412,19 @@
                              if (signer)
                              {
                                  // sign the widget
-                                 signatureWidget.sign(signer, ^(BOOL accepted) {});
+                                 signatureWidget.sign(signer, ^(BOOL accepted) {
+                                     [weakSelf.mudoc clearFocus];
+                                 });
+                             }
+                             else
+                             {
+                                 [weakSelf.mudoc clearFocus];
                              }
                          }];
+                }
+                else
+                {
+                    [weakSelf.mudoc clearFocus];
                 }
             }];
         [alert addAction:signAction];
@@ -419,9 +441,15 @@
             }];
             [alert addAction:deleteAction];
         }
-        UIAlertAction *noAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *noAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.mudoc clearFocus];
+        }];
         [alert addAction:noAction];
         [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        [self.mudoc clearFocus];
     }
 }
 
@@ -633,7 +661,7 @@
     if ([self tapConsumedByWidgetOnPageView:pageView at:point isDoubleTap:NO])
         return;
 
-    [(MuPDFDKDoc *)self.doc clearSelection];
+    [self.mudoc clearSelection];
 
     if (self.annotatingMode == MuPDFDKAnnotatingMode_Note
         || self.annotatingMode == MuPDFDKAnnotatingMode_DigitalSignature)
@@ -686,7 +714,7 @@
     if ([self tapConsumedByWidgetOnPageView:pageView at:point isDoubleTap:YES])
         return;
 
-    [(MuPDFDKDoc *)self.doc clearSelection];
+    [self.mudoc clearSelection];
 
     [pageView removeWidgetView];
     [(MuPDFDKDoc *)self.doc clearFocus];
