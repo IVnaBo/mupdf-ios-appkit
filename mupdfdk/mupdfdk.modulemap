@@ -1,5 +1,5 @@
 framework module mupdfdk {
-  umbrella header "sodk.h"
+  umbrella header "mupdfdk.h"
   exclude header "ARDKOpenSSLKeychain.h"
   exclude header "ARDKCertPickerDialogViewController.h"
   exclude header "ARDKCertVerifyDialogViewController.h"
