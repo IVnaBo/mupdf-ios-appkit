@@ -532,6 +532,17 @@
     }
 }
 
+- (void)warnOfUnsavedSignature
+{
+    NSString *title = NSLocalizedString(@"Cannot verify signature", @"Title of unsaved-signature warning");
+    NSString *message = NSLocalizedString(@"Signature cannot be verified until after the document has been saved", @"Message of unsaved_signature warning");
+    NSString *ok = NSLocalizedString(@"OK", @"Button text");
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:ok style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)focusWidgetView:(MuPDFDKWidget *)widget onPage:(MuPDFDKPageView *)pageView at:(CGPoint)point andSelect:(BOOL)select
 {
     __weak typeof(self) weakSelf = self;
@@ -575,7 +586,14 @@
         {
             [weakSelf showArea:widget.rect onPage:weakPageView.pageNumber];
             [weakPageView removeWidgetView];
-            [weakSelf invokeSignatureVerifyViewController:widget];
+            if (widget.unsaved)
+            {
+                [weakSelf warnOfUnsavedSignature];
+            }
+            else
+            {
+                [weakSelf invokeSignatureVerifyViewController:widget];
+            }
         }
     } caseUnsignedSignature:^(MuPDFDKWidgetUnsignedSignature *widget){
         if (self.session.docSettings.pdfFormSigningEnabled)

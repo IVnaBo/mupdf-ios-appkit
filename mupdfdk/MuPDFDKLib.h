@@ -140,6 +140,7 @@ typedef enum
 @end
 
 @interface MuPDFDKWidgetSignedSignature : MuPDFDKWidget
+@property BOOL unsaved;
 @property void (^verify)(id<PKCS7Verifier> verifier,
                          void (^result)(PKCS7VerifyResult r,
                                         int invalidChangePoint,

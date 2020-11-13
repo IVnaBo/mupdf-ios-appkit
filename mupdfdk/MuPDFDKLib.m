@@ -1883,6 +1883,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
                         {
                             // Already signed
                             MuPDFDKWidgetSignedSignature *uswidget = [[MuPDFDKWidgetSignedSignature alloc] init];
+                            uswidget.unsaved = pdf_xref_obj_is_unsaved_signature(idoc, focus_obj);
                             uswidget.verify = ^(id<PKCS7Verifier> verifier,
                                                 void (^result)(PKCS7VerifyResult r,
                                                                int invalidChangePoint,
