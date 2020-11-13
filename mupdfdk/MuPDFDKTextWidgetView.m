@@ -579,7 +579,8 @@ inputDelegate=_inputDelegate, tokenizer=_tokenizer;
 
 - (NSString *)textInRange:(UITextRange *)range
 {
-    return [_text substringWithRange:((ARDKTextRange *)range).nsRange];
+    NSRange stringRange = NSMakeRange(0, _text.length);
+    return [_text substringWithRange:NSIntersectionRange(((ARDKTextRange *)range).nsRange, stringRange)];
 }
 
 - (void)limitTextLength:(NSInteger)limit
