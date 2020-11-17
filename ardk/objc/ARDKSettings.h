@@ -24,8 +24,8 @@
 /// to openInHandler/openPdfInHandler/shareHandler will be inside SecureFS,
 /// and hence cannot be directly passed to the iOS(macOS) open in / share
 /// methods.
-@property (copy) NSString *temporaryPath;
+@property (copy) NSString * _Nullable temporaryPath;
 
-@property (strong) id<ARDKSecureFS> secureFs;
+@property (strong) id<ARDKSecureFS> _Nullable secureFs;
 
 @end

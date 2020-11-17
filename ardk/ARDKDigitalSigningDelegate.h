@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import "ARDKPKCS7.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ARDKDigitalSigningDelegate <NSObject>
 
 /**
@@ -67,3 +69,5 @@
                 description:(id<PKCS7Description>) description
                  onComplete:(void (^)(void)) onComplete;
 @end
+
+NS_ASSUME_NONNULL_END

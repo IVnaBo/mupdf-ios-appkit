@@ -9,6 +9,8 @@
 #import "ARDKPageView.h"
 #import "MuPDFDKAnnotatingMode.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MuPDFDKPageView : ARDKPageView
 
 /// Whether the user is currently adding an annotation and if so what type
@@ -41,7 +43,7 @@
 - (void)updateTextSelectionEnd:(CGPoint)pt;
 
 /// For a given point, find the annotations that intersect it and perform an operation on them
-- (void)forAnnotationAtPt:(CGPoint)pt onPage:(void (^)(MuPDFDKAnnotation *annot))block;
+- (void)forAnnotationAtPt:(CGPoint)pt onPage:(void (^)(MuPDFDKAnnotation * _Nullable annot))block;
 
 /// Attempt to select an annotation at the given point
 - (void)selectAnnotationAt:(CGPoint)pt;
@@ -53,7 +55,7 @@
 - (BOOL)addSignatureFieldAt:(CGPoint)pt;
 
 /// Test for a hyperlink at a given point
-- (void)testAt:(CGPoint)pt forHyperlink:(void (^)(id<ARDKHyperlink> link))block;
+- (void)testAt:(CGPoint)pt forHyperlink:(void (^)(id<ARDKHyperlink> _Nullable link))block;
 
 /// Send a tap event to the page, and define what to do if tapping focusses a widget
 - (void)tapAt:(CGPoint)pt onFocus:(void (^)(MuPDFDKWidget *))block;
@@ -99,6 +101,8 @@
 - (void)setWidgetMenuVisible:(BOOL)visible;
 
 /// Focus and exectute a block for the next field after the focussed one
-- (void)focusNextField:(void (^)(MuPDFDKWidget *widget))block;
+- (void)focusNextField:(void (^)(MuPDFDKWidget * _Nullable widget))block;
 
 @end
+
+NS_ASSUME_NONNULL_END

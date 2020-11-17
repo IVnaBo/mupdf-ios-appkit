@@ -59,7 +59,7 @@ extern NSString * const ARDK_RibbonScrollWarningHoldOff;
 ///
 /// The temporary file will be created within the secureFs area if secureFs
 /// is available.
-- (NSString *)writeDataToTemporaryFile:(NSData *)data;
+- (NSString * _Nullable)writeDataToTemporaryFile:(NSData *)data;
 
 /// Create a document session for the given file state
 ///

@@ -9,6 +9,8 @@
 #import "ARDKBasicDocumentViewController.h"
 #import "MuPDFDKBasicDocumentViewAPI.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MuPDFDKBasicDocumentViewController : ARDKBasicDocumentViewController<MuPDFDKBasicDocumentViewAPI>
 // Active document session that can be used to create another view
 @property(readonly) ARDKDocSession *session;
@@ -19,5 +21,6 @@
 // Create a document view based on an active session
 + (instancetype) viewControllerForSession:(ARDKDocSession *)session;
 
-
 @end
+
+NS_ASSUME_NONNULL_END

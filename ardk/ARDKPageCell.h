@@ -34,7 +34,7 @@
 @property(readonly) NSInteger pageNumber;
 
 // The page view currently controlled by the cell
-@property UIView<ARDKPageCellDelegate> *pageView;
+@property UIView<ARDKPageCellDelegate> * _Nullable pageView;
 
 // The current frame for the cell (possibly we could use the cells
 // actual frame, needs investigating).

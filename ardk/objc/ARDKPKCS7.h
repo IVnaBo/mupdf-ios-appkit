@@ -5,6 +5,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef enum
 {
     PKCS7VerifyResult_Okay,
@@ -73,5 +75,7 @@ typedef enum
 - (id<PKCS7Description>)description:(NSData *)signature;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* ARDKPKCS7_h */

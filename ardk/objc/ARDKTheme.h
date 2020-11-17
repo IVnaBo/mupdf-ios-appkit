@@ -3,6 +3,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Manage UI themes
 ///
 /// Provide storage, lookup and retrieval for a theme.
@@ -48,3 +50,5 @@
                fallback:(NSInteger)defaultValue;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -9,9 +9,9 @@
 @protocol ARDKDocumentSettingsFeatureDelegate <NSObject>
 @optional
 /// Callback triggered when the user wants to access disabled features
-- (void)ardkDocumentSettings:(ARDKDocumentSettings* _Nullable)documentsSettings pressedDisabledFeature:(UIView* _Nonnull)sourceView atPosition:(CGPoint) position;
+- (void)ardkDocumentSettings:(ARDKDocumentSettings* _Nonnull)documentsSettings pressedDisabledFeature:(UIView* _Nonnull)sourceView atPosition:(CGPoint) position;
 /// Callback triggered when the sodk did show disabled features (like a tab), useful for customization
-- (void)ardkDocumentSettings:(ARDKDocumentSettings* _Nullable)documentsSettings didDisplayDisabledFeatures:(NSArray<UIButton *> * _Nonnull)buttons;
+- (void)ardkDocumentSettings:(ARDKDocumentSettings* _Nonnull)documentsSettings didDisplayDisabledFeatures:(NSArray<UIButton *> * _Nonnull)buttons;
 @end
 
 /// Allow various functionality within SmartOffice to be enabled/disabled

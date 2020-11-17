@@ -12,8 +12,8 @@
 
 @interface ARDKDocTypeDetail : NSObject
 
-+ (NSString *)docTypeIcon:(ARDKDocType)type;
++ (NSString * _Nonnull)docTypeIcon:(ARDKDocType)type;
 
-+ (UIColor *)docTypeColor:(ARDKDocType)type;
++ (UIColor * _Nonnull)docTypeColor:(ARDKDocType)type;
 
 @end

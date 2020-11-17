@@ -11,6 +11,8 @@
 #import "ARDKHandlerInfo.h"
 #import "ARDKDocumentSettings.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ARDKDocumentViewController : UIViewController
 
 
@@ -24,7 +26,7 @@
 /// @param presentingVc    View controller to call presentViewController on (if necessary)
 /// @param currentFilename Document's current filename, for use as an initial value
 /// @param session         The session requesting the save
-typedef void (^ARSaveAsHandler)(UIViewController *presentingVc,
+typedef void (^ARSaveAsHandler)(UIViewController * _Nonnull presentingVc,
                                 NSString *currentFilename,
                                 ARDKDocSession *session);
 
@@ -81,16 +83,16 @@ typedef void (^ARSavePdfHandler)(UIViewController *presentingVc,
 typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 
 /// Block called when a 'save as' process is required
-@property (copy, nonatomic)ARSaveAsHandler saveAsHandler;
+@property (nullable, copy, nonatomic)ARSaveAsHandler saveAsHandler;
 
 /// Block called when a 'save to' process is required
-@property (copy, nonatomic)ARSaveToHandler saveToHandler;
+@property (nullable, copy, nonatomic)ARSaveToHandler saveToHandler;
 
 /// Block called when a 'print' process is required
-@property (copy, nonatomic)ARPrintHandler printHandler;
+@property (nullable, copy, nonatomic)ARPrintHandler printHandler;
 
 /// Block called when the 'save as pdf' button is pressed
-@property (copy, nonatomic)ARSavePdfHandler savePdfHandler;
+@property (nullable, copy, nonatomic)ARSavePdfHandler savePdfHandler;
 
 /// Block called when 'Open In' process is initiated
 ///
@@ -99,7 +101,7 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 ///
 /// If the handler is nil (the default), the 'Open In' button will not be
 /// present in the UI.
-@property (copy, nonatomic)ARButtonHandler openInHandler;
+@property (nullable, copy, nonatomic)ARButtonHandler openInHandler;
 
 /// Block called when 'Share' process is initiated
 ///
@@ -108,7 +110,7 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 ///
 /// If the handler is nil (the default), the 'Share' button will not be
 /// present in the UI.
-@property (copy, nonatomic)ARButtonHandler shareHandler;
+@property (nullable, copy, nonatomic)ARButtonHandler shareHandler;
 
 /// Block called when 'Open PDF In' process is initiated
 ///
@@ -117,7 +119,7 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 ///
 /// If the handler is nil (the default), the 'Open PDF In' button will not be
 /// present in the UI.
-@property (copy, nonatomic)ARButtonHandler openPdfInHandler;
+@property (nullable, copy, nonatomic)ARButtonHandler openPdfInHandler;
 
 /// Handler called when user taps an external link in a document
 ///
@@ -127,7 +129,7 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 /// depending on the security requirements of the app.
 ///
 /// If left unset, nothing will happen when links are tapped.
-@property (copy, nonatomic)AROpenURLHandler openUrlHandler;
+@property (nullable, copy, nonatomic)AROpenURLHandler openUrlHandler;
 
 /// Pasteboard for the document editor to use
 ///
@@ -137,7 +139,7 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 /// likes (for example, keeping the text internal to the app).
 ///
 /// The default is a clipboard that only allows pasting within the document.
-@property (strong, nonatomic)id<ARDKPasteboard> pasteboard;
+@property (nullable, strong, nonatomic)id<ARDKPasteboard> pasteboard;
 
 @property(readonly) BOOL documentHasBeenModified;
 
@@ -155,3 +157,5 @@ typedef void (^AROpenURLHandler)(UIViewController *presentingVc, NSURL *url);
 - (void)closeDocument:(void (^)(BOOL))onCompletion;
 
 @end
+
+NS_ASSUME_NONNULL_END

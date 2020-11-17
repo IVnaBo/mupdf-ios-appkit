@@ -4,6 +4,8 @@
 #import "MuPDFDKAnnotatingMode.h"
 #import "ARDKBasicDocViewAPI.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol MuPDFDKBasicDocumentViewAPI <ARDKBasicDocViewAPI>
 
 /// Whether the user is currently adding an annotation and if so what type
@@ -22,3 +24,5 @@
 - (void)endTextWidgetEditing;
 
 @end
+
+NS_ASSUME_NONNULL_END
