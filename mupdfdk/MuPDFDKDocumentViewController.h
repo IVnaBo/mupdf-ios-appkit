@@ -8,6 +8,8 @@
 
 #import "ARDKDocumentViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MuPDFDKDocumentViewController : ARDKDocumentViewController
 
 /// Create a view on a document, based on its file path.
@@ -36,3 +38,5 @@
 + (ARDKDocumentViewController *)viewControllerForSessionRestoreLastViewingState:(ARDKDocSession *)session;
 
 @end
+
+NS_ASSUME_NONNULL_END

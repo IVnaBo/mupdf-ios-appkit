@@ -8,7 +8,6 @@
 #import "ARDKButton.h"
 #import "ARDKTheme.h"
 #import "ARDKDocTypeDetail.h"
-#import "ARDKDocErrorHandler.h"
 #import "ARDKViewRenderer.h"
 #import "ARDKDocumentSettings.h"
 #import "ARDKCollectionViewCell.h"

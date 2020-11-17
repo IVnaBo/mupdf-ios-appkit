@@ -11,6 +11,8 @@
 
 #import "ARDKLib.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ARDKPageView : UIView<ARDKPageCellDelegate>
 
 /// initialize the page view
@@ -24,7 +26,7 @@
 + (CGAffineTransform) transformForPage:(id<ARDKPage>)page withinFrame:(CGRect)frame;
 
 /// The color to use when highlighting the view with a surrounding border
-@property UIColor *highlightColor;
+@property(nullable) UIColor *highlightColor;
 
 /// Position the page to the top left of the view. We use the same
 /// size view for all pages. This affects the positioning for pages
@@ -55,10 +57,10 @@
 @property BOOL updatesDisabled;
 
 /// Block to call when updates occur
-@property(copy) void (^onUpdate)(void);
+@property(copy) void (^ _Nullable onUpdate)(void);
 
 /// Kick off a render of a particular area of the page at a specific scale
-- (void)displayArea:(CGRect)area atScale:(CGFloat)scale usingBitmap:(ARDKBitmap *)bm whenDone:(void (^)(void))block;
+- (void)displayArea:(CGRect)area atScale:(CGFloat)scale usingBitmap:(ARDKBitmap *)bm whenDone:(void (^ _Nullable)(void))block;
 
 /// Mark as not taking part in a render pass. This is necessary to keep
 /// the alternation of bitmap use for rendering
@@ -73,3 +75,5 @@
 - (void)resizeOverlays;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -4,8 +4,12 @@
 
 #import "ARDKLib.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ARDKPrintPageRenderer : UIPrintPageRenderer
 
 - initWithDocument:(id<ARDKDoc>)doc;
 
 @end
+
+NS_ASSUME_NONNULL_END

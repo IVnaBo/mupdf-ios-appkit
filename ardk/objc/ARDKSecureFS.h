@@ -14,6 +14,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ARDKSecureFS_Handle
 
 @property (readonly) unsigned long long ARDKSecureFS_offsetInFile;
@@ -57,9 +59,9 @@
 
 - (BOOL)ARDKSecureFS_createFileAtPath:(NSString *)path;
 
-- (id<ARDKSecureFS_Handle>)ARDKSecureFS_fileHandleForReadingAtPath:(NSString *)path;
-- (id<ARDKSecureFS_Handle>)ARDKSecureFS_fileHandleForWritingAtPath:(NSString *)path;
-- (id<ARDKSecureFS_Handle>)ARDKSecureFS_fileHandleForUpdatingAtPath:(NSString *)path;
+- (id<ARDKSecureFS_Handle> _Nullable)ARDKSecureFS_fileHandleForReadingAtPath:(NSString *)path;
+- (id<ARDKSecureFS_Handle> _Nullable)ARDKSecureFS_fileHandleForWritingAtPath:(NSString *)path;
+- (id<ARDKSecureFS_Handle> _Nullable)ARDKSecureFS_fileHandleForUpdatingAtPath:(NSString *)path;
 
 /// Retrieve file attributes
 ///
@@ -67,7 +69,7 @@
 ///   NSFileModificationDate
 ///   NSFileType
 ///   NSFileSize
-- (NSDictionary<NSString *, id> *)ARDKSecureFS_attributesOfItemAtPath:(NSString *)path;
+- (NSDictionary<NSString *, id> * _Nullable)ARDKSecureFS_attributesOfItemAtPath:(NSString *)path;
 
 /// Creates a directory at the specified path
 - (BOOL)ARDKSecureFS_createDirectoryAtPath:(NSString *)path
@@ -79,3 +81,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

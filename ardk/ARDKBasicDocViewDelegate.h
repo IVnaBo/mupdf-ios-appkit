@@ -1,4 +1,4 @@
-// Copyright © 2019 Artifex Software Inc. All rights reserved.
+// Copyright © 2019-2020 Artifex Software Inc. All rights reserved.
 
 #import <Foundation/Foundation.h>
 
@@ -57,7 +57,7 @@
 
 /// Called to open a url. The document view calls this when
 /// a link to an external document is tapped.
-- (void)callOpenUrlHandler:(NSURL *)url
-                    fromVC:(UIViewController *)presentingView;
+- (void)callOpenUrlHandler:(NSURL * _Nonnull)url
+                    fromVC:(UIViewController * _Nonnull)presentingView;
 
 @end

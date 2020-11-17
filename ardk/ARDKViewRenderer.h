@@ -8,6 +8,9 @@
 
 #import "ARDKLib.h"
 #import "ARDKPageCell.h"
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol ARDKViewRendererDelegate <NSObject>
 @property UIView *view;
@@ -15,8 +18,6 @@
 
 - (void)iteratePages:(void (^)(NSInteger i, UIView<ARDKPageCellDelegate> *pageView, CGRect screenRect))block;
 @end
-
-#import <Foundation/Foundation.h>
 
 @interface ARDKViewRenderer : NSObject
 @property BOOL darkMode;
@@ -30,3 +31,5 @@
 - (void)afterFirstRender:(void (^)(void))block;
 
 @end
+
+NS_ASSUME_NONNULL_END

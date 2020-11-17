@@ -132,11 +132,6 @@
     return self;
 }
 
-- (CGSize)viewSize
-{
-    return self.view.frame.size;
-}
-
 /// Override: adjust a rectangle to fit a specified page
 - (CGSize)adjustSize:(CGSize)size toPage:(NSInteger)page
 {

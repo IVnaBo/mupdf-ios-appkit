@@ -10,6 +10,8 @@
 #import "ARDKSettings.h"
 #import "platform-headers.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Error type returned from some ARDK functions
 ///
 /// 0 means no error
@@ -97,12 +99,12 @@ typedef struct ARDKBitmapInfo
 @property(readonly) NSInteger width;
 @property(readonly) NSInteger height;
 @property(readonly) ARDKBitmapType bmType;
-@property(readonly) ARDKBitmap *parent;
+@property(nullable,readonly) ARDKBitmap *parent;
 @property ARDKSoftProfile softProfile;
 @property BOOL darkMode;
 
 /// Allocate a bitmap of a specific size
-+ (ARDKBitmap *)bitmapAtSize:(CGSize)size ofType:(ARDKBitmapType)bmType;
++ (ARDKBitmap * _Nullable)bitmapAtSize:(CGSize)size ofType:(ARDKBitmapType)bmType;
 
 /// Give access to a subarea of an already allocated bitmap
 + (ARDKBitmap *)bitmapFromSubarea:(CGRect)area ofBitmap:(ARDKBitmap *)bm;
@@ -182,7 +184,7 @@ typedef struct ARDKBitmapInfo
 @property (copy) NSString *label;
 @property NSUInteger depth;
 @property BOOL open;
-@property (retain) NSMutableArray<id<ARDKTocEntry>> *children;
+@property (retain) NSMutableArray<id<ARDKTocEntry>> * _Nullable children;
 @end
 
 
@@ -234,7 +236,7 @@ typedef struct ARDKBitmapInfo
                        atZoom:(CGFloat)zoom
                 withDocOrigin:(CGPoint)orig
                    intoBitmap:(ARDKBitmap *)bm
-                     andAlpha:(ARDKBitmap *)am
+                     andAlpha:(ARDKBitmap * _Nullable)am
                      progress:(void (^)(ARError error))block;
 
 /// Render into a bitmap
@@ -271,7 +273,7 @@ typedef struct ARDKBitmapInfo
                 atZoom:(CGFloat)zoom
          withDocOrigin:(CGPoint)orig
             intoBitmap:(ARDKBitmap *)bm
-              andAlpha:(ARDKBitmap *)am;
+              andAlpha:(ARDKBitmap * _Nullable)am;
 
 @end
 
@@ -298,7 +300,7 @@ typedef enum ARDKSaveResult
 @property(nonatomic, readonly) BOOL ARDKPasteboard_hasStrings;
 
 /// Set/get the current contents of the clipboard
-@property(nonatomic,copy,setter=ARDKPasteboard_setString:) NSString *ARDKPasteboard_string;
+@property(nullable,nonatomic,copy,setter=ARDKPasteboard_setString:) NSString *ARDKPasteboard_string;
 
 /// The number of times the pasteboard’s contents have changed.
 @property(readonly, nonatomic) NSInteger ARDKPasteboard_changeCount;
@@ -331,10 +333,10 @@ typedef enum ARDKSaveResult
 @property(readonly) id<ARDKLib> lib;
 
 /// Abstracted access to the app's pasteboard
-@property(retain) id<ARDKPasteboard> pasteboard;
+@property(nullable,retain) id<ARDKPasteboard> pasteboard;
 
 /// Allocate a bitmap of a specific size
-- (ARDKBitmap *)bitmapAtSize:(CGSize)size;
+- (ARDKBitmap * _Nullable)bitmapAtSize:(CGSize)size;
 
 /// Determine if the document has been modified
 ///
@@ -369,14 +371,14 @@ typedef enum ARDKSaveResult
 /// progressBlock is also called when the document is edited, either adding or
 /// removing pages, with numPages decreasing in the page-removing case.
 /// This property should not be changed after 'loadDocument' is called.
-@property (copy)void (^progressBlock)(NSInteger numPages, BOOL complete);
+@property(nullable,copy) void (^progressBlock)(NSInteger numPages, BOOL complete);
 
 /// errorBlock is called on the UI thread once for each error that occurs
 /// as the document loads.
 /// It may be called multiple times.
 /// Not all errors are fatal.
 /// This property should not be changed after 'loadDocument' is called.
-@property (copy)void (^errorBlock)(ARDKDocErrorType error);
+@property(nullable,copy) void (^errorBlock)(ARDKDocErrorType error);
 
 /// successBlock is called on the UI thread once the document has fully loaded
 /// and no error has occurred.
@@ -384,7 +386,7 @@ typedef enum ARDKSaveResult
 /// the document will usually be available for render significantly before this
 /// call is made, interactive apps should use progressBlock.
 /// This property should not be changed after 'loadDocument' is called.
-@property (copy)void (^successBlock)(void);
+@property(nullable,copy) void (^successBlock)(void);
 
 /// Add a target for receiving document events
 ///
@@ -430,7 +432,7 @@ typedef enum ARDKSaveResult
 - (void)movePage:(NSInteger)pageNumber to:(NSInteger)newNumber;
 
 /// Return a specific page of an open document
-- (id<ARDKPage>)getPage:(NSInteger)pageNumber update:(void (^)(CGRect area))block;
+- (id<ARDKPage> _Nullable)getPage:(NSInteger)pageNumber update:(void (^ _Nullable)(CGRect area))block;
 
 /// Abort loading if still active. This should be called when an SODKDoc
 /// is no longer needed, otherwise it may take a long time to deallocate
@@ -456,7 +458,7 @@ typedef enum ARDKSaveResult
 
 @property (readonly) ARDKSettings *settings;
 
-- (instancetype)initWithSettings:(ARDKSettings *)settings;
+- (instancetype)initWithSettings:(ARDKSettings * _Nullable)settings;
 
 /// Open a document given the path of the file and its file type.
 ///
@@ -465,3 +467,5 @@ typedef enum ARDKSaveResult
 -(id<ARDKDoc>)docForPath:(NSString *)path ofType:(ARDKDocType)docType;
 
 @end
+
+NS_ASSUME_NONNULL_END

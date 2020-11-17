@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ARDKPKCS7.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ARDKCertVerifyDialogViewController : UIViewController
 
 /**
@@ -30,3 +32,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

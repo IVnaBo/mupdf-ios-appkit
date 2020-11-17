@@ -1,26 +1,32 @@
-//
-//  ARDKBasicDocViewAPI.h
-//  smart-office-nui
-//
-//  Created by Paul Gardiner on 04/08/2017.
-//  Copyright © 2017 Artifex Software Inc. All rights reserved.
-//
+//  Copyright © 2017-2020 Artifex Software Inc. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import "ARDKDocSession.h"
 #import "ARDKPageGeometry.h"
 #import "ARDKBasicDocViewDelegate.h"
 
+/// The protocol via which to control basic views on a document.
+/// where "basic" refers to the views not including significant
+/// UI elements.
 @protocol ARDKBasicDocViewAPI <NSObject>
-@property(readonly) id<ARDKDoc> doc;
-@property(weak) id<ARDKBasicDocViewDelegate> delegate;
-@property(readonly) ARDKDocSession *session;
-@property id<ARDKPasteboard> pasteboard;
+
+/// The document being viewed
+@property(nonnull,readonly) id<ARDKDoc> doc;
+
+/// The views delegate
+@property(nullable,weak) id<ARDKBasicDocViewDelegate> delegate;
+
+/// The document viewing/editing session, on which the view
+/// is based.
+@property(nonnull,readonly) ARDKDocSession *session;
+
+/// The pasteboard implementation used by this document view.
+/// Bespoke pasteboard implementations may be used for the
+/// sake of securing copy and paste.
+@property(nullable) id<ARDKPasteboard> pasteboard;
 
 /// Currently displayed page
 @property(readonly) NSInteger currentPage;
-
-@property(readonly) CGSize viewSize;
 
 // Tranform from page coordinates to screen coordinates
 - (CGAffineTransform)pageToScreen:(NSInteger)pageNo;
@@ -33,28 +39,37 @@
 
 /// Control of the viewed-page stack, used to return to a viewing position
 /// after visiting a new location via a link, or for revisiting a link
+///
+/// Whether there is a previous viewing state
 @property(readonly) BOOL viewingStatePreviousAllowed;
+/// Wherther there is a next viewing state
 @property(readonly) BOOL viewingStateNextAllowed;
+/// Move to previous viewing state
 - (void)viewingStatePrevious;
+/// Move to next viewing state
 - (void)viewingStateNext;
+/// Add the current viewing state to the end of the list
 - (void)pushViewingState:(NSInteger)page withOffset:(CGPoint)offset;
 
-- (void)showArea:(CGRect)box onPage:(NSInteger)pageNum animated:(BOOL)animated onCompletion:(void (^)(void))block;
+/// Update the view to make a specific area of a page visible, with
+/// the option to perform the movement animated or immediately. and
+/// the option to perform a further task on completion
+- (void)showArea:(CGRect)box onPage:(NSInteger)pageNum animated:(BOOL)animated onCompletion:(void (^ _Nullable)(void))block;
 
-/// Pan the document view to display an area of a page
+/// Update the view to make a specific area of a page visible
 - (void)showArea:(CGRect)box onPage:(NSInteger)page;
 
 /// Show a set of page areas, possibly animated with a callback on completion
-- (void)showAreas:(NSArray<ARDKPageArea *> *)areas animated:(BOOL)animated onCompletion:(void (^)(void))block;
+- (void)showAreas:(NSArray<ARDKPageArea *> * _Nonnull)areas animated:(BOOL)animated onCompletion:(void (^ _Nullable)(void))block;
 
 /// Show a set of page areas with animation
-- (void)showAreas:(NSArray<ARDKPageArea *> *)areas;
+- (void)showAreas:(NSArray<ARDKPageArea *> * _Nonnull)areas;
 
 /// Pan the document view to a page
 - (void)showPage:(NSInteger)pageNum;
 
 /// Pan the document view to a page, with callback on completion
-- (void)showPage:(NSInteger)pageNum animated:(BOOL)animated onCompletion:(void (^)(void))block;
+- (void)showPage:(NSInteger)pageNum animated:(BOOL)animated onCompletion:(void (^ _Nullable)(void))block;
 
 /// Pan a specified position within a page to the top left of the screen
 - (void)showPage:(NSInteger)pageIndex withOffset:(CGPoint)pt;
@@ -67,10 +82,10 @@
 - (void)showEndOfPage:(NSInteger)pageNum;
 
 /// Map a point within the scrolling view to a cell if any
-- (void)forCellAtPoint:(CGPoint)pt do:(void (^)(NSInteger index, UIView *cell, CGPoint pt))block;
+- (void)forCellAtPoint:(CGPoint)pt do:(void (^ _Nonnull)(NSInteger index, UIView * _Nonnull cell, CGPoint pt))block;
 
 /// Map a point within the scrolling view to the nearest cell
-- (void)forCellNearestPoint:(CGPoint)pt do:(void (^)(NSInteger, UIView *))block;
+- (void)forCellNearestPoint:(CGPoint)pt do:(void (^ _Nonnull)(NSInteger, UIView * _Nonnull))block;
 
 // Tell the UITextInput implementation that the selection
 /// has changed
