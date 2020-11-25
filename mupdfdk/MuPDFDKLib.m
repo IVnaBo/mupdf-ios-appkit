@@ -38,6 +38,7 @@
 #define SEMI_TRANSPARENT (0.5)
 
 #define UPDATE_BITMAP_PROPORTION (6)
+#define INITIAL_FZPAGE_CACHE_SIZE (500)
 
 static float highlight_color[] = {1.0, 1.0, 0.0};
 
@@ -2121,7 +2122,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
     MuPDFPrintProfile _printProfile;
     ARDKSoftProfile _softProfile;
     NSInteger _reportedPageCount;
-    NSArray<FzPageHolder *> *_fzpages;
+    NSMutableDictionary<NSNumber *, FzPageHolder *> *_fzpages;
     NSArray<MuPDFDKPageHolder *> *_pages;
     BOOL _pdfFormFillingEnabled;
 }
@@ -2378,10 +2379,13 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
                     if (pdf)
                     {
                         pdf_page *ppage = (pdf_page *)page.fzpage;
-                        for (annot = pdf_first_annot(ctx, ppage); annot; annot = pdf_next_annot(ctx, annot))
+                        if (ppage)
                         {
-                            if (pdf_annot_type(ctx, annot) == PDF_ANNOT_REDACT)
-                                [pagesWithRedactions addObject:[NSNumber numberWithInteger:self->_pageCount]];
+                            for (annot = pdf_first_annot(ctx, ppage); annot; annot = pdf_next_annot(ctx, annot))
+                            {
+                                if (pdf_annot_type(ctx, annot) == PDF_ANNOT_REDACT)
+                                    [pagesWithRedactions addObject:[NSNumber numberWithInteger:self->_pageCount]];
+                            }
                         }
                     }
 
@@ -3192,8 +3196,9 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
     assert(strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), queue_label) == 0);
     fz_context *ctx = self.mulib.ctx;
 
-    for (FzPageHolder *holder in _fzpages)
+    for (NSNumber *key in _fzpages)
     {
+        FzPageHolder *holder = _fzpages[key];
         pdf_page *page = (pdf_page *)holder.page.fzpage;
         if (page)
         {
@@ -3331,36 +3336,27 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
 - (FzPage *)getFzPage:(NSInteger)pageNumber
 {
     assert(strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), queue_label) == 0);
-    FzPage *page = nil;
-    NSMutableArray<FzPageHolder *> *fzpages = [NSMutableArray array];
-    for (FzPageHolder *holder in _fzpages)
+    NSNumber *pn = [NSNumber numberWithInteger:pageNumber];
+    FzPageHolder *holder = _fzpages[pn];
+
+    if (holder.page)
+        return holder.page;
+
+    // There was no holder for this page number, or the weak page property may have been freed.
+    // Overwrite it in either case.
+    fz_context *ctx = self.mulib.ctx;
+    fz_page *fzpage = NULL;
+    fz_try(ctx)
     {
-        if (holder.page)
-        {
-            [fzpages addObject:holder];
-            if (holder.pageNo == pageNumber)
-                page = holder.page;
-        }
+        fzpage = fz_load_page(ctx, self.fzdoc, (int)pageNumber);
+    }
+    fz_catch(ctx)
+    {
     }
 
-    if (!page)
-    {
-        fz_context *ctx = self.mulib.ctx;
-        fz_page *fzpage = NULL;
-        fz_try(ctx)
-        {
-            fzpage = fz_load_page(ctx, self.fzdoc, (int)pageNumber);
-        }
-        fz_catch(ctx)
-        {
-        }
+    FzPage *page = [FzPage pageFromPage:fzpage ofDoc:self];
 
-        page = [FzPage pageFromPage:fzpage ofDoc:self];
-
-        [fzpages addObject:[FzPageHolder holderForPage:page numbered:pageNumber]];
-    }
-
-    _fzpages = fzpages;
+    _fzpages[pn] = [FzPageHolder holderForPage:page numbered:pageNumber];
 
     return page;
 }
@@ -3518,7 +3514,7 @@ static NSMutableArray<id<ARDKTocEntry>> *tocFromOutline(fz_outline *outline, int
                         fz_drop_stream(ctx, self->_stream);
                         self->_stream = NULL;
 
-                        self->_fzpages = [NSArray array];
+                        self->_fzpages = [NSMutableDictionary dictionaryWithCapacity:INITIAL_FZPAGE_CACHE_SIZE];
 
                         @synchronized(self->_pages)
                         {
