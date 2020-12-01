@@ -215,6 +215,7 @@ static void darken_bitmap_888(uint8_t  *bitmap,
     if (self.parent == nil)
     {
         free(buf16.data);
+        buf16.data = NULL;
     }
 }
 
