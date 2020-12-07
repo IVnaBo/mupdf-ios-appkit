@@ -2165,6 +2165,7 @@ static MuPDFDKTextSelection *selWord(fz_context *ctx, fz_stext_page *text, CGPoi
         _selections = [NSMutableDictionary dictionary];
         _pagesWithRedactions = [NSMutableSet set];
         _eventTargets = [NSMutableArray array];
+        _fzpages = [NSMutableDictionary dictionaryWithCapacity:INITIAL_FZPAGE_CACHE_SIZE];
     }
     return self;
 }
