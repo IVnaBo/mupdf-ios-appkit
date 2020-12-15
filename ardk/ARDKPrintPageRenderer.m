@@ -9,6 +9,7 @@
 {
     id<ARDKDoc> _doc;
     BOOL        _skipRenderPageWithLowMemory;
+    BOOL        _renderForPrinter;
 }
 
 - (id)initWithDocument:(id<ARDKDoc>)doc
@@ -21,14 +22,14 @@
         assert(doc);
         _doc = doc;
         _skipRenderPageWithLowMemory = NO;
-    
+        _renderForPrinter = NO;
+        
         if ( noti )
         {
             [noti addObserver:self
                      selector:@selector(handleMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification
                        object:nil];
         }
-        
     }
     return self;
 }
@@ -74,17 +75,21 @@
 
 - (void)drawPageAtIndex:(NSInteger)pageIndex inRect:(CGRect)printableRect
 {
-    /* WARNING: called on a background thread to generate previews and on the
-     * main thread when printing */
-    BOOL printing = [NSThread isMainThread];
-
+    /* WARNING: can be call on the main thread or on a background thread */
+    
     assert(_doc);
 
     if ( _skipRenderPageWithLowMemory )
         return;
 
-    if ( printing )
+    // this method is called to render previews for the screen and also
+    // to render page images for the printer. We need to conserve memory
+    // so we render at a lower resolution for on screen previews and scale
+    // the resolution up for the printer
+    if (_renderForPrinter)
+    {
         printableRect = ARCGRectScale(printableRect, PRINT_SCALING);
+    }
 
     __block UIImage *image = nil;
     __block ARError err = 0;
@@ -121,7 +126,7 @@
         image = [[bm asImage] ARDKsanitizedImage];
     };
 
-    if ( printing )
+    if ( [NSThread isMainThread ] )
         drawBlock();
     else
         dispatch_sync(dispatch_get_main_queue(), drawBlock);
@@ -130,8 +135,12 @@
         return;
 
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    if ( printing )
+
+    if (_renderForPrinter)
+    {
         CGContextScaleCTM(currentContext, 1.0/PRINT_SCALING, 1.0/PRINT_SCALING);
+    }
+
     CGContextTranslateCTM(currentContext, printableRect.origin.x, printableRect.origin.y);
     if (landscape)
     {
@@ -144,6 +153,23 @@
 
     CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
     CGContextDrawImage(currentContext, rect, image.CGImage);
+}
+
+// UIPrintInteractionControllerDelegate methods
+- (void)printInteractionControllerWillPresentPrinterOptions:(UIPrintInteractionController *)printInteractionController
+{
+    // the UIPrintInteractionController dialog is about to come on screen, we
+    // need to switch the ARDKPrintPageRenderer into "render for screen" mode
+    // while this dialog is on screen to conserve memory
+    _renderForPrinter = NO;
+}
+
+- (void)printInteractionControllerWillDismissPrinterOptions:(UIPrintInteractionController *)printInteractionController
+{
+    // the UIPrintInteractionController dialog is about to be dismissed by the user,
+    // the progress dialog also uses this ARDKPrintPageRenderer instance to render
+    // pages for the printer, so we need to switch it to "render for printer" mode
+    _renderForPrinter = YES;
 }
 
 @end

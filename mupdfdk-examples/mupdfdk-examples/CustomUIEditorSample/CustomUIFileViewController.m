@@ -71,10 +71,12 @@
 
 - (IBAction)printButtonWasTapped:(id)sender
 {
-    UIPrintInteractionController *printComtroller = [UIPrintInteractionController sharedPrintController];
+    UIPrintInteractionController *printController = [UIPrintInteractionController sharedPrintController];
     ARDKPrintPageRenderer *pageRenderer = [[ARDKPrintPageRenderer alloc] initWithDocument:self.doc];
-    printComtroller.printPageRenderer = pageRenderer;
-    [printComtroller presentAnimated:YES completionHandler:^(UIPrintInteractionController * _Nonnull printInteractionController, BOOL completed, NSError * _Nullable error) {
+    printController.printPageRenderer = pageRenderer;
+    printController.delegate = pageRenderer;
+
+    [printController presentAnimated:YES completionHandler:^(UIPrintInteractionController * _Nonnull printInteractionController, BOOL completed, NSError * _Nullable error) {
         if (error)
         {
             NSLog(@"Print failed due to error %@", error);

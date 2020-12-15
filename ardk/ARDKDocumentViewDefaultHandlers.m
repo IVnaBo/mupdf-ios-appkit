@@ -163,6 +163,8 @@ static ARDKOpenInHelper *openInHelper;
         UIPrintInteractionController *printController = [UIPrintInteractionController sharedPrintController];
         ARDKPrintPageRenderer *pageRenderer = [[ARDKPrintPageRenderer alloc] initWithDocument:session.doc];
         printController.printPageRenderer = pageRenderer;
+        printController.delegate = pageRenderer;
+        
         [printController presentAnimated:YES
                        completionHandler:^(UIPrintInteractionController *pic, BOOL completed, NSError *error){
             if (error)
