@@ -6,7 +6,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ARDKPrintPageRenderer : UIPrintPageRenderer
+@interface ARDKPrintPageRenderer : UIPrintPageRenderer <UIPrintInteractionControllerDelegate>
 
 - initWithDocument:(id<ARDKDoc>)doc;
 
